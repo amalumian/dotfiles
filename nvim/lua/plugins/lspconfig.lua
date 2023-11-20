@@ -4,7 +4,7 @@ return {
     opts = {
       diagnostics = {
         underline = true,
-        virtual_text = false,
+        virtual_text = true,
         float = {
           border = "rounded",
         },
