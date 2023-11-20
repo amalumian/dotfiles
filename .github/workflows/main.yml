@@ -1,0 +1,45 @@
+name: Main
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-20.04
+    steps:
+
+      - uses: actions/checkout@v2
+      - name: Nvim install config files
+        run: |
+          make nvim-install
+
+      - name: Dotfiles install
+        run: |
+          make dotfiles-install
+
+      - name: Apt install
+        run: |
+          sudo apt-get update
+          sudo make ubuntu-prepare OPTIONS="--dry-run"
+
+  macos:
+    runs-on: macos-latest
+    steps:
+
+      - uses: actions/checkout@v2
+      - name: Nvim install config files
+        run: |
+          make nvim-install
+
+      - name: Dotfiles install
+        run: |
+          make dotfiles-install
+
+      # - name: Brew install
+      #   run: |
+      #     make macos-prepare OPTIONS="--dry-run"
