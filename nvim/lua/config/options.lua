@@ -8,6 +8,6 @@ vim.o.langmap =
 vim.o.relativenumber = true
 vim.o.spelllang = "ru_ru,en_us"
 vim.o.linebreak = true
-vim.g.autoformat = true
+vim.g.autoformat = false
 
 require("lazyvim.util").get_root = vim.loop.cwd
