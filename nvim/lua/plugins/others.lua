@@ -9,6 +9,12 @@ return {
     event = "InsertEnter",
     opts = {}, -- this is equalent to setup({}) function
   },
+  {
+    "windwp/nvim-ts-autotag",
+    event = "LazyFile",
+    opts = { enable_close_on_slash = false },
+  },
+
   { "isobit/vim-caddyfile" },
   { -- maybe https://github.com/0x00-ketsu/autosave.nvim
     "0x00-ketsu/autosave.nvim",
