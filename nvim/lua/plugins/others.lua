@@ -14,7 +14,7 @@ return {
     event = "LazyFile",
     opts = { enable_close_on_slash = false },
   },
-
+  { "mg979/vim-visual-multi" },
   { "isobit/vim-caddyfile" },
   { -- maybe https://github.com/0x00-ketsu/autosave.nvim
     "0x00-ketsu/autosave.nvim",
