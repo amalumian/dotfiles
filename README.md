@@ -127,6 +127,7 @@ This document serves as a guide for setting up my future MacBooks. It provides a
 - iTerm2 (Theme: Solarized Dark)
   - Homebrew
     - git
+      - main (default branch)
     - asdf
     - python
     - node (npm)
