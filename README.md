@@ -154,7 +154,7 @@ This document serves as a guide for setting up my future MacBooks. It provides a
     - rubygems
     - lua
     - yarn
-    - zsh:
+    - zsh
       - zsh-autosuggestions
       - zsh-syntax-highlighting
       - zsh-syntax-autocomplete
