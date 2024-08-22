@@ -51,6 +51,7 @@ This document serves as a guide for setting up my future MacBooks. It provides a
 - Arc
 - Microsoft Edge
 - DuckDuckGo
+- Min
 
 ### Programming
 
@@ -121,6 +122,7 @@ This document serves as a guide for setting up my future MacBooks. It provides a
 - Kindle
 - Logi Options+
 - ChatGPT
+- KeyCastr
 
 ## Terminal
 
