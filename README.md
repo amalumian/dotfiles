@@ -123,6 +123,7 @@ This document serves as a guide for setting up my future MacBooks. It provides a
 - Logi Options+
 - ChatGPT
 - KeyCastr
+- AltTab
 
 ## Terminal
 
