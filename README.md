@@ -124,6 +124,7 @@ This document serves as a guide for setting up my future MacBooks. It provides a
 - ChatGPT
 - KeyCastr
 - AltTab
+  - Hide window thumbnails
 
 ## Terminal
 
