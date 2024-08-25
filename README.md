@@ -63,6 +63,7 @@ This document serves as a guide for setting up my future MacBooks. It provides a
 - Postman
 - Figma
 - ImageOptim
+- Squoosh (PWA)
 
 ### Communication
 
