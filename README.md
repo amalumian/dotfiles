@@ -19,6 +19,7 @@ This document serves as a guide for setting up my future MacBooks. It provides a
 ## System Preferences
 
 - CAPS -> CTRL
+- Create Developer folder
 
 ## Mac Apps
 
