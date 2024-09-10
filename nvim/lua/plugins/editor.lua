@@ -13,6 +13,23 @@ return {
 		},
 	},
 	{
+		"nvim-neo-tree/neo-tree.nvim",
+		cmd = "Neotree",
+		opts = {
+			window = { position = "current" },
+			filesystem = {
+				filtered_items = {
+					visible = true,
+					hide_dotfiles = false,
+					hide_gitignored = false,
+					never_show = {
+						".DS_Store",
+					},
+				},
+			},
+		},
+	},
+	{
 		"tpope/vim-fugitive",
 		config = function()
 			vim.keymap.set("n", "<leader>gs", vim.cmd.G, { desc = "Fugitive" })
