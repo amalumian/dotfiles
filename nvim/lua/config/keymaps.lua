@@ -5,6 +5,10 @@ local opts = { noremap = true, silent = true }
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- Do the same as previous but for searching
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
+
 -- Greatest remap ever
 keymap.set("x", "<leader>p", [["_dP]])
 
