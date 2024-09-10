@@ -12,7 +12,89 @@ return {
 			},
 		},
 	},
+	{
+		"tpope/vim-fugitive",
+		config = function()
+			vim.keymap.set("n", "<leader>gs", vim.cmd.G, { desc = "Fugitive" })
 
+			local autocmd = vim.api.nvim_create_autocmd
+			autocmd("BufWinEnter", {
+				pattern = "*",
+				callback = function()
+					if vim.bo.ft ~= "fugitive" then
+						return
+					end
+
+					local bufnr = vim.api.nvim_get_current_buf()
+					local opts = { buffer = bufnr, remap = false }
+					vim.keymap.set("n", "<leader>p", function()
+						vim.cmd.Git("push")
+					end, opts)
+
+					-- rebase always
+					vim.keymap.set("n", "<leader>P", function()
+						vim.cmd.Git({ "pull", "--rebase" })
+					end, opts)
+
+					-- NOTE: It allows me to easily set the branch i am pushing and any tracking
+					-- needed if i did not set the branch up correctly
+					vim.keymap.set("n", "<leader>t", ":Git push -u origin ", opts)
+				end,
+			})
+
+			vim.keymap.set("n", "gu", "<cmd>diffget //2<CR>")
+			vim.keymap.set("n", "gh", "<cmd>diffget //3<CR>")
+		end,
+	},
+	{
+		"mbbill/undotree",
+
+		config = function()
+			vim.keymap.set("n", "<leader>U", vim.cmd.UndotreeToggle, { desc = "Undotree" })
+		end,
+	},
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			local harpoon = require("harpoon")
+
+			harpoon:setup()
+
+			vim.keymap.set("n", "<leader>a", function()
+				harpoon:list():add()
+			end, { desc = "Harpoon" })
+			vim.keymap.set("n", "<C-e>", function()
+				harpoon.ui:toggle_quick_menu(harpoon:list())
+			end)
+
+			vim.keymap.set("n", "<C-h>", function()
+				harpoon:list():select(1)
+			end)
+			vim.keymap.set("n", "<C-t>", function()
+				harpoon:list():select(2)
+			end)
+			vim.keymap.set("n", "<C-n>", function()
+				harpoon:list():select(3)
+			end)
+			vim.keymap.set("n", "<C-s>", function()
+				harpoon:list():select(4)
+			end)
+			vim.keymap.set("n", "<leader><C-h>", function()
+				harpoon:list():replace_at(1)
+			end)
+			vim.keymap.set("n", "<leader><C-t>", function()
+				harpoon:list():replace_at(2)
+			end)
+			vim.keymap.set("n", "<leader><C-n>", function()
+				harpoon:list():replace_at(3)
+			end)
+			vim.keymap.set("n", "<leader><C-s>", function()
+				harpoon:list():replace_at(4)
+			end)
+		end,
+	},
 	{
 		"echasnovski/mini.hipatterns",
 		event = "BufReadPre",
@@ -34,7 +116,6 @@ return {
 			},
 		},
 	},
-
 	{
 		"dinhhuy258/git.nvim",
 		event = "BufReadPre",
