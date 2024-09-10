@@ -38,6 +38,8 @@ alias sshhome="cd ~/.ssh"
 alias sshconfig="nvim ~/.ssh/config"
 # edit global git configuration
 alias gitconfig="nvim ~/.gitconfig"
+# vim instead of nvim
+alias vim="nvim"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
