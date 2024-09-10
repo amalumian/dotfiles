@@ -1,8 +1,12 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Cursor stays in the middle during jumps
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+
 -- Greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
+keymap.set("x", "<leader>p", [["_dP]])
 
 -- Move selected lines
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
