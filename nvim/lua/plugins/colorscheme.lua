@@ -1,12 +1,14 @@
 return {
 	{
-		"craftzdog/solarized-osaka.nvim",
-		lazy = true,
-		priority = 1000,
-		opts = function()
-			return {
-				transparent = true,
-			}
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			require("rose-pine").setup({
+				disable_background = true,
+				styles = {
+					italic = false,
+				},
+			})
 		end,
 	},
 }
