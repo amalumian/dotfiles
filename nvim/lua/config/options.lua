@@ -33,7 +33,7 @@ vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 vim.opt.guicursor = ""
 vim.opt.termguicolors = true
-vim.opt.colorcolumn = "100"
+-- vim.opt.colorcolumn = "100"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
