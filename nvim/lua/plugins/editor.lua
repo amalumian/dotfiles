@@ -73,43 +73,106 @@ return {
 	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {
+			menu = {
+				width = vim.api.nvim_win_get_width(0) - 4,
+			},
+			settings = {
+				save_on_toggle = true,
+			},
+		},
 		config = function()
 			local harpoon = require("harpoon")
+			harpoon:setup({})
 
-			harpoon:setup()
+			-- basic telescope configuration
+			local conf = require("telescope.config").values
+			local function toggle_telescope(harpoon_files)
+				local file_paths = {}
+				for _, item in ipairs(harpoon_files.items) do
+					table.insert(file_paths, item.value)
+				end
 
-			vim.keymap.set("n", "<leader>a", function()
-				harpoon:list():add()
-			end, { desc = "Harpoon" })
+				require("telescope.pickers")
+					.new({}, {
+						prompt_title = "Harpoon",
+						finder = require("telescope.finders").new_table({
+							results = file_paths,
+						}),
+						previewer = conf.file_previewer({}),
+						sorter = conf.generic_sorter({}),
+					})
+					:find()
+			end
+
 			vim.keymap.set("n", "<C-e>", function()
-				harpoon.ui:toggle_quick_menu(harpoon:list())
-			end)
+				toggle_telescope(harpoon:list())
+			end, { desc = "Open Harpoon Window" })
+		end,
+		keys = function()
+			local keys = {
+				{
+					"<leader>a",
+					function()
+						require("harpoon"):list():add()
+					end,
+					desc = "Harpoon File",
+				},
+				{
+					"<C-h>",
+					function()
+						require("harpoon"):list():select(1)
+					end,
+				},
+				{
+					"<C-j>",
+					function()
+						require("harpoon"):list():select(2)
+					end,
+				},
+				{
+					"<C-k>",
+					function()
+						require("harpoon"):list():select(3)
+					end,
+				},
+				{
+					"<C-l>",
+					function()
+						require("harpoon"):list():select(4)
+					end,
+				},
+				{
+					"<leader><C-h>",
+					function()
+						require("harpoon"):list():replace_at(1)
+					end,
+					desc = "Replace Harpoon at File 1",
+				},
+				{
+					"<leader><C-j>",
+					function()
+						require("harpoon"):list():replace_at(2)
+					end,
+					desc = "Replace Harpoon at File 2",
+				},
+				{
+					"<leader><C-k>",
+					function()
+						require("harpoon"):list():replace_at(3)
+					end,
+					desc = "Replace Harpoon at File 3",
+				},
+				{
+					"<leader><C-l>",
+					function()
+						require("harpoon"):list():replace_at(4)
+					end,
+					desc = "Replace Harpoon at File 4",
+				},
+			}
 
-			vim.keymap.set("n", "<C-h>", function()
-				harpoon:list():select(1)
-			end)
-			vim.keymap.set("n", "<C-t>", function()
-				harpoon:list():select(2)
-			end)
-			vim.keymap.set("n", "<C-n>", function()
-				harpoon:list():select(3)
-			end)
-			vim.keymap.set("n", "<C-s>", function()
-				harpoon:list():select(4)
-			end)
-			vim.keymap.set("n", "<leader><C-h>", function()
-				harpoon:list():replace_at(1)
-			end)
-			vim.keymap.set("n", "<leader><C-t>", function()
-				harpoon:list():replace_at(2)
-			end)
-			vim.keymap.set("n", "<leader><C-n>", function()
-				harpoon:list():replace_at(3)
-			end)
-			vim.keymap.set("n", "<leader><C-s>", function()
-				harpoon:list():replace_at(4)
-			end)
+			return keys
 		end,
 	},
 	{
