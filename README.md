@@ -169,7 +169,8 @@ This document serves as a guide for setting up my future MacBooks. It provides a
     - p10k
       - [reference](https://github.com/romkatv/powerlevel10k/blob/master/config/p10k-robbyrussell.zsh)
     - neovim
-      - [reference](https://github.com/craftzdog/dotfiles-public/tree/master/.config/nvim)
+      - [craftzdog](https://github.com/craftzdog/dotfiles-public/tree/master/.config/nvim)
+      - [ThePrimeagen](https://github.com/ThePrimeagen/init.lua)
     - fzf
     - fd
     - asciinema
