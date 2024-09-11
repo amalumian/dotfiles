@@ -33,6 +33,8 @@ vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 vim.opt.guicursor = ""
 vim.opt.termguicolors = true
+vim.opt.signcolumn = "yes"
+vim.opt.updatetime = 250
 -- vim.opt.colorcolumn = "100"
 
 -- Undercurl
