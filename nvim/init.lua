@@ -38,6 +38,4 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup {
   spec = 'amalumian.plugins',
   change_detection = { notify = false },
-  'tpope/vim-sleuth',
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 }

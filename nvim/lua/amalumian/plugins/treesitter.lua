@@ -22,7 +22,7 @@ return {
       'http',
       'sql',
       'javascript',
-      'json',
+      'json5',
       'regex',
       'tsx',
       'typescript',
