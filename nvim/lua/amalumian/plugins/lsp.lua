@@ -104,7 +104,42 @@ return {
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
       local servers = {
-        ts_ls = {},
+        vtsls = {
+          filetypes = {
+            'javascript',
+            'javascriptreact',
+            'javascript.jsx',
+            'typescript',
+            'typescriptreact',
+            'typescript.tsx',
+          },
+          settings = {
+            complete_function_calls = true,
+            vtsls = {
+              enableMoveToFileCodeAction = true,
+              autoUseWorkspaceTsdk = true,
+              experimental = {
+                completion = {
+                  enableServerSideFuzzyMatch = true,
+                },
+              },
+            },
+            typescript = {
+              updateImportsOnFileMove = { enabled = 'always' },
+              suggest = {
+                completeFunctionCalls = true,
+              },
+              inlayHints = {
+                enumMemberValues = { enabled = true },
+                functionLikeReturnTypes = { enabled = true },
+                parameterNames = { enabled = 'literals' },
+                parameterTypes = { enabled = true },
+                propertyDeclarationTypes = { enabled = true },
+                variableTypes = { enabled = false },
+              },
+            },
+          },
+        },
         eslint = {
           settings = {
             workingDirectories = { mode = 'auto' },
@@ -115,6 +150,7 @@ return {
         html = {},
         jsonls = {},
         yamlls = {},
+        marksman = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -132,10 +168,11 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua',
         'tailwindcss-language-server',
-        'typescript-language-server',
         'css-lsp',
         'shellcheck',
         'prettier',
+        'markdownlint-cli2',
+        'markdown-toc',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
