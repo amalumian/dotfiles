@@ -1,3 +1,3 @@
-require 'amalumian.keymaps'
-require 'amalumian.options'
-require 'amalumian.autocmds'
+require 'amalumian.config.keymaps'
+require 'amalumian.config.options'
+require 'amalumian.config.autocmds'
