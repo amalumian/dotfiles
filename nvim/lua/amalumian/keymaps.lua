@@ -1,4 +1,5 @@
-vim.keymap.set('n', '\\', vim.cmd.Ex)
+-- Open Netrw
+vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
 
 -- Cursor stays in the middle during jumps
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
@@ -29,7 +30,7 @@ vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '<C-q>', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- theprimeagen's keymap
 vim.keymap.set('n', '<C-p>', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
