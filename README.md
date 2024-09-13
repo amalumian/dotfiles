@@ -129,7 +129,7 @@ This document serves as a guide for setting up my future MacBooks. It provides a
 
 ## Terminal
 
-- iTerm2 (theme: rose-pine)
+- iTerm2
   - Homebrew
     - git
       - main (default branch)
