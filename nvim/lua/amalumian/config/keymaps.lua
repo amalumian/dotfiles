@@ -1,5 +1,11 @@
--- Open Netrw
-vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
+-- Toggle Netrw
+vim.keymap.set('n', '<leader>e', function()
+  if vim.bo.filetype == 'netrw' then
+    vim.cmd 'b#'
+  else
+    vim.cmd.Ex()
+  end
+end)
 
 -- Cursor stays in the middle during jumps
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
