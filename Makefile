@@ -1,4 +1,6 @@
-.PHONY: nvim
+.PHONY: setup nvim zsh p10k
+
+setup: nvim zsh p10k
 
 nvim:
 	rm -rf ~/.config/nvim
