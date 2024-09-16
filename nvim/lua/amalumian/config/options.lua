@@ -37,4 +37,4 @@ vim.opt.showcmd = true
 vim.opt.hlsearch = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
--- vim.opt.colorcolumn = "100"
+vim.opt.colorcolumn = '100'
