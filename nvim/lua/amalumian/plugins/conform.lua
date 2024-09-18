@@ -33,6 +33,8 @@ return {
     formatters_by_ft = {
       lua = { 'stylua' },
       javascript = { 'prettier' },
+      typescript = { 'prettier' },
+      typescriptreact = { 'prettier' },
       html = { 'prettier' },
       markdown = { 'prettier', 'markdownlint-cli2', 'markdown-toc' },
     },

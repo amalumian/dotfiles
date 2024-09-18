@@ -7,8 +7,8 @@ return {
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
         html = { 'tidy' },
-        css = { 'stylelint' },
-        scss = { 'stylelint' },
+        -- css = { 'stylelint' },
+        -- scss = { 'stylelint' },
       }
 
       local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
