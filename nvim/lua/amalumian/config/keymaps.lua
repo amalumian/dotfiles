@@ -40,3 +40,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- theprimeagen's keymap
 vim.keymap.set('n', '<C-p>', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Open float diagnostic
+vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float)
