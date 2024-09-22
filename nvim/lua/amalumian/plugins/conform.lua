@@ -35,7 +35,6 @@ return {
       javascript = { 'prettier' },
       typescript = { 'prettier' },
       typescriptreact = { 'prettier' },
-      html = { 'prettier' },
       markdown = { 'prettier', 'markdownlint-cli2', 'markdown-toc' },
     },
   },
