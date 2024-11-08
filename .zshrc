@@ -57,6 +57,9 @@ vf() {
 # PostgreSQL
 export PATH="/Library/PostgreSQL/16/bin:$PATH"
 
+# Racket
+export PATH="/Applications/Racket v8.14/bin:$PATH"
+
 # Keys to normal navigation by words in terminal
 bindkey -e
 bindkey '^[[1;9C' forward-word
