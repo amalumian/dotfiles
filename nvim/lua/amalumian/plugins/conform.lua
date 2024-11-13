@@ -31,11 +31,14 @@ return {
     --   }
     -- end,
     formatters_by_ft = {
-      lua = { 'stylua' },
+      html = { 'prettier' },
+      css = { 'prettier' },
+      scss = { 'prettier' },
       javascript = { 'prettier' },
+      javascriptreact = { 'prettier' },
       typescript = { 'prettier' },
       typescriptreact = { 'prettier' },
-      javascriptreact = { 'prettier' },
+      lua = { 'stylua' },
       markdown = { 'prettier', 'markdownlint-cli2', 'markdown-toc' },
     },
   },
