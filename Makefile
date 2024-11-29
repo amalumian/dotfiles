@@ -1,6 +1,6 @@
-.PHONY: setup nvim zsh p10k
+.PHONY: setup nvim zsh p10k tmux
 
-setup: nvim zsh p10k
+setup: nvim zsh p10k tmux
 
 nvim:
 	rm -rf ~/.config/nvim
@@ -16,3 +16,7 @@ zsh:
 p10k:
 	rm ~/.p10k.zsh
 	ln -snf $(PWD)/.p10k.zsh ~/
+
+tmux:
+	rm ~/.tmux.conf
+	ln -snf $(PWD)/.tmux.conf ~/
