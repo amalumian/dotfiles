@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -55,7 +58,7 @@ vf() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # PostgreSQL
-export PATH="/Library/PostgreSQL/16/bin:$PATH"
+export PATH="/Library/PostgreSQL/17/bin:$PATH"
 
 # Racket
 export PATH="/Applications/Racket v8.14/bin:$PATH"
