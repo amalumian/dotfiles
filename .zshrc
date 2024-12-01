@@ -44,16 +44,6 @@ alias gitconfig="nvim ~/.gitconfig"
 # vim instead of nvim
 alias vim="nvim"
 
-# Function to search directories and change to the selected one
-cdf() {
-  cd $(find ~/Developer -type d -not -path "*/node_modules/*" | fzf)
-}
-# Function to search files and open the selected one in Vim
-vf() {
-  local file=$(find ~/Developer -type f -not -path "*/node_modules/*" | fzf)
-  [ -n "$file" ] && vim "$file"
-}
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
