@@ -1,6 +1,6 @@
-.PHONY: setup nvim zsh p10k tmux
+.PHONY: setup nvim zsh p10k tmux aerospace
 
-setup: nvim zsh p10k tmux
+setup: nvim zsh p10k tmux aerospace
 
 nvim:
 	rm -rf ~/.config/nvim
@@ -20,3 +20,7 @@ p10k:
 tmux:
 	rm ~/.tmux.conf
 	ln -snf $(PWD)/.tmux.conf ~/
+
+aerospace:
+	rm ~/.aerospace.toml
+	ln -snf $(PWD)/.aerospace.toml ~/
