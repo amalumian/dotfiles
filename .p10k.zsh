@@ -43,7 +43,7 @@
   # Red prompt symbol if the last command failed.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=red
   # Prompt symbol: bold arrow.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_CONTENT_EXPANSION='֍ '
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_CONTENT_EXPANSION='%B֍ '
 
   # Cyan current directory.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=cyan
