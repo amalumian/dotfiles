@@ -50,6 +50,9 @@ alias vim="nvim"
 # PostgreSQL
 export PATH="/Library/PostgreSQL/17/bin:$PATH"
 
+# MySQL
+export PATH="/usr/local/mysql/bin:$PATH"
+
 # Racket
 export PATH="/Applications/Racket v8.14/bin:$PATH"
 
