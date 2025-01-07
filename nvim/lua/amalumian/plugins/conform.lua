@@ -40,6 +40,7 @@ return {
       typescriptreact = { 'prettier' },
       lua = { 'stylua' },
       markdown = { 'prettier', 'markdownlint-cli2', 'markdown-toc' },
+      yaml = { 'prettier' },
     },
   },
 }
