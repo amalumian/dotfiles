@@ -47,6 +47,11 @@ alias vim="nvim"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Keys to normal navigation by words in terminal
+bindkey -e
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
+
 # PostgreSQL
 export PATH="/Library/PostgreSQL/17/bin:$PATH"
 
@@ -56,7 +61,7 @@ export PATH="/usr/local/mysql/bin:$PATH"
 # Racket
 export PATH="/Applications/Racket v8.14/bin:$PATH"
 
-# Keys to normal navigation by words in terminal
-bindkey -e
-bindkey '^[[1;9C' forward-word
-bindkey '^[[1;9D' backward-word
+# asdf
+export ASDF_DIR="$HOME/.asdf"
+. "$ASDF_DIR/asdf.sh"
+. "$ASDF_DIR/completions/asdf.bash"
