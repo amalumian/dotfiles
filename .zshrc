@@ -29,20 +29,24 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# edit global zsh configuration
+# Edit global zsh configuration
 alias zshconfig="nvim ~/.zshrc"
-# reload zsh configuration
+# Reload zsh configuration
 alias zshsource="source ~/.zshrc"
-# navigate to oh-my-zsh directory
+# Navigate to oh-my-zsh directory
 alias ohmyzsh="cd ~/.oh-my-zsh"
-# navigate to global ssh directory
+# Navigate to global ssh directory
 alias sshhome="cd ~/.ssh"
-# edit global ssh configuration
+# Edit global ssh configuration
 alias sshconfig="nvim ~/.ssh/config"
-# edit global git configuration
+# Edit global git configuration
 alias gitconfig="nvim ~/.gitconfig"
-# vim instead of nvim
+# Use vim instead of nvim
 alias vim="nvim"
+# Navigate to amalumian directory
+alias amalumian="cd ~/Developer/amalumian/"
+# Navigate to dotfiles directory
+alias dotfiles="cd ~/Developer/dotfiles/"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
