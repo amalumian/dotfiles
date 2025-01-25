@@ -10,19 +10,19 @@ nvim:
 	ln -snf $(PWD)/nvim ~/.config/nvim
 
 zsh:
-	rm ~/.zshrc
+	rm -f ~/.zshrc
 	ln -snf $(PWD)/.zshrc ~/
 
 p10k:
-	rm ~/.p10k.zsh
+	rm -f ~/.p10k.zsh
 	ln -snf $(PWD)/.p10k.zsh ~/
 
 tmux:
-	rm ~/.tmux.conf
+	rm -f ~/.tmux.conf
 	ln -snf $(PWD)/.tmux.conf ~/
 
 aerospace:
-	rm ~/.aerospace.toml
+	rm -f ~/.aerospace.toml
 	ln -snf $(PWD)/.aerospace.toml ~/
 
 kitty:
