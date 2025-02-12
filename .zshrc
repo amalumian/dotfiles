@@ -47,6 +47,10 @@ alias gitconfig="nvim ~/.gitconfig"
 alias vim="nvim"
 # Navigate to amalumian directory
 alias amalumian="cd ~/Developer/amalumian/"
+# Navigate to www.amalumian.dev directory
+alias www.malumian.dev="cd ~/Developer/malumian/www.malumian.dev/"
+# Navigate to finance.amalumian.dev directory
+alias finance.malumian.dev="cd ~/Developer/malumian/finance.malumian.dev/"
 # Navigate to dotfiles directory
 alias dotfiles="cd ~/Developer/dotfiles/"
 
