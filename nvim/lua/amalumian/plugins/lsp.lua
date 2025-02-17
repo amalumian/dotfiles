@@ -160,6 +160,8 @@ return {
             },
           },
         },
+        dockerls = {},
+        docker_compose_language_service = {},
       }
 
       require('mason').setup()
@@ -173,6 +175,7 @@ return {
         'prettier',
         'markdownlint-cli2',
         'markdown-toc',
+        'hadolint',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

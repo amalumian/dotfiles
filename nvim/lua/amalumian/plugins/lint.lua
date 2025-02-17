@@ -7,6 +7,7 @@ return {
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
         html = { 'tidy' },
+        dockerfile = { 'hadolint' },
         -- css = { 'stylelint' },
         -- scss = { 'stylelint' },
       }
