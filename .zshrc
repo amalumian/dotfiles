@@ -53,6 +53,8 @@ alias www.malumian.dev="cd ~/Developer/malumian/www.malumian.dev/"
 alias finance.malumian.dev="cd ~/Developer/malumian/finance.malumian.dev/"
 # Navigate to dotfiles directory
 alias dotfiles="cd ~/Developer/dotfiles/"
+# Navigate to nvim directory
+alias nvimconfig="cd ~/Developer/dotfiles/nvim"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
