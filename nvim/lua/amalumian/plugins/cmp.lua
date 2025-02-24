@@ -3,6 +3,12 @@ return {
   event = 'InsertEnter',
   dependencies = {
     {
+      'zbirenbaum/copilot-cmp',
+      config = function()
+        require('copilot_cmp').setup()
+      end,
+    },
+    {
       'L3MON4D3/LuaSnip',
       build = (function()
         if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
@@ -52,7 +58,7 @@ return {
         ['<C-y>'] = cmp.mapping.confirm { select = true },
 
         -- Manually trigger a completion from nvim-cmp.
-        ['<C-Space>'] = cmp.mapping.complete {},
+        ['<C-\\>'] = cmp.mapping.complete {},
 
         -- <c-l> will move you to the right of each of the expansion locations.
         -- <c-h> is similar, except moving you backwards.
@@ -75,6 +81,7 @@ return {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
+        { name = 'copilot' },
       },
     }
   end,
