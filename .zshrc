@@ -31,29 +31,18 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# Edit global zsh configuration
+# Aliases
 alias zshconfig="nvim ~/.zshrc"
-# Reload zsh configuration
 alias zshsource="source ~/.zshrc"
-# Navigate to oh-my-zsh directory
 alias ohmyzsh="cd ~/.oh-my-zsh"
-# Navigate to global ssh directory
 alias sshhome="cd ~/.ssh"
-# Edit global ssh configuration
 alias sshconfig="nvim ~/.ssh/config"
-# Edit global git configuration
 alias gitconfig="nvim ~/.gitconfig"
-# Use vim instead of nvim
 alias vim="nvim"
-# Navigate to amalumian directory
 alias amalumian="cd ~/Developer/amalumian/"
-# Navigate to www.amalumian.dev directory
 alias www.malumian.dev="cd ~/Developer/malumian/www.malumian.dev/"
-# Navigate to finance.amalumian.dev directory
 alias finance.malumian.dev="cd ~/Developer/malumian/finance.malumian.dev/"
-# Navigate to dotfiles directory
 alias dotfiles="cd ~/Developer/dotfiles/"
-# Navigate to nvim directory
 alias nvimconfig="cd ~/Developer/dotfiles/nvim"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -77,3 +66,5 @@ export PATH="/Applications/Racket v8.14/bin:$PATH"
 export ASDF_DIR="$HOME/.asdf"
 . "$ASDF_DIR/asdf.sh"
 . "$ASDF_DIR/completions/asdf.bash"
+
+. "$HOME/.local/bin/env"
