@@ -16,6 +16,12 @@ return {
     -- - sr)'  - [S]urround [R]eplace [)] [']
     require('mini.surround').setup()
 
+    require('mini.animate').setup {
+      scroll = {
+        enable = false,
+      },
+    }
+
     local statusline = require 'mini.statusline'
     statusline.setup { use_icons = vim.g.have_nerd_font }
 
