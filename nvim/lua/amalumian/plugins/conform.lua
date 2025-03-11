@@ -41,6 +41,7 @@ return {
       lua = { 'stylua' },
       markdown = { 'prettier', 'markdownlint-cli2', 'markdown-toc' },
       yaml = { 'prettier' },
+      go = { 'goimports', 'gofumpt' },
     },
   },
 }
