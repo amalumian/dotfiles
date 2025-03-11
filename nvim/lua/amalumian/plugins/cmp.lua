@@ -52,7 +52,7 @@ return {
         ['<C-y>'] = cmp.mapping.confirm { select = true },
 
         -- Manually trigger a completion from nvim-cmp.
-        ['<C-\\>'] = cmp.mapping.complete {},
+        ['<C-t>'] = cmp.mapping.complete {},
 
         -- <c-l> will move you to the right of each of the expansion locations.
         -- <c-h> is similar, except moving you backwards.

@@ -12,9 +12,9 @@ return {
         keymap = {
           accept = false,
           accept_word = false,
-          accept_line = '<M-[>',
+          accept_line = '<C-]>',
           next = '<M-]>',
-          prev = false,
+          prev = '<M-[>',
           dismiss = false,
         },
       },
