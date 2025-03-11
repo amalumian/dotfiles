@@ -24,3 +24,13 @@ aerospace:
 kitty:
 	rm -rf ~/.config/kitty
 	ln -snf $(PWD)/kitty ~/.config/kitty
+
+ssh:
+	mkdir ~/.ssh
+	cd ~/.ssh
+	ssh-keygen -t ed25519 -C "github"
+	ssh-keygen -y -f gitHub
+	touch ~/.ssh/config
+	echo -e "Host *\n  AddKeysToAgent yes\n  UseKeychain yes\n  IdentityFile ~/.ssh/github" >> ~/.ssh/config
+	ssh-add --apple-use-keychain ~/.ssh/github
+	cat ~/.ssh/id_rsa.pub | pbcopy
