@@ -1,0 +1,8 @@
+[user]
+	name = Arthur Malumian
+	email = arthurmalumian@gmail.com
+[core]
+	editor = nvim
+	excludesfile = /Users/amalumian/.gitignore_global
+[init]
+	defaultBranch = main
