@@ -39,4 +39,3 @@ export PATH="/Applications/Racket v8.14/bin:$PATH"
 export ASDF_DIR="$HOME/.asdf"
 . "$ASDF_DIR/asdf.sh"
 . "$ASDF_DIR/completions/asdf.bash"
-
