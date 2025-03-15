@@ -24,7 +24,6 @@ alias amalumian="cd ~/Developer/amalumian/"
 alias www.malumian.dev="cd ~/Developer/malumian/www.malumian.dev/"
 alias finance.malumian.dev="cd ~/Developer/malumian/finance.malumian.dev/"
 alias dotfiles="cd ~/Developer/dotfiles/"
-alias nvimconfig="cd ~/Developer/dotfiles/nvim"
 
 # PostgreSQL
 export PATH="/Library/PostgreSQL/17/bin:$PATH"
