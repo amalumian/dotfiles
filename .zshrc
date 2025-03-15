@@ -7,6 +7,7 @@ export LC_ALL=en_US.UTF-8
 
 export TERM=screen-256color
 
+# Custom plugins put in ~/.oh-my-zsh/custom/plugins
 plugins=(git vi-mode fzf docker docker-compose you-should-use zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
