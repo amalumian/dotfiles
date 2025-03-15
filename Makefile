@@ -1,6 +1,6 @@
-.PHONY: setup nvim zsh tmux aerospace kitty
+.PHONY: setup nvim zsh tmux aerospace
 
-setup: nvim zsh tmux aerospace kitty
+setup: nvim zsh tmux aerospace
 
 nvim:
 	rm -rf ~/.config/nvim
@@ -20,10 +20,6 @@ tmux:
 aerospace:
 	rm -f ~/.aerospace.toml
 	ln -snf $(PWD)/.aerospace.toml ~/
-
-kitty:
-	rm -rf ~/.config/kitty
-	ln -snf $(PWD)/kitty ~/.config/kitty
 
 ssh:
 	mkdir ~/.ssh
