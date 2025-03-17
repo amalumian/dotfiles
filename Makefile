@@ -25,8 +25,8 @@ ssh:
 	mkdir ~/.ssh
 	cd ~/.ssh
 	ssh-keygen -t ed25519 -C "github"
-	ssh-keygen -y -f gitHub
+	ssh-keygen -y -f github
 	touch ~/.ssh/config
 	echo -e "Host *\n  AddKeysToAgent yes\n  UseKeychain yes\n  IdentityFile ~/.ssh/github" >> ~/.ssh/config
 	ssh-add --apple-use-keychain ~/.ssh/github
-	cat ~/.ssh/id_rsa.pub | pbcopy
+	cat ~/.ssh/github.pub | pbcopy
