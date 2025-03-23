@@ -21,8 +21,8 @@ alias sshconfig="nvim ~/.ssh/config"
 alias gitconfig="nvim ~/.gitconfig"
 alias vim="nvim"
 alias amalumian="cd ~/Developer/amalumian/"
-alias www.malumian.dev="cd ~/Developer/malumian/www.malumian.dev/"
-alias finance.malumian.dev="cd ~/Developer/malumian/finance.malumian.dev/"
+alias www.malumian.dev="cd ~/Developer/malumian.dev/www.malumian.dev/"
+alias finance.malumian.dev="cd ~/Developer/malumian.dev/finance.malumian.dev/"
 alias dotfiles="cd ~/Developer/dotfiles/"
 
 # PostgreSQL
