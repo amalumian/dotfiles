@@ -32,4 +32,4 @@ export PATH="/Library/PostgreSQL/17/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 
 # Racket
-export PATH="/Applications/Racket v8.14/bin:$PATH"
+export PATH="/Applications/Racket v8.16/bin:$PATH"
