@@ -8,7 +8,7 @@ export LC_ALL=en_US.UTF-8
 export TERM=screen-256color
 
 # Custom plugins put in ~/.oh-my-zsh/custom/plugins
-plugins=(git asdf vi-mode fzf docker docker-compose you-should-use zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
+plugins=(git vi-mode fzf docker docker-compose you-should-use zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -33,3 +33,8 @@ export PATH="/usr/local/mysql/bin:$PATH"
 
 # Racket
 export PATH="/Applications/Racket v8.16/bin:$PATH"
+
+# asdf
+. "$HOME/.asdf/asdf.sh"
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
