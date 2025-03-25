@@ -1,9 +1,9 @@
--- Toggle Netrw
+-- Toggle oil.nvim
 vim.keymap.set('n', '<leader>e', function()
-  if vim.bo.filetype == 'netrw' then
+  if vim.bo.filetype == 'oil' then
     vim.cmd 'b#'
   else
-    vim.cmd.Ex()
+    vim.cmd 'Oil'
   end
 end)
 
