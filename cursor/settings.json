@@ -1,0 +1,37 @@
+{
+  "window.commandCenter": 1,
+
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+
+  "editor.fontSize": 16,
+  "editor.fontFamily": "Iosevka Nerd Font Mono",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
+  "editor.inlayHints.fontFamily": "Iosevka Nerd Font Mono",
+
+  "editor.tabSize": 2,
+  "editor.linkedEditing": true,
+  "editor.cursorStyle": "block",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.formatOnSave": true,
+  "workbench.sideBar.location": "right",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindings": [
+    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
+    { "before": ["n"], "after": ["n", "z", "z", "z", "v"] },
+    { "before": ["N"], "after": ["N", "z", "z", "z", "v"] },
+    {
+      "before": ["<Esc>"],
+      "commands": ["cancelSelection", "closeFindWidget", ":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    }
+  ]
+}
