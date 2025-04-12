@@ -17,6 +17,7 @@
   "editor.formatOnSave": true,
   "workbench.sideBar.location": "right",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.renderWhitespace": "boundary",
 
   "vim.useSystemClipboard": true,
   "vim.leader": "<space>",
