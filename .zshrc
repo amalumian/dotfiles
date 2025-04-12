@@ -36,3 +36,6 @@ export PATH="/Applications/Racket v8.16/bin:$PATH"
 . "$HOME/.asdf/asdf.sh"
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
+
+# GPG Trouble Shooting
+export GPG_TTY=$(tty)
