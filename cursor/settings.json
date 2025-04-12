@@ -2,6 +2,7 @@
   "window.commandCenter": 1,
 
   "workbench.colorTheme": "Gruvbox Dark Medium",
+  "workbench.iconTheme": "material-icon-theme",
 
   "editor.fontSize": 16,
   "editor.fontFamily": "Iosevka Nerd Font Mono",
@@ -32,6 +33,10 @@
     {
       "before": ["K"],
       "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
     }
   ]
 }
