@@ -23,7 +23,6 @@
   "vim.useSystemClipboard": true,
   "vim.highlightedyank.enable": true,
   "vim.leader": "<space>",
-  "vim.hlsearch": true,
   "vim.normalModeKeyBindings": [
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
