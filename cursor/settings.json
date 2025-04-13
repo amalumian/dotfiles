@@ -9,6 +9,7 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
   "editor.inlayHints.fontFamily": "Iosevka Nerd Font Mono",
+  "workbench.editor.showTabs": "single",
 
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
@@ -20,6 +21,7 @@
   "editor.renderWhitespace": "boundary",
 
   "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
   "vim.leader": "<space>",
   "vim.hlsearch": true,
   "vim.normalModeKeyBindings": [
@@ -28,16 +30,46 @@
     { "before": ["n"], "after": ["n", "z", "z", "z", "v"] },
     { "before": ["N"], "after": ["N", "z", "z", "z", "v"] },
     {
-      "before": ["<Esc>"],
-      "commands": ["cancelSelection", "closeFindWidget", ":nohl"]
-    },
-    {
       "before": ["K"],
       "commands": ["editor.action.showHover"]
     },
     {
       "before": ["g", "r"],
       "commands": ["editor.action.referenceSearch.trigger"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["leader", "d"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["leader", "d", "s"],
+      "commands": ["workbench.action.showAllSymbols"]
+    },
+    {
+      "before": ["leader", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["leader", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["g", "D"],
+      "commands": ["editor.action.revealDeclaration"]
+    },
+    {
+      "before": ["leader", "f"],
+      "commands": ["editor.action.format"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["<C-y>"],
+      "commands": ["acceptSelectedSuggestion"]
     }
   ]
 }
