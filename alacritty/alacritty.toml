@@ -1,0 +1,12 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_material_medium_dark.toml"
+]
+
+[window]
+padding = { x = 2, y = 2 }
+option_as_alt = "OnlyLeft"
+
+[font]
+normal = { family = "Iosevka Nerd Font Mono", style = "Regular" }
+size = 20.0
