@@ -20,6 +20,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "boundary",
 
+  "git.enableCommitSigning": true,
+
   "vim.useSystemClipboard": true,
   "vim.highlightedyank.enable": true,
   "vim.leader": "<space>",
