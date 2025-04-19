@@ -21,6 +21,10 @@ aerospace:
 	rm -f ~/.aerospace.toml
 	ln -snf $(PWD)/.aerospace.toml ~/
 
+alacritty:
+	rm -rf ~/.config/alacritty
+	ln -snf $(PWD)/alacritty ~/.config/alacritty
+
 cursor:
 	rm -f "~/Library/Application Support/Cursor/User/keybindings.json"
 	ln -snf $(PWD)/cursor/keybindings.json "~/Library/Application Support/Cursor/User/"
