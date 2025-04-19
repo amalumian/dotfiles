@@ -21,6 +21,18 @@ aerospace:
 	rm -f ~/.aerospace.toml
 	ln -snf $(PWD)/.aerospace.toml ~/
 
+cursor:
+	rm -f "~/Library/Application Support/Cursor/User/keybindings.json"
+	ln -snf $(PWD)/cursor/keybindings.json "~/Library/Application Support/Cursor/User/"
+	rm -f "~/Library/Application Support/Cursor/User/settings.json"
+	ln -snf $(PWD)/cursor/settings.json "~/Library/Application Support/Cursor/User/"
+
+zed:
+	rm -f ~/.config/zed/settings.json
+	ln -snf $(PWD)/zed/settings.json ~/.config/zed/
+	rm -f ~/.config/zed/keymap.json
+	ln -snf $(PWD)/zed/keymap.json ~/.config/zed/
+
 ssh:
 	mkdir ~/.ssh
 	cd ~/.ssh
