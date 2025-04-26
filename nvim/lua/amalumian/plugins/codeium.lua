@@ -2,7 +2,6 @@ return {
   'Exafunction/codeium.nvim',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'hrsh7th/nvim-cmp',
   },
   cmd = 'Codeium',
   event = 'InsertEnter',
@@ -11,7 +10,6 @@ return {
     enable_cmp_source = false,
     virtual_text = {
       enabled = true,
-      idle_delay = 25,
       key_bindings = {
         accept = '<Tab>',
         accept_word = false,
