@@ -8,5 +8,5 @@ padding = { x = 2, y = 2 }
 option_as_alt = "OnlyLeft"
 
 [font]
-normal = { family = "Iosevka Nerd Font Mono", style = "Regular" }
-size = 20.0
+normal = { family = "Iosevka Nerd Font Mono" }
+size = 22.0
