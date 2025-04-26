@@ -11,7 +11,7 @@ return {
     enable_cmp_source = false,
     virtual_text = {
       enabled = true,
-      idle_delay = 0,
+      idle_delay = 25,
       key_bindings = {
         accept = '<Tab>',
         accept_word = false,
