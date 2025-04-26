@@ -14,7 +14,7 @@ return {
       idle_delay = 25,
       key_bindings = {
         accept = '<Tab>',
-        accept_word = '<C-[>',
+        accept_word = false,
         accept_line = '<C-]>',
         next = '<M-]>',
         prev = '<M-[>',
