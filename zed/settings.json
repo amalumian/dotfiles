@@ -7,25 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "version": "2"
-  },
-
   "project_panel": {
     "dock": "right",
     "git_status": true
   },
   "ui_font_size": 16,
   "buffer_font_size": 16,
+  "icon_theme": "Material Icon Theme",
   "theme": {
-    "mode": "system",
     "light": "Gruvbox Dark",
     "dark": "Gruvbox Dark"
   },
@@ -34,7 +23,6 @@
       "enabled": true
     }
   },
-
   "vim_mode": true,
   "vim": {
     "use_system_clipboard": "always"
