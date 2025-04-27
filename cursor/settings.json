@@ -2,7 +2,6 @@
   "window.commandCenter": 1,
   "cursor.cpp.enablePartialAccepts": true,
 
-  "workbench.colorTheme": "Gruvbox Dark Medium",
   "workbench.iconTheme": "material-icon-theme",
 
   "editor.fontSize": 16,
