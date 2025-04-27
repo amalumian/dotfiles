@@ -4,7 +4,7 @@ return {
     'nvim-lua/plenary.nvim',
   },
   cmd = 'Codeium',
-  event = 'InsertEnter',
+  event = 'BufEnter',
   build = ':Codeium Auth',
   opts = {
     enable_cmp_source = false,
