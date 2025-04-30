@@ -33,10 +33,6 @@
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
     { "before": ["n"], "after": ["n", "z", "z", "z", "v"] },
     { "before": ["N"], "after": ["N", "z", "z", "z", "v"] },
-    {
-      "before": ["leader", "f"],
-      "commands": ["editor.action.format"]
-    },
     // Hover
     {
       "before": ["K"],
