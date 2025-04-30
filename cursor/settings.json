@@ -2,7 +2,7 @@
   "window.commandCenter": 1,
   "cursor.cpp.enablePartialAccepts": true,
 
-  "workbench.colorTheme": "Visual Studio Light - C++",
+  "workbench.colorTheme": "Visual Studio Light",
   "workbench.iconTheme": "material-icon-theme",
 
   "editor.fontSize": 14,
@@ -11,6 +11,7 @@
   "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
   "editor.inlayHints.fontFamily": "Iosevka Nerd Font Mono",
   "workbench.editor.showTabs": "single",
+  "workbench.editor.revealIfOpen": true,
 
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
@@ -27,6 +28,7 @@
   "vim.highlightedyank.enable": true,
   "vim.leader": "<space>",
   "vim.normalModeKeyBindings": [
+    // Centering
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
     { "before": ["n"], "after": ["n", "z", "z", "z", "v"] },
@@ -35,10 +37,12 @@
       "before": ["leader", "f"],
       "commands": ["editor.action.format"]
     },
+    // Hover
     {
       "before": ["K"],
       "commands": ["editor.action.showHover"]
     },
+    // LSP
     {
       "before": ["g", "r"],
       "commands": ["editor.action.referenceSearch.trigger"]
@@ -54,6 +58,43 @@
     {
       "before": ["g", "c", "a"],
       "commands": ["editor.action.quickFix"]
+    },
+    // Harpoon
+    {
+      "before": ["<C-e>"],
+      "commands": ["vscode-harpoon.editEditors"]
+    },
+    {
+      "before": ["<leader>", "<C-h>"],
+      "commands": ["vscode-harpoon.addEditor1"]
+    },
+    {
+      "before": ["<leader>", "<C-j>"],
+      "commands": ["vscode-harpoon.addEditor2"]
+    },
+    {
+      "before": ["<leader>", "<C-k>"],
+      "commands": ["vscode-harpoon.addEditor3"]
+    },
+    {
+      "before": ["<leader>", "<C-l>"],
+      "commands": ["vscode-harpoon.addEditor4"]
+    },
+    {
+      "before": ["<C-h>"],
+      "commands": ["vscode-harpoon.gotoEditor1"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["vscode-harpoon.gotoEditor2"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["vscode-harpoon.gotoEditor3"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["vscode-harpoon.gotoEditor4"]
     }
   ]
 }
