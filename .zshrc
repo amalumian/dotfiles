@@ -39,4 +39,3 @@ autoload -Uz compinit && compinit
 
 # GPG Trouble Shooting
 export GPG_TTY=$(tty)
-
