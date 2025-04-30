@@ -9,7 +9,6 @@ ginfuru.ginfuru-vscode-jekyll-syntax
 ginfuru.vscode-jekyll-snippets
 github.vscode-pull-request-github
 golang.go
-jdinhlife.gruvbox
 jock.svg
 kisstkondoros.vscode-gutter-preview
 ms-azuretools.vscode-docker
@@ -23,10 +22,10 @@ ms-vscode.remote-explorer
 neilding.language-liquid
 pkief.material-icon-theme
 redhat.vscode-yaml
-sainnhe.gruvbox-material
 shd101wyy.markdown-preview-enhanced
 sissel.shopify-liquid
 sumneko.lua
+tobias-z.vscode-harpoon
 tomoki1207.pdf
 usernamehw.errorlens
 visualstudioexptteam.intellicode-api-usage-examples
