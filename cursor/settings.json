@@ -17,7 +17,7 @@
   "editor.linkedEditing": true,
   "editor.cursorStyle": "block",
   "editor.cursorSmoothCaretAnimation": "on",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "workbench.sideBar.location": "right",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "boundary",
