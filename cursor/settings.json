@@ -2,11 +2,12 @@
   "window.commandCenter": 1,
   "cursor.cpp.enablePartialAccepts": true,
 
+  "workbench.colorTheme": "Visual Studio Light - C++",
   "workbench.iconTheme": "material-icon-theme",
 
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.fontFamily": "Iosevka Nerd Font Mono",
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
   "editor.inlayHints.fontFamily": "Iosevka Nerd Font Mono",
   "workbench.editor.showTabs": "single",
@@ -15,7 +16,7 @@
   "editor.linkedEditing": true,
   "editor.cursorStyle": "block",
   "editor.cursorSmoothCaretAnimation": "on",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "workbench.sideBar.location": "right",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "boundary",
@@ -31,6 +32,10 @@
     { "before": ["n"], "after": ["n", "z", "z", "z", "v"] },
     { "before": ["N"], "after": ["N", "z", "z", "z", "v"] },
     {
+      "before": ["leader", "f"],
+      "commands": ["editor.action.format"]
+    },
+    {
       "before": ["K"],
       "commands": ["editor.action.showHover"]
     },
@@ -43,34 +48,12 @@
       "commands": ["editor.action.goToImplementation"]
     },
     {
-      "before": ["leader", "d"],
-      "commands": ["editor.action.goToTypeDefinition"]
-    },
-    {
-      "before": ["leader", "d", "s"],
-      "commands": ["workbench.action.showAllSymbols"]
-    },
-    {
-      "before": ["leader", "r", "n"],
+      "before": ["g", "r", "n"],
       "commands": ["editor.action.rename"]
     },
     {
-      "before": ["leader", "c", "a"],
+      "before": ["g", "c", "a"],
       "commands": ["editor.action.quickFix"]
-    },
-    {
-      "before": ["g", "D"],
-      "commands": ["editor.action.revealDeclaration"]
-    },
-    {
-      "before": ["leader", "f"],
-      "commands": ["editor.action.format"]
-    }
-  ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["<C-y>"],
-      "commands": ["acceptSelectedSuggestion"]
     }
   ]
 }
