@@ -26,14 +26,14 @@ alacritty:
 	ln -snf $(PWD)/alacritty ~/.config/alacritty
 
 ghostty:
-	rm -f "~/Library/Application Support/com.mitchellh.ghostty/config"
-	ln -snf $(PWD)/ghostty/config "~/Library/Application Support/com.mitchellh.ghostty/"
+	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
+	ln -snf $(PWD)/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
 
 cursor:
-	rm -f "~/Library/Application Support/Cursor/User/keybindings.json"
-	ln -snf $(PWD)/cursor/keybindings.json "~/Library/Application Support/Cursor/User/"
-	rm -f "~/Library/Application Support/Cursor/User/settings.json"
-	ln -snf $(PWD)/cursor/settings.json "~/Library/Application Support/Cursor/User/"
+	rm -f ~/Library/Application\ Support/Cursor/User/keybindings.json
+	ln -snf $(PWD)/cursor/keybindings.json ~/Library/Application\ Support/Cursor/User/
+	rm -f ~/Library/Application\ Support/Cursor/User/settings.json
+	ln -snf $(PWD)/cursor/settings.json ~/Library/Application\ Support/Cursor/User/
 
 zed:
 	rm -f ~/.config/zed/settings.json
