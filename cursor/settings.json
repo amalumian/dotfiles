@@ -13,7 +13,7 @@
   "editor.fontFamily": "Iosevka Nerd Font Mono",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
 
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
