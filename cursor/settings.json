@@ -2,17 +2,18 @@
   "window.commandCenter": 1,
   "cursor.cpp.enablePartialAccepts": true,
 
+  "window.zoomLevel": 3,
+
   "workbench.colorTheme": "Default Light+",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.showTabs": "single",
+  "workbench.editor.revealIfOpen": true,
 
-  "window.zoomLevel": 3,
   "editor.fontSize": 14,
   "editor.fontFamily": "Iosevka Nerd Font Mono",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
-  "editor.inlayHints.fontFamily": "Iosevka Nerd Font Mono",
-  "workbench.editor.showTabs": "single",
-  "workbench.editor.revealIfOpen": true,
+  "editor.fontLigatures": true,
 
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
