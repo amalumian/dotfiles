@@ -6,8 +6,11 @@
 
   "workbench.colorTheme": "Default Light+",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.showTabs": "single",
   "workbench.editor.revealIfOpen": true,
+
+  "workbench.editor.showTabs": "single",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
 
   "editor.fontSize": 14,
   "editor.fontFamily": "Iosevka Nerd Font Mono",
@@ -23,10 +26,19 @@
   "workbench.sideBar.location": "right",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "none",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+    "source.sortImports": "explicit"
+  },
+
+  "editor.rulers": [100],
 
   "git.enableCommitSigning": true,
 
+  "vim.easymotion": true,
   "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.incsearch": true,
   "vim.highlightedyank.enable": true,
   "vim.leader": "<space>",
   "vim.normalModeKeyBindings": [
