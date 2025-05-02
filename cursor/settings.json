@@ -165,5 +165,16 @@
       "before": ["<S-k>"],
       "commands": ["editor.action.moveLinesUpAction"]
     }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Fix undo, redo
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
+    }
   ]
 }
