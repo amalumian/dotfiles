@@ -1,47 +1,62 @@
 {
+  // ========== Cursor ==========
   "window.commandCenter": 1,
   "cursor.cpp.enablePartialAccepts": true,
 
+  // ========== Visuals ==========
   "window.zoomLevel": 3,
-
+  "window.density.editorTabHeight": "compact",
   "workbench.colorTheme": "Default Light+",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.revealIfOpen": true,
-
-  "workbench.editor.showTabs": "single",
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-
+  "terminal.integrated.cursorStyle": "block",
+  "editor.cursorStyle": "block",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "blink",
+  "terminal.integrated.cursorBlinking": true,
+  "editor.lineNumbers": "relative",
   "editor.fontSize": 14,
   "editor.fontFamily": "Iosevka Nerd Font Mono",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
   "editor.fontLigatures": false,
+  "workbench.editor.showTabs": "single",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.revealIfOpen": true,
+  "workbench.sideBar.location": "right",
+  "workbench.editor.closeOnFileDelete": true,
+  "editor.rulers": [100],
+  "explorer.compactFolders": false,
+  "breadcrumbs.enabled": false,
 
+  // ========== Editor ==========
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
-  "editor.cursorStyle": "block",
-  "editor.cursorSmoothCaretAnimation": "on",
   "editor.formatOnSave": true,
-  "workbench.sideBar.location": "right",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "trailing",
   "editor.codeActionsOnSave": {
     "source.organizeImports": "always",
     "source.sortImports": "explicit"
   },
 
-  "editor.rulers": [100],
-
+  // ========== Git ==========
   "git.enableCommitSigning": true,
 
+  // ========== VIM ==========
   "vim.easymotion": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
   "vim.incsearch": true,
   "vim.highlightedyank.enable": true,
   "vim.leader": "<space>",
   "vim.normalModeKeyBindings": [
+    // Remove highlight
+    {
+      "before": ["<C-[>"],
+      "commands": [":nohl"]
+    },
     // Centering
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
@@ -54,12 +69,28 @@
     },
     // LSP
     {
-      "before": ["g", "r"],
-      "commands": ["editor.action.referenceSearch.trigger"]
+      "before": ["g", "p", "d"],
+      "commands": ["editor.action.peekDefinition"]
     },
     {
       "before": ["g", "i"],
       "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "p", "i"],
+      "commands": ["editor.action.peekImplementation"]
+    },
+    {
+      "before": ["g", "D"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["g", "p", "D"],
+      "commands": ["editor.action.peekTypeDefinition"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
     },
     {
       "before": ["g", "r", "n"],
@@ -68,6 +99,23 @@
     {
       "before": ["g", "c", "a"],
       "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    // Search
+    {
+      "before": ["<leader>", "s", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "s", "g"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "s", "e"],
+      "commands": ["workbench.action.showAllEditors"]
     },
     // Harpoon
     {
@@ -105,6 +153,17 @@
     {
       "before": ["<C-l>"],
       "commands": ["vscode-harpoon.gotoEditor4"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Move lines
+    {
+      "before": ["<S-j>"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["<S-k>"],
+      "commands": ["editor.action.moveLinesUpAction"]
     }
   ]
 }

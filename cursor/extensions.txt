@@ -1,4 +1,6 @@
 2guys1account.quackrack-cursor
+antfu.browse-lite
+antfu.vite
 bradlc.vscode-tailwindcss
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
@@ -14,6 +16,7 @@ formulahendry.auto-rename-tag
 ginfuru.ginfuru-vscode-jekyll-syntax
 ginfuru.vscode-jekyll-snippets
 github.remotehub
+github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
 ibm.output-colorizer
@@ -45,6 +48,7 @@ tyriar.lorem-ipsum
 usernamehw.errorlens
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode
+vitest.explorer
 vscodevim.vim
 wayou.vscode-todo-highlight
 wix.vscode-import-cost
