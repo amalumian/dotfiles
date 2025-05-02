@@ -12,5 +12,17 @@
   {
     "key": "cmd+w",
     "command": "workbench.action.closeEditorsInGroup"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "acceptSelectedSuggestion"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "acceptSelectedCodeAction"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "workbench.action.acceptSelectedQuickOpenItem"
   }
 ]
