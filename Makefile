@@ -14,6 +14,7 @@ zsh:
 	ln -snf $(PWD)/.zshrc ~/
 
 tmux:
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	rm -f ~/.tmux.conf
 	ln -snf $(PWD)/.tmux.conf ~/
 
