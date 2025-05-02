@@ -32,7 +32,7 @@
   // ========== Editor ==========
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "trailing",
   "editor.codeActionsOnSave": {
@@ -52,10 +52,24 @@
   "vim.highlightedyank.enable": true,
   "vim.leader": "<space>",
   "vim.normalModeKeyBindings": [
+    // Fix undo, redo
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
+    },
     // Remove highlight
     {
       "before": ["<C-[>"],
       "commands": [":nohl"]
+    },
+    // Format
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
     },
     // Centering
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
@@ -164,17 +178,6 @@
     {
       "before": ["<S-k>"],
       "commands": ["editor.action.moveLinesUpAction"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    // Fix undo, redo
-    {
-      "before": ["u"],
-      "commands": ["undo"]
-    },
-    {
-      "before": ["<C-r>"],
-      "commands": ["redo"]
     }
   ]
 }
