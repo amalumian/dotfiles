@@ -6,7 +6,7 @@
   // ========== Visuals ==========
   "window.zoomLevel": 3,
   "window.density.editorTabHeight": "compact",
-  "workbench.colorTheme": "Default Light+",
+  "workbench.colorTheme": "Gruvbox Dark Medium",
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.cursorStyle": "block",
   "editor.cursorStyle": "block",

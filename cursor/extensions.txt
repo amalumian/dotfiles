@@ -20,6 +20,7 @@ github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
 ibm.output-colorizer
+jdinhlife.gruvbox
 jock.svg
 kisstkondoros.vscode-gutter-preview
 mhutchie.git-graph
