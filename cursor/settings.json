@@ -39,6 +39,7 @@
     "source.organizeImports": "always",
     "source.sortImports": "explicit"
   },
+  "editor.acceptSuggestionOnCommitCharacter": false,
 
   // ========== Git ==========
   "git.enableCommitSigning": true,
