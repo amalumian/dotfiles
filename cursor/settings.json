@@ -35,10 +35,6 @@
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "trailing",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always",
-    "source.sortImports": "explicit"
-  },
   "editor.acceptSuggestionOnCommitCharacter": false,
 
   // ========== Git ==========
