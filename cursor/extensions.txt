@@ -1,4 +1,3 @@
-2guys1account.quackrack-cursor
 antfu.browse-lite
 antfu.vite
 bradlc.vscode-tailwindcss
@@ -34,6 +33,7 @@ ms-vscode.cpptools
 ms-vscode.makefile-tools
 ms-vscode.remote-explorer
 ms-vscode.remote-repositories
+mvllow.rose-pine
 naumovs.color-highlight
 neilding.language-liquid
 pkief.material-icon-theme
