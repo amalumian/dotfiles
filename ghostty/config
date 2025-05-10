@@ -4,3 +4,4 @@ font-size = 26
 cursor-style = block
 macos-option-as-alt = true
 macos-titlebar-style=transparent
+mouse-hide-while-typing = true
