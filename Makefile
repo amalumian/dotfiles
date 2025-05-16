@@ -1,6 +1,6 @@
-.PHONY: setup asdf aerospace cursor cursor-extensions font ghostty git gnupg homebrew npm nvim ssh tmux zsh
+.PHONY: setup asdf aerospace cursor cursor-extensions font ghostty git gnupg homebrew npm nvim ssh system tmux zsh
 
-setup: asdf aerospace cursor cursor-extensions font ghostty git gnupg homebrew npm nvim ssh tmux zsh
+setup: asdf aerospace cursor cursor-extensions font ghostty git gnupg homebrew npm nvim ssh system tmux zsh
 
 aerospace:
 	rm -f ~/.aerospace.toml
@@ -70,6 +70,12 @@ ssh:
 	echo -e "Host *\n  AddKeysToAgent yes\n  UseKeychain yes\n  IdentityFile ~/.ssh/github" >> ~/.ssh/config
 	ssh-add --apple-use-keychain ~/.ssh/github
 	cat ~/.ssh/github.pub | pbcopy
+
+system:
+	defaults write com.apple.dock autohide-delay -float 0
+	killall Dock
+	defaults write -g NSWindowShouldDragOnGesture -bool true
+	defaults write -g ApplePressAndHoldEnabled -bool false
 
 tmux:
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
