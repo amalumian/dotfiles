@@ -33,6 +33,10 @@ cursor-extensions:
 		cursor --install-extension "$$extension"; \
 	done < $(PWD)/cursor/extensions.txt
 
+font:
+	brew tap homebrew/cask-fonts
+	brew install --cask font-iosevka-nerd-font
+
 ghostty:
 	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
 	ln -snf $(PWD)/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
