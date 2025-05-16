@@ -1,34 +1,26 @@
-.PHONY: setup nvim zsh tmux aerospace
+.PHONY: setup asdf aerospace cursor cursor-extensions ghostty git gnupg homebrew npm nvim ssh tmux zsh
 
-setup: nvim zsh tmux aerospace
-
-nvim:
-	rm -rf ~/.config/nvim
-	rm -rf ~/.local/share/nvim
-	rm -rf ~/.local/state/nvim
-	rm -rf ~/.cache/nvim
-	ln -snf $(PWD)/nvim ~/.config/nvim
-
-zsh:
-	rm -f ~/.zshrc
-	ln -snf $(PWD)/.zshrc ~/
-
-tmux:
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-	rm -f ~/.tmux.conf
-	ln -snf $(PWD)/.tmux.conf ~/
+setup: asdf aerospace cursor cursor-extensions ghostty git gnupg homebrew npm nvim ssh tmux zsh
 
 aerospace:
 	rm -f ~/.aerospace.toml
-	ln -snf $(PWD)/.aerospace.toml ~/
+	ln -snf $(PWD)/aerospace/.aerospace.toml ~/
 
-alacritty:
-	rm -rf ~/.config/alacritty
-	ln -snf $(PWD)/alacritty ~/.config/alacritty
-
-ghostty:
-	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
-	ln -snf $(PWD)/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
+asdf:
+	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.15.0
+	. ~/.asdf/asdf.sh
+	asdf plugin add nodejs
+	asdf plugin add golang
+	asdf plugin add lua
+	asdf plugin add ruby
+	asdf install nodejs latest
+	asdf install golang latest
+	asdf install lua latest
+	asdf install ruby latest
+	asdf global nodejs latest
+	asdf global golang latest
+	asdf global lua latest
+	asdf global ruby latest
 
 cursor:
 	rm -f ~/Library/Application\ Support/Cursor/User/keybindings.json
@@ -36,11 +28,34 @@ cursor:
 	rm -f ~/Library/Application\ Support/Cursor/User/settings.json
 	ln -snf $(PWD)/cursor/settings.json ~/Library/Application\ Support/Cursor/User/
 
-zed:
-	rm -f ~/.config/zed/settings.json
-	ln -snf $(PWD)/zed/settings.json ~/.config/zed/
-	rm -f ~/.config/zed/keymap.json
-	ln -snf $(PWD)/zed/keymap.json ~/.config/zed/
+cursor-extensions:
+	while read extension; do \
+		cursor --install-extension "$$extension"; \
+	done < $(PWD)/cursor/extensions.txt
+
+ghostty:
+	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
+	ln -snf $(PWD)/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
+
+git:
+	cp -R $(PWD)/git/. ~/
+
+gnupg:
+	cp -R $(PWD)/gnupg/. ~/.gnupg/
+
+homebrew:
+	xargs brew install < $(PWD)/homebrew/formulae.txt
+	xargs brew install --cask < $(PWD)/homebrew/casks.txt
+
+npm:
+	xargs npm install -g < $(PWD)/npm/global-packages.txt
+
+nvim:
+	rm -rf ~/.config/nvim
+	rm -rf ~/.local/share/nvim
+	rm -rf ~/.local/state/nvim
+	rm -rf ~/.cache/nvim
+	ln -snf $(PWD)/nvim ~/.config/nvim
 
 ssh:
 	mkdir ~/.ssh
@@ -51,3 +66,12 @@ ssh:
 	echo -e "Host *\n  AddKeysToAgent yes\n  UseKeychain yes\n  IdentityFile ~/.ssh/github" >> ~/.ssh/config
 	ssh-add --apple-use-keychain ~/.ssh/github
 	cat ~/.ssh/github.pub | pbcopy
+
+tmux:
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	rm -f ~/.tmux.conf
+	ln -snf $(PWD)/tmux/.tmux.conf ~/
+
+zsh:
+	rm -f ~/.zshrc
+	ln -snf $(PWD)/zsh/.zshrc ~/

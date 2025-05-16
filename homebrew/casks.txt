@@ -1,0 +1,7 @@
+nikitabobko/tap/aerospace
+karabiner-elements
+flameshot
+stats
+keycastr
+monitorcontrol
+hiddenbar
