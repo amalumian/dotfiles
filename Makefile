@@ -1,6 +1,6 @@
-.PHONY: setup asdf aerospace cursor cursor-extensions ghostty git gnupg homebrew npm nvim ssh tmux zsh
+.PHONY: setup asdf aerospace cursor cursor-extensions font ghostty git gnupg homebrew npm nvim ssh tmux zsh
 
-setup: asdf aerospace cursor cursor-extensions ghostty git gnupg homebrew npm nvim ssh tmux zsh
+setup: asdf aerospace cursor cursor-extensions font ghostty git gnupg homebrew npm nvim ssh tmux zsh
 
 aerospace:
 	rm -f ~/.aerospace.toml
