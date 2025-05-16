@@ -20,15 +20,13 @@ fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
 
 # Aliases
-alias zshconfig="nvim ~/.zshrc"
-alias zshsource="source ~/.zshrc"
-alias ohmyzsh="cd ~/.oh-my-zsh"
-alias sshhome="cd ~/.ssh"
-alias sshconfig="nvim ~/.ssh/config"
-alias gitconfig="nvim ~/.gitconfig"
+alias zshconfig="nvim $HOME/.zshrc"
+alias zshsource="source $HOME/.zshrc"
+alias sshconfig="nvim $HOME/.ssh/config"
+alias gitconfig="nvim $HOME/.gitconfig"
 alias vim="nvim"
-alias www.malumian.dev="cd ~/Developer/malumian.dev/www.malumian.dev/"
-alias dotfiles="cd ~/Developer/dotfiles/"
+alias www.malumian.dev="cd $HOME/Developer/malumian.dev/www.malumian.dev/"
+alias dotfiles="cd $HOME/Developer/dotfiles/"
 
 # Theme
 ZSH_THEME="robbyrussell"
