@@ -24,7 +24,6 @@ return {
           local harpoon = require 'harpoon'
           harpoon.ui:toggle_quick_menu(harpoon:list())
         end,
-        desc = 'Harpoon Quick Menu',
       },
       {
         '<C-h>',
@@ -55,28 +54,24 @@ return {
         function()
           require('harpoon'):list():replace_at(1)
         end,
-        desc = 'Replace Harpoon at File 1',
       },
       {
         '<leader><C-j>',
         function()
           require('harpoon'):list():replace_at(2)
         end,
-        desc = 'Replace Harpoon at File 2',
       },
       {
         '<leader><C-k>',
         function()
           require('harpoon'):list():replace_at(3)
         end,
-        desc = 'Replace Harpoon at File 3',
       },
       {
         '<leader><C-l>',
         function()
           require('harpoon'):list():replace_at(4)
         end,
-        desc = 'Replace Harpoon at File 4',
       },
     }
 
