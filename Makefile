@@ -45,7 +45,20 @@ git:
 	cp -R $(PWD)/git/. ~/
 
 gnupg:
+	mkdir -p ~/.gnupg
 	cp -R $(PWD)/gnupg/. ~/.gnupg/
+	@echo "Starting GPG key generation. Please follow the prompts:"
+	@echo "  Kind of key: RSA and RSA"
+	@echo "  Keysize: 4096"
+	@echo "  Expiration: 0 (does not expire)"
+	@gpg --full-generate-key
+	@echo "Key generated, now configuring git..."
+	@KEYID=$$(gpg --list-secret-keys --keyid-format LONG | grep '^sec' | awk '{print $$2}' | cut -d'/' -f2); \
+	@echo "KEYID: $$KEYID"; \
+	@echo "Public key copied to clipboard"; \
+	gpg --armor --export $$KEYID | pbcopy; \
+	git config --global user.signingkey $$KEYID; \
+	@echo "Git configured to sign commits with key $$KEYID"
 
 homebrew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -65,13 +78,15 @@ nvim:
 
 ssh:
 	mkdir -p ~/.ssh
-	cd ~/.ssh
-	ssh-keygen -t ed25519 -C "github"
-	ssh-keygen -y -f github
-	touch ~/.ssh/config
-	echo -e "Host *\n  AddKeysToAgent yes\n  UseKeychain yes\n  IdentityFile ~/.ssh/github" >> ~/.ssh/config
+	@if [ -f ~/.ssh/config ]; then \
+		cp ~/.ssh/config ~/.ssh/config.bak.$$(date +%Y%m%d%H%M%S); \
+		echo "Backup of existing ~/.ssh/config saved."; \
+	fi
+	cp $(PWD)/ssh/config ~/.ssh/config
+	ssh-keygen -t ed25519 -C "github" -f ~/.ssh/github
 	ssh-add --apple-use-keychain ~/.ssh/github
-	cat ~/.ssh/github.pub | pbcopy
+	pbcopy < ~/.ssh/github.pub
+	@echo "SSH key generated, added to keychain and public key copied to clipboard."
 
 system:
 	defaults write com.apple.dock autohide-delay -float 0
