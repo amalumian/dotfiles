@@ -8,18 +8,18 @@ aerospace:
 
 asdf:
 	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.15.0
-	. ~/.asdf/asdf.sh
-	asdf plugin add nodejs
-	asdf plugin add golang
-	asdf plugin add lua
-	asdf plugin add ruby
-	asdf install nodejs latest
-	asdf install golang latest
-	asdf install lua latest
-	asdf install ruby latest
-	asdf global nodejs latest
-	asdf global golang latest
-	asdf global lua latest
+	. ~/.asdf/asdf.sh && \
+	asdf plugin add nodejs && \
+	asdf plugin add golang && \
+	asdf plugin add lua && \
+	asdf plugin add ruby && \
+	asdf install nodejs latest && \
+	asdf install golang latest && \
+	asdf install lua latest && \
+	asdf install ruby latest && \
+	asdf global nodejs latest && \
+	asdf global golang latest && \
+	asdf global lua latest && \
 	asdf global ruby latest
 
 cursor:
@@ -48,7 +48,9 @@ gnupg:
 	cp -R $(PWD)/gnupg/. ~/.gnupg/
 
 homebrew:
-	xargs brew install < $(PWD)/homebrew/formulae.txt
+	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	eval "$$(/opt/homebrew/bin/brew shellenv)" && \
+	xargs brew install < $(PWD)/homebrew/formulae.txt && \
 	xargs brew install --cask < $(PWD)/homebrew/casks.txt
 
 npm:
@@ -62,7 +64,7 @@ nvim:
 	ln -snf $(PWD)/nvim ~/.config/nvim
 
 ssh:
-	mkdir ~/.ssh
+	mkdir -p ~/.ssh
 	cd ~/.ssh
 	ssh-keygen -t ed25519 -C "github"
 	ssh-keygen -y -f github
@@ -84,4 +86,6 @@ tmux:
 
 zsh:
 	rm -f ~/.zshrc
+	rm -f ~/.zprofile
 	ln -snf $(PWD)/zsh/.zshrc ~/
+	ln -snf $(PWD)/zsh/.zprofile ~/
