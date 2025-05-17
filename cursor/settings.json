@@ -38,6 +38,7 @@
 
   // ========== Git ==========
   "git.enableCommitSigning": true,
+  "git.confirmSync": false,
 
   // ========== VIM ==========
   "vim.easymotion": true,
