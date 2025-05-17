@@ -13,3 +13,150 @@ make setup
 - [ ] After completing the previous two, I can delete the "System Preferences" and "Apps" sections in "Setup" page of my website.
 - [ ] Setup page can be renamed to "Gear" and contain info and photos about my tech gear.
 - [ ] Link to this dotfiles can be moved to "About" page of my website.
+
+## References for To Do
+
+### System Preferences
+
+- Appearance
+  - Show scroll bars: Always
+  - Click in the scroll bar to: Jump to the spot that's clicked
+- Apple Intelligence & Siri: false
+- Control Center
+  - Clock: Flash the time separators
+  - Automatically hide and show the menu bar: Always
+- Desktop & Dock
+  - Position on screen: Left
+  - Minimize windows using: Scale Effect
+  - Animate opening applications: False
+  - Automatically hide and show the Dock: True
+  - Ask to keep changes when closing documents: True
+  - Automatically rearrange Spaces based on most recent use: False
+  - Group windows by application: True
+  - Prefer tabs when opening documents: Never
+- Display
+  - Automatically adjust brightness: False
+  - Resolution: 1280x800
+- Lock Screen
+  - Show 24-hour time: False
+- Trackpad
+  - Tracking speed: Max
+  - Click: Light
+  - Dragging style: Three Finger Drag
+  - Tap to click: On
+  - Notification center: Off
+- Keyboard
+  - Key repeat rate: Max
+  - Delay until repeat: Max
+  - Adjust keyboard brightness in low light: False
+  - Caps Lock: Control
+  - Spotlight: Off
+  - Press Globe key to: Do Nothing
+  - Keyboard navigation: True
+  - Input Sources: English (US), Russian (PC)
+  - Correct spelling automatically: False
+  - Capitalize words automatically: False
+  - Show inline predictive text: False
+  - Add period with double-space: False
+  - Use smart quotes and dashes: False
+  - Dictation: True
+- Finder
+  - New Finder windows show: Home Directory
+  - Show all filename extensions: True
+  - Remove items from the Trash: After 30 days
+  - Show Path Bar: True
+  - Show Status Bar: True
+  - Create "Developer" directory in home directory
+  - Create "Work" directory in home directory
+
+### Apps
+
+#### Browser
+- Firefox
+- Google Chrome
+- Safari
+
+#### Cloud
+- Dropbox
+- Google Drive
+- One Drive
+
+#### Communication
+- Discord
+- Microsoft Teams
+- Signal
+- Slack
+- Telegram
+- Zoom
+
+#### Games
+- Battle.net
+- League of Legends
+- Steam
+
+#### Notes
+- Notion
+- Obsidian
+- Todoist
+
+#### Other
+- Affinity Photo
+- AltTab
+  - Appearance: App Icons
+- AppCleaner
+- Audacity
+- balenaEtcher
+- Command X
+- DeepL
+  - Excluded apps: All related to programming
+- GIMP
+- IINA
+- KeepingYouAwake
+- KeyboardCleanTool
+- Kindle
+- Logi Options+
+- OBS
+- Raycast
+  - Hotkey: CMD + Space
+  - Navigation Bindings: Vim style
+  - Clipboard History: CMD + Shift + C
+- Spark
+- Spotify
+- Yandex Music
+- Transmission
+- Karabiner Elements
+- Flameshot
+- Stats
+- Keycastr
+- Aerospace
+- Hiddenbar
+
+#### Programming
+- Cursor
+- DBeaver
+- Docker
+- Excalidraw (PWA)
+- Figma
+- FileZilla
+- Ghostty
+- ImageOptim
+- PostgreSQL
+- Postman
+- Racket
+- VS Code
+- WebStorm
+
+#### VM
+- Multipass
+- VirtualBox
+
+#### VPN
+- FoXray
+- Outline
+- Outline Manager
+- Streisand
+- WireGuard
+
+#### Wallets
+- Electrum
+- Exodus
