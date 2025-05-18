@@ -5,7 +5,7 @@
 
   // ========== Visuals ==========
   "window.zoomLevel": 3,
-  "window.density.editorTabHeight": "default",
+  "window.density.editorTabHeight": "compact",
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.cursorStyle": "block",
   "editor.cursorStyle": "block",
