@@ -124,9 +124,10 @@
       "before": ["<leader>", "s", "g"],
       "commands": ["workbench.action.findInFiles"]
     },
+    // Quick open
     {
-      "before": ["<leader>", "s", "e"],
-      "commands": ["workbench.action.showAllEditors"]
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.quickOpen"]
     },
     // Harpoon
     {
