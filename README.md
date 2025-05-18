@@ -33,6 +33,13 @@ make setup
   - Automatically rearrange Spaces based on most recent use: False
   - Group windows by application: True
   - Prefer tabs when opening documents: Never
+  - Drag windows to screen edges to tile: False
+  - Drag windows to menu bar to fill screen: False
+  - Hold Option key while dragging windows to tile: False
+  - Tiled windows have margins: False
+  - Stage Manager: False
+  - Show recent apps in Stage Manager: False
+  - Click wallpaper to reveal desktop: Only in Stage Manager
 - Display
   - Automatically adjust brightness: False
   - Resolution: 1280x800
