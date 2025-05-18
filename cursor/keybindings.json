@@ -24,5 +24,9 @@
   {
     "key": "ctrl+y",
     "command": "workbench.action.acceptSelectedQuickOpenItem"
+  },
+  {
+    "key": "ctrl+\\",
+    "command": "editor.action.triggerSuggest"
   }
 ]

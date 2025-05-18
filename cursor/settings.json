@@ -9,7 +9,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.cursorStyle": "block",
   "editor.cursorStyle": "block",
-  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSmoothCaretAnimation": "off",
   "editor.cursorBlinking": "blink",
   "terminal.integrated.cursorBlinking": true,
   "editor.lineNumbers": "relative",
