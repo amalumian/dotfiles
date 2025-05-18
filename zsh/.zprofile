@@ -7,4 +7,6 @@ export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/Applications/Racket v8.16/bin:$PATH"
 export GPG_TTY=$(tty)
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)" # Apple Silicon
+# eval "$(/usr/local/Homebrew/bin/brew shellenv)" # Intel
