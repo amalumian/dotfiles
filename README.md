@@ -18,6 +18,7 @@ make setup
 ### System Preferences
 
 - Appearance
+  - Appearance: Auto
   - Show scroll bars: Always
   - Click in the scroll bar to: Jump to the spot that's clicked
 - Apple Intelligence & Siri: false
