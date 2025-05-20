@@ -6,8 +6,10 @@
   // ========== Visuals ==========
   "window.zoomLevel": 3,
   "window.density.editorTabHeight": "compact",
-  "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "GitHub Dark",
+  "workbench.preferredLightColorTheme": "GitHub Light",
+  "window.autoDetectColorScheme": true,
   "terminal.integrated.cursorStyle": "block",
   "editor.cursorStyle": "block",
   "editor.cursorSmoothCaretAnimation": "off",
