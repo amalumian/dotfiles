@@ -41,6 +41,7 @@ make setup
   - Stage Manager: False
   - Show recent apps in Stage Manager: False
   - Click wallpaper to reveal desktop: Only in Stage Manager
+  - Hot Corners: False
 - Display
   - Automatically adjust brightness: False
   - Resolution: 1280x800
