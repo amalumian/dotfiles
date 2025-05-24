@@ -153,6 +153,7 @@ make setup
 - Racket
 - VS Code
 - WebStorm
+- Zed
 
 #### VM
 - Multipass
