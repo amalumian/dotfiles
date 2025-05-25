@@ -11,7 +11,6 @@ eamodio.gitlens
 ecmel.vscode-html-css
 esbenp.prettier-vscode
 figma.figma-vscode-extension
-formulahendry.auto-rename-tag
 ginfuru.ginfuru-vscode-jekyll-syntax
 ginfuru.vscode-jekyll-snippets
 github.github-vscode-theme
