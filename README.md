@@ -10,6 +10,7 @@ make setup
 
 - [ ] Add installation of all possible apps via Homebrew casks, and display a message at the end listing apps that need to be installed manually (+ Add info message after installing particular app about what I need to configure in that one).
 - [ ] Add commands to set up all my macOS system settings, and display a message at the end listing settings that need to be configured manually.
+- [ ] Change Makefile scripts order.
 - [x] Delete the "System Preferences" and "Apps" sections in "Setup" page of my website.
 - [x] Link to this dotfiles can be moved to "About" page of my website.
 
