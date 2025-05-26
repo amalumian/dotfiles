@@ -1,6 +1,6 @@
-.PHONY: setup asdf aerospace cursor cursor-extensions font ghostty git gnupg homebrew npm nvim ssh system tmux zsh
+.PHONY: setup asdf aerospace cursor cursor-extensions font ghostty git gnupg homebrew npm nvim ssh system tmux zed zsh
 
-setup: asdf aerospace cursor cursor-extensions font ghostty git gnupg homebrew npm nvim ssh system tmux zsh
+setup: asdf aerospace cursor cursor-extensions font ghostty git gnupg homebrew npm nvim ssh system tmux zed zsh
 
 aerospace:
 	rm -f ~/.aerospace.toml
@@ -98,6 +98,12 @@ tmux:
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	rm -f ~/.tmux.conf
 	ln -snf $(PWD)/tmux/.tmux.conf ~/
+
+zed:
+	rm -f ~/.config/zed/settings.json
+	ln -snf $(PWD)/zed/settings.json ~/.config/zed/
+	rm -f ~/.config/zed/keymap.json
+	ln -snf $(PWD)/zed/keymap.json ~/.config/zed/
 
 zsh:
 	rm -f ~/.zshrc
