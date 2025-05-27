@@ -6,6 +6,7 @@ fzf
 fd
 bat
 fastfetch
+imageoptim-cli
 tree
 tldr
 ripgrep
