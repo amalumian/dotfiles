@@ -123,181 +123,68 @@ zed:
 	ln -snf $(PWD)/zed/keymap.json ~/.config/zed/
 
 system:
-	@echo "Appearance"
-	@echo "Set appearance to Auto"
-	defaults write -g AppleInterfaceStyle -string "Auto"
-	@echo "Show scroll bars always"
-	defaults write -g AppleShowScrollBars -string "Always"
-	@echo "Set scroll bar behavior to jump to clicked spot"
-	defaults write -g AppleScrollerPagingBehavior -bool true
-
-	@echo "Apple Intelligence & Siri"
-	@echo "Disable Siri"
-	defaults write com.apple.assistant.support "Assistant Enabled" -bool false
-
-	@echo "Control Center"
-	@echo "Flash time separators"
-	defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
-	@echo "Automatically hide menu bar"
-	defaults write -g _HIHideMenuBar -bool true
-
-	@echo "Desktop & Dock"
-	@echo "Position dock on left"
-	defaults write com.apple.dock orientation -string "left"
-	@echo "Set minimize effect to scale"
-	defaults write com.apple.dock mineffect -string "scale"
-	@echo "Disable animation when opening applications"
-	defaults write com.apple.dock launchanim -bool false
-	@echo "Automatically hide dock"
-	defaults write com.apple.dock autohide -bool true
-	@echo "Ask to keep changes when closing documents"
-	defaults write -g NSCloseAlwaysConfirmsChanges -bool true
-	@echo "Disable automatic space rearrangement"
-	defaults write com.apple.dock mru-spaces -bool false
-	@echo "Group windows by application"
-	defaults write com.apple.dock expose-group-apps -bool true
-	@echo "Never prefer tabs"
-	defaults write -g AppleWindowTabbingMode -string "never"
-	@echo "Disable window tiling"
-	defaults write -g NSWindowShouldDragOnGesture -bool false
-	@echo "Disable window filling screen"
-	defaults write -g NSWindowShouldDragOnGesture -bool false
-	@echo "Disable option key tiling"
-	defaults write -g NSWindowShouldDragOnGesture -bool false
-	@echo "Disable tiled window margins"
-	defaults write -g NSWindowShouldDragOnGesture -bool false
-	@echo "Disable Stage Manager"
-	defaults write com.apple.WindowManager EnableStageManager -bool false
-	@echo "Disable recent apps in Stage Manager"
-	defaults write com.apple.WindowManager ShowRecentApps -bool false
-	@echo "Set wallpaper click behavior"
-	defaults write com.apple.WindowManager ClickWallpaperToRevealDesktop -bool false
-	@echo "Disable hot corners"
-	defaults write com.apple.dock wvous-tl-corner -int 0
-	defaults write com.apple.dock wvous-tr-corner -int 0
-	defaults write com.apple.dock wvous-bl-corner -int 0
-	defaults write com.apple.dock wvous-br-corner -int 0
 	@echo "Set dock autohide delay to 0"
 	defaults write com.apple.dock autohide-delay -float 0
-
-	@echo "Display"
-	@echo "Disable automatic brightness adjustment"
-	defaults write com.apple.BezelServices kDim -bool false
-
-	@echo "Lock Screen"
-	@echo "Disable 24-hour time"
-	defaults write com.apple.menuextra.clock Is24Hour -bool false
-
-	@echo "Trackpad"
-	@echo "Set tracking speed to maximum"
-	defaults write -g com.apple.trackpad.scaling -float 3.0
-	@echo "Set click to light"
-	defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
-	@echo "Set dragging style to three finger"
-	defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
-	@echo "Enable tap to click"
-	defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-	@echo "Disable notification center"
-	defaults write com.apple.notificationcenterui menuExtras -array
-
-	@echo "Keyboard"
-	@echo "Set key repeat rate to maximum"
-	defaults write -g KeyRepeat -int 2
-	@echo "Set delay until repeat to minimum"
-	defaults write -g InitialKeyRepeat -int 15
-	@echo "Disable keyboard brightness adjustment"
-	defaults write -g com.apple.keyboard.illumination -bool false
-	@echo "Set Caps Lock to Control"
-	defaults write -g com.apple.keyboard.modifiermapping.1452-641-0 -dict-add 0 -dict-add HIDKeyboardModifierMappingSrc -int 0x700000039 HIDKeyboardModifierMappingDst -int 0x7000000E0
-	@echo "Disable Spotlight"
-	defaults write com.apple.Spotlight MenuItemHidden -bool true
-	@echo "Set Globe key to do nothing"
-	defaults write com.apple.HIToolbox AppleFnUsageType -int 0
-	@echo "Enable keyboard navigation"
-	defaults write -g AppleKeyboardUIMode -int 2
-	@echo "Set input sources"
-	@echo "Note: Input sources require manual configuration"
-	@echo "Disable automatic spelling correction"
-	defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
-	@echo "Disable automatic capitalization"
-	defaults write -g NSAutomaticCapitalizationEnabled -bool false
-	@echo "Disable predictive text"
-	defaults write -g NSAutomaticTextCompletionEnabled -bool false
-	@echo "Disable double-space period"
-	defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
-	@echo "Disable smart quotes and dashes"
-	defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
-	defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
-	@echo "Enable dictation"
-	defaults write com.apple.speech.recognition.AppleSpeechRecognition.prefs DictationIMMasterDictationEnabled -bool true
 	@echo "Disable press and hold"
 	defaults write -g ApplePressAndHoldEnabled -bool false
-
-	@echo "Finder"
-	@echo "Set new windows to show home directory"
-	defaults write com.apple.finder NewWindowTarget -string "PfHm"
-	@echo "Show all filename extensions"
-	defaults write -g AppleShowAllExtensions -bool true
-	@echo "Set trash removal to 30 days"
-	defaults write com.apple.finder FXRemoveOldTrashItems -bool true
-	defaults write com.apple.finder FXRemoveOldTrashItemsDelay -int 30
-	@echo "Show path bar"
-	defaults write com.apple.finder ShowPathbar -bool true
-	@echo "Show status bar"
-	defaults write com.apple.finder ShowStatusBar -bool true
-	@echo "Create Developer and Work directories"
-	mkdir -p ~/Developer
-	mkdir -p ~/Work
-
-	@echo "Restarting Dock and Finder to apply changes..."
 	killall Dock || true
-	killall Finder || true
 
-	@echo "Final system settings summary:"
+	@echo "System Settings:"
 	@echo "Appearance:"
-	@echo "  - Auto appearance"
-	@echo "  - Always show scroll bars"
-	@echo "  - Jump to clicked spot in scroll bars"
-	@echo "Apple Intelligence & Siri: Disabled"
+	@echo "  - Appearance: Auto"
+	@echo "  - Show scroll bars: Always"
+	@echo "  - Click in the scroll bar to: Jump to the spot that's clicked"
+	@echo "Apple Intelligence & Siri: false"
 	@echo "Control Center:"
-	@echo "  - Flash time separators"
-	@echo "  - Auto-hide menu bar"
+	@echo "  - Clock: Flash the time separators"
+	@echo "  - Automatically hide and show the menu bar: Always"
 	@echo "Desktop & Dock:"
-	@echo "  - Left position"
-	@echo "  - Scale minimize effect"
-	@echo "  - No animation when opening apps"
-	@echo "  - Auto-hide dock"
-	@echo "  - Keep changes when closing documents"
-	@echo "  - No auto-rearrange spaces"
-	@echo "  - Group windows by app"
-	@echo "  - Never prefer tabs"
-	@echo "  - No window tiling"
-	@echo "  - No Stage Manager"
+	@echo "  - Position on screen: Left"
+	@echo "  - Minimize windows using: Scale Effect"
+	@echo "  - Animate opening applications: False"
+	@echo "  - Automatically hide and show the Dock: True"
+	@echo "  - Ask to keep changes when closing documents: True"
+	@echo "  - Automatically rearrange Spaces based on most recent use: False"
+	@echo "  - Group windows by application: True"
+	@echo "  - Prefer tabs when opening documents: Never"
+	@echo "  - Drag windows to screen edges to tile: False"
+	@echo "  - Drag windows to menu bar to fill screen: False"
+	@echo "  - Hold Option key while dragging windows to tile: False"
+	@echo "  - Tiled windows have margins: False"
+	@echo "  - Stage Manager: False"
+	@echo "  - Show recent apps in Stage Manager: False"
+	@echo "  - Click wallpaper to reveal desktop: Only in Stage Manager"
+	@echo "  - Hot Corners: False"
 	@echo "Display:"
-	@echo "  - No auto brightness"
-	@echo "  - 1280x800 resolution"
+	@echo "  - Automatically adjust brightness: False"
+	@echo "  - Resolution: 1280x800"
 	@echo "Lock Screen:"
-	@echo "  - 12-hour time format"
+	@echo "  - Show 24-hour time: False"
 	@echo "Trackpad:"
-	@echo "  - Max tracking speed"
-	@echo "  - Light click"
-	@echo "  - Three finger drag"
-	@echo "  - Tap to click enabled"
-	@echo "  - No notification center"
+	@echo "  - Tracking speed: Max"
+	@echo "  - Click: Light"
+	@echo "  - Dragging style: Three Finger Drag"
+	@echo "  - Tap to click: On"
+	@echo "  - Notification center: Off"
 	@echo "Keyboard:"
-	@echo "  - Max key repeat rate"
-	@echo "  - Max delay until repeat"
-	@echo "  - No auto keyboard brightness"
-	@echo "  - Caps Lock as Control"
-	@echo "  - Spotlight disabled"
-	@echo "  - Globe key does nothing"
-	@echo "  - Keyboard navigation enabled"
-	@echo "  - Input sources: English (US), Russian (PC)"
-	@echo "  - All auto-corrections disabled"
-	@echo "  - Dictation enabled"
+	@echo "  - Key repeat rate: Max"
+	@echo "  - Delay until repeat: Max"
+	@echo "  - Adjust keyboard brightness in low light: False"
+	@echo "  - Caps Lock: Control"
+	@echo "  - Spotlight: Off"
+	@echo "  - Press Globe key to: Do Nothing"
+	@echo "  - Keyboard navigation: True"
+	@echo "  - Input Sources: English (US), Russian (PC)"
+	@echo "  - Correct spelling automatically: False"
+	@echo "  - Capitalize words automatically: False"
+	@echo "  - Show inline predictive text: False"
+	@echo "  - Add period with double-space: False"
+	@echo "  - Use smart quotes and dashes: False"
+	@echo "  - Dictation: True"
 	@echo "Finder:"
-	@echo "  - Home directory for new windows"
-	@echo "  - Show all extensions"
-	@echo "  - 30-day trash removal"
-	@echo "  - Show path and status bars"
-	@echo "  - Developer and Work directories created"
+	@echo "  - New Finder windows show: Home Directory"
+	@echo "  - Show all filename extensions: True"
+	@echo "  - Remove items from the Trash: After 30 days"
+	@echo "  - Show Path Bar: True"
+	@echo "  - Show Status Bar: True"
+	@echo "  - Create \"Developer\" directory in home directory"
