@@ -9,6 +9,7 @@ donjayamanne.githistory
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
 ecmel.vscode-html-css
+editorconfig.editorconfig
 esbenp.prettier-vscode
 figma.figma-vscode-extension
 ginfuru.ginfuru-vscode-jekyll-syntax
