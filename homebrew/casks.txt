@@ -1,3 +1,4 @@
+basictex
 nikitabobko/tap/aerospace
 karabiner-elements
 flameshot

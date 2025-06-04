@@ -23,3 +23,4 @@ webp
 gpg2
 gnupg
 pinentry-mac
+pandoc
