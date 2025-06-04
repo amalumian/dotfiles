@@ -112,9 +112,18 @@ cursor:
 	ln -snf $(PWD)/cursor/settings.json ~/Library/Application\ Support/Cursor/User/
 
 cursor-extensions:
-	while read extension; do \
+	@echo "Installing extensions from extensions.txt..."
+	@while read extension; do \
 		cursor --install-extension "$$extension"; \
 	done < $(PWD)/cursor/extensions.txt
+	@echo "Checking for extensions that need to be removed..."
+	@cursor --list-extensions | while read installed_ext; do \
+		if ! grep -q "^$$installed_ext$$" $(PWD)/cursor/extensions.txt; then \
+			echo "Removing extension: $$installed_ext"; \
+			cursor --uninstall-extension "$$installed_ext"; \
+		fi; \
+	done
+	@echo "Extensions synchronization complete"
 
 zed:
 	rm -f ~/.config/zed/settings.json
