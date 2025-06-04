@@ -1,9 +1,9 @@
-theme = rose-pine
+theme = Builtin Dark
 font-family = Iosevka Nerd Font Mono
 font-size = 26
 cursor-style = block
 macos-option-as-alt = true
 macos-titlebar-style = hidden
 mouse-hide-while-typing = true
-background-opacity = 0.9
+background-opacity = 0.8
 background-blur = 15
