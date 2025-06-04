@@ -28,6 +28,7 @@ homebrew:
 font:
 	brew tap homebrew/cask-fonts
 	brew install --cask font-iosevka-nerd-font
+	brew install --cask font-jetbrains-mono-nerd-font
 
 git:
 	cp -R $(PWD)/git/. ~/
