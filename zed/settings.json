@@ -7,7 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Material Icon Theme",
   "agent": {
     "model_parameters": [],
     "default_model": {
@@ -16,11 +15,16 @@
     },
     "version": "2"
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+
+  "cursor_shape": "block",
+  "ui_font_size": 22,
+  "buffer_font_size": 22,
   "theme": {
     "mode": "system",
     "light": "Github Light",
     "dark": "Github Dark"
-  }
+  },
+  "icon_theme": "Material Icon Theme",
+
+  "vim_mode": true
 }
