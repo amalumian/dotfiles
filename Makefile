@@ -1,6 +1,6 @@
-.PHONY: homebrew font git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty cursor cursor-extensions zed system setup
+.PHONY: homebrew git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty cursor cursor-extensions zed system setup
 
-setup: homebrew font git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty cursor cursor-extensions zed system
+setup: homebrew git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty cursor cursor-extensions zed system
 
 homebrew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -24,11 +24,6 @@ homebrew:
 	@echo "  - FoXray"
 	@echo "  - Electrum"
 	@echo "  - Exodus"
-
-font:
-	brew tap homebrew/cask-fonts
-	brew install --cask font-iosevka-nerd-font
-	brew install --cask font-jetbrains-mono-nerd-font
 
 git:
 	cp -R $(PWD)/git/. ~/
