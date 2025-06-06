@@ -20,7 +20,6 @@ github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
 ibm.output-colorizer
-jdinhlife.gruvbox
 jock.svg
 kisstkondoros.vscode-gutter-preview
 mhutchie.git-graph
@@ -34,7 +33,6 @@ ms-vscode.cpptools
 ms-vscode.makefile-tools
 ms-vscode.remote-explorer
 ms-vscode.remote-repositories
-mvllow.rose-pine
 naumovs.color-highlight
 neilding.language-liquid
 pkief.material-icon-theme
