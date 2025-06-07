@@ -142,7 +142,7 @@ system:
 	@echo "Apple Intelligence & Siri: false"
 	@echo "Control Center:"
 	@echo "  - Clock: Flash the time separators"
-	@echo "  - Automatically hide and show the menu bar: Always"
+	@echo "  - Automatically hide and show the menu bar: In Full Screen Only"
 	@echo "Desktop & Dock:"
 	@echo "  - Position on screen: Left"
 	@echo "  - Minimize windows using: Scale Effect"
