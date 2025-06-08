@@ -12,6 +12,7 @@ ecmel.vscode-html-css
 editorconfig.editorconfig
 esbenp.prettier-vscode
 figma.figma-vscode-extension
+firefox-devtools.vscode-firefox-debug
 ginfuru.ginfuru-vscode-jekyll-syntax
 ginfuru.vscode-jekyll-snippets
 github.github-vscode-theme
