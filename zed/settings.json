@@ -19,8 +19,8 @@
   "cursor_shape": "block",
   "ui_font_size": 24,
   "buffer_font_size": 24,
-  "ui_font_family": "Iosevka Nerd Font Mono",
-  "buffer_font_family": "Iosevka Nerd Font Mono",
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "theme": {
     "mode": "system",
     "light": "Github Light",
