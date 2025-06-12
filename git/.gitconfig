@@ -5,7 +5,15 @@
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	safecrlf = warn
 [init]
 	defaultBranch = main
 [commit]
 	gpgsign = true
+[merge]
+	tool = nvimdiff
+[diff]
+	tool = nvimdiff
+[difftool]
+	prompt = false
