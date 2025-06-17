@@ -19,7 +19,6 @@ telegram
 zoom
 notion
 obsidian
-todoist
 affinity-photo
 alt-tab
 appcleaner
