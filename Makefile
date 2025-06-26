@@ -29,6 +29,7 @@ git:
 	cp -R $(PWD)/git/. ~/
 
 ssh:
+	eval "$(ssh-agent -s)"
 	mkdir -p ~/.ssh
 	@if [ -f ~/.ssh/config ]; then \
 		cp ~/.ssh/config ~/.ssh/config.bak.$$(date +%Y%m%d%H%M%S); \
