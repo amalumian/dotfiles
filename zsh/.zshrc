@@ -5,6 +5,7 @@ alias zshsource="source $HOME/.zshrc"
 alias sshconfig="nvim $HOME/.ssh/config"
 alias gitconfig="nvim $HOME/.gitconfig"
 alias dotfiles="cd $HOME/Developer/dotfiles/"
+alias index="cd $HOME/Developer/malumian/index/"
 alias www="cd $HOME/Developer/malumian/www/"
 alias finance="cd $HOME/Developer/malumian/finance/"
 
