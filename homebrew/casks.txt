@@ -44,5 +44,4 @@ visual-studio-code
 webstorm
 zed
 multipass
-font-iosevka-nerd-font
 font-jetbrains-mono-nerd-font
