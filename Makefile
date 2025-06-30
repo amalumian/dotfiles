@@ -25,6 +25,7 @@ homebrew:
 	@echo "  - Electrum"
 	@echo "  - Exodus"
 	@echo "  - Fade In"
+	@echo "  - DaVinci Resolve"
 
 git:
 	cp -R $(PWD)/git/. ~/
