@@ -24,6 +24,7 @@ homebrew:
 	@echo "  - FoXray"
 	@echo "  - Electrum"
 	@echo "  - Exodus"
+	@echo "  - Fade In"
 
 git:
 	cp -R $(PWD)/git/. ~/
