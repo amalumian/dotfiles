@@ -26,6 +26,13 @@ homebrew:
 	@echo "  - Exodus"
 	@echo "  - Fade In"
 	@echo "  - DaVinci Resolve"
+	@echo "  - Steam"
+	@echo "  - Aseprite"
+	@echo "  - Blender"
+	@echo "  - Godot"
+	@echo "  - Battle.net"
+	@echo "  - League of Legends"
+	@echo "  - balenaEtcher"
 
 git:
 	cp -R $(PWD)/git/. ~/
