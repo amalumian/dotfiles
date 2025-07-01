@@ -9,7 +9,6 @@ eslint-plugin-jsx-a11y
 eslint-plugin-node
 eslint-plugin-react
 eslint-plugin-react-hooks
-imageoptim-cli
 jsonlint
 markdownlint-cli
 markuplint
