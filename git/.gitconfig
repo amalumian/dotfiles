@@ -13,6 +13,7 @@
 	gpgsign = true
 [merge]
 	tool = nvimdiff
+	conflictstyle = diff3
 [diff]
 	tool = nvimdiff
 [difftool]
