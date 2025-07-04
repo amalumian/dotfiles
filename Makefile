@@ -1,6 +1,12 @@
-.PHONY: homebrew git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty cursor cursor-extensions zed system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty cursor cursor-extensions zed system setup
 
-setup: homebrew git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty cursor cursor-extensions zed system
+setup: git-hooks homebrew git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty cursor cursor-extensions zed system
+
+git-hooks:
+	@echo "Installing git hooks..."
+	@ln -sf "$$(pwd)/git/hooks/prepare-commit-msg" .git/hooks/prepare-commit-msg
+	@chmod +x .git/hooks/prepare-commit-msg
+	@echo "Hook installed: .git/hooks/prepare-commit-msg"
 
 homebrew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

@@ -1,0 +1,49 @@
+#!/bin/zsh
+
+set -e
+
+COMMIT_MSG_FILE="$1"
+
+STAGED_STATUS=("${(@f)$(git status --porcelain 2>/dev/null | grep '^[AM]' || echo '')}")
+
+if [[ ${#STAGED_STATUS[@]} -eq 0 ]]; then
+  exit 0
+fi
+
+MODIFIED_FILES=()
+NEW_FILES=()
+
+for line in "${STAGED_STATUS[@]}"; do
+  file_status="${line:0:2}"
+  filename="${line:3}"
+
+  case "$file_status" in
+    "M "|"MM")
+      MODIFIED_FILES+=("$filename")
+      ;;
+    "A "|"AM")
+      NEW_FILES+=("$filename")
+      ;;
+  esac
+done
+
+limit_file_list() {
+  local files=("$@")
+  if [[ ${#files[@]} -gt 5 ]]; then
+    echo "${(j:, :)files[1,5]}... and $(( ${#files[@]} - 5 )) more files"
+  else
+    echo "${(j:, :)files}"
+  fi
+}
+
+COMMIT_PARTS=()
+
+if [[ ${#MODIFIED_FILES[@]} -gt 0 ]]; then
+  COMMIT_PARTS+=("Modify $(limit_file_list "${MODIFIED_FILES[@]}")")
+fi
+
+if [[ ${#NEW_FILES[@]} -gt 0 ]]; then
+  COMMIT_PARTS+=("Add $(limit_file_list "${NEW_FILES[@]}")")
+fi
+
+echo "${(j:; :)COMMIT_PARTS}" > "$COMMIT_MSG_FILE"
