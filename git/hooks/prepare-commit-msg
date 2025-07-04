@@ -3,6 +3,11 @@
 set -e
 
 COMMIT_MSG_FILE="$1"
+COMMIT_SOURCE="$2"
+
+if [[ "$COMMIT_SOURCE" == "message" ]]; then
+  exit 0
+fi
 
 STAGED_STATUS=("${(@f)$(git status --porcelain 2>/dev/null | grep '^[AM]' || echo '')}")
 
