@@ -1,54 +1,60 @@
-#!/bin/zsh
+#!/usr/bin/env node
 
-set -e
+const { execSync } = require('child_process');
+const fs = require('fs');
 
-COMMIT_MSG_FILE="$1"
-COMMIT_SOURCE="$2"
+const commitMsgFile = process.argv[2];
+const commitSource = process.argv[3];
 
-if [[ "$COMMIT_SOURCE" == "message" ]]; then
-  exit 0
-fi
-
-STAGED_STATUS=("${(@f)$(git status --porcelain 2>/dev/null | grep '^[AM]' || echo '')}")
-
-if [[ ${#STAGED_STATUS[@]} -eq 0 ]]; then
-  exit 0
-fi
-
-MODIFIED_FILES=()
-NEW_FILES=()
-
-for line in "${STAGED_STATUS[@]}"; do
-  file_status="${line:0:2}"
-  filename="${line:3}"
-
-  case "$file_status" in
-    "M "|"MM")
-      MODIFIED_FILES+=("$filename")
-      ;;
-    "A "|"AM")
-      NEW_FILES+=("$filename")
-      ;;
-  esac
-done
-
-limit_file_list() {
-  local files=("$@")
-  if [[ ${#files[@]} -gt 5 ]]; then
-    echo "${(j:, :)files[1,5]}... and $(( ${#files[@]} - 5 )) more files"
-  else
-    echo "${(j:, :)files}"
-  fi
+if (commitSource === 'message') {
+  process.exit(0);
 }
 
-COMMIT_PARTS=()
+try {
+  const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+  const stagedFiles = gitStatus
+    .split('\n')
+    .filter(line => line.match(/^[AM]/))
+    .map(line => ({
+      status: line.substring(0, 2),
+      filename: line.substring(3)
+    }));
 
-if [[ ${#MODIFIED_FILES[@]} -gt 0 ]]; then
-  COMMIT_PARTS+=("Modify $(limit_file_list "${MODIFIED_FILES[@]}")")
-fi
+  if (stagedFiles.length === 0) {
+    process.exit(0);
+  }
 
-if [[ ${#NEW_FILES[@]} -gt 0 ]]; then
-  COMMIT_PARTS+=("Add $(limit_file_list "${NEW_FILES[@]}")")
-fi
+  const modifiedFiles = [];
+  const newFiles = [];
 
-echo "${(j:; :)COMMIT_PARTS}" > "$COMMIT_MSG_FILE"
+  stagedFiles.forEach(({ status, filename }) => {
+    if (status === 'M ' || status === 'MM') {
+      modifiedFiles.push(filename);
+    } else if (status === 'A ' || status === 'AM') {
+      newFiles.push(filename);
+    }
+  });
+
+  const limitFileList = (files) => {
+    if (files.length > 5) {
+      return `${files.slice(0, 5).join(', ')}... and ${files.length - 5} more files`;
+    }
+    return files.join(', ');
+  };
+
+  const commitParts = [];
+
+  if (modifiedFiles.length > 0) {
+    commitParts.push(`Modify ${limitFileList(modifiedFiles)}`);
+  }
+
+  if (newFiles.length > 0) {
+    commitParts.push(`Add ${limitFileList(newFiles)}`);
+  }
+
+  const commitMessage = commitParts.join('; ');
+  fs.writeFileSync(commitMsgFile, commitMessage);
+
+} catch (error) {
+  process.exit(0);
+}
