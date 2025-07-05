@@ -1,4 +1,10 @@
-Host *
+Host github.com
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/github
 	AddKeysToAgent yes
 	UseKeychain yes
-	IdentityFile ~/.ssh/github
+Host pwn.college
+	HostName pwn.college
+	User hacker
+	IdentityFile ~/.ssh/pwncollege
