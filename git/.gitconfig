@@ -7,7 +7,7 @@
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
 	safecrlf = warn
-	pages = less
+	pager = bat
 [init]
 	defaultBranch = main
 [commit]
