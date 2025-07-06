@@ -14,7 +14,7 @@ try {
   const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
   const stagedFiles = gitStatus
     .split('\n')
-    .filter(line => line.match(/^[AM]/))
+    .filter(line => line.match(/^[AMD]/))
     .map(line => ({
       status: line.substring(0, 2),
       filename: line.substring(3)
@@ -26,12 +26,15 @@ try {
 
   const modifiedFiles = [];
   const newFiles = [];
+  const deletedFiles = [];
 
   stagedFiles.forEach(({ status, filename }) => {
     if (status === 'M ' || status === 'MM') {
       modifiedFiles.push(filename);
     } else if (status === 'A ' || status === 'AM') {
       newFiles.push(filename);
+    } else if (status === 'D ' || status === 'DM') {
+      deletedFiles.push(filename);
     }
   });
 
@@ -50,6 +53,10 @@ try {
 
   if (newFiles.length > 0) {
     commitParts.push(`Add ${limitFileList(newFiles)}`);
+  }
+
+  if (deletedFiles.length > 0) {
+    commitParts.push(`Delete ${limitFileList(deletedFiles)}`);
   }
 
   const commitMessage = commitParts.join('; ');
