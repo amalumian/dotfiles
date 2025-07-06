@@ -1,67 +1,97 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
+const { execSync } = require("child_process");
+const fs = require("fs");
 
 const commitMsgFile = process.argv[2];
 const commitSource = process.argv[3];
 
-if (commitSource === 'message') {
+if (commitSource === "message") {
   process.exit(0);
 }
 
 try {
-  const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+  const gitStatus = execSync("git status --porcelain", { encoding: "utf8" });
   const stagedFiles = gitStatus
-    .split('\n')
-    .filter(line => line.match(/^[AMD]/))
-    .map(line => ({
+    .split("\n")
+    .filter((line) => line.match(/^[AMDR]/))
+    .map((line) => ({
       status: line.substring(0, 2),
-      filename: line.substring(3)
+      filename: line.substring(3),
     }));
 
   if (stagedFiles.length === 0) {
     process.exit(0);
   }
 
-  const modifiedFiles = [];
   const newFiles = [];
+  const modifiedFiles = [];
+  const renamedFiles = [];
   const deletedFiles = [];
 
   stagedFiles.forEach(({ status, filename }) => {
-    if (status === 'M ' || status === 'MM') {
-      modifiedFiles.push(filename);
-    } else if (status === 'A ' || status === 'AM') {
+    if (status === "A " || status === "AM") {
       newFiles.push(filename);
-    } else if (status === 'D ' || status === 'DM') {
+    } else if (status === "M " || status === "MM") {
+      modifiedFiles.push(filename);
+    } else if (status === "R " || status === "RM") {
+      renamedFiles.push(filename);
+    } else if (status === "D " || status === "DM") {
       deletedFiles.push(filename);
     }
   });
 
-  const limitFileList = (files) => {
-    if (files.length > 5) {
-      return `${files.slice(0, 5).join(', ')}... and ${files.length - 5} more files`;
-    }
-    return files.join(', ');
+  const getAllPaths = (files) => {
+    return [...new Set(files.map((file) => file.split("/")[0]))];
   };
 
-  const commitParts = [];
+  const allNewPaths = getAllPaths(newFiles);
+  const allModifiedPaths = getAllPaths(modifiedFiles);
+  const allRenamedPaths = getAllPaths(renamedFiles);
+  const allDeletedPaths = getAllPaths(deletedFiles);
 
-  if (modifiedFiles.length > 0) {
-    commitParts.push(`Modify ${limitFileList(modifiedFiles)}`);
+  const firstLineParts = [];
+  if (allNewPaths.length > 0) {
+    firstLineParts.push(`Add to ${allNewPaths.join(", ")}`);
+  }
+  if (allModifiedPaths.length > 0) {
+    firstLineParts.push(`Modify in ${allModifiedPaths.join(", ")}`);
+  }
+  if (allRenamedPaths.length > 0) {
+    firstLineParts.push(`Rename in ${allRenamedPaths.join(", ")}`);
+  }
+  if (allDeletedPaths.length > 0) {
+    firstLineParts.push(`Delete from ${allDeletedPaths.join(", ")}`);
   }
 
+  const firstLine = firstLineParts.join("; ");
+
+  const descriptionParts = [];
   if (newFiles.length > 0) {
-    commitParts.push(`Add ${limitFileList(newFiles)}`);
+    descriptionParts.push(`Added:`);
+    newFiles.forEach((file) => descriptionParts.push(`  - ${file}`));
+    descriptionParts.push("");
   }
-
+  if (modifiedFiles.length > 0) {
+    descriptionParts.push(`Modified:`);
+    modifiedFiles.forEach((file) => descriptionParts.push(`  - ${file}`));
+    descriptionParts.push("");
+  }
+  if (renamedFiles.length > 0) {
+    descriptionParts.push(`Renamed:`);
+    renamedFiles.forEach((file) => descriptionParts.push(`  - ${file}`));
+    descriptionParts.push("");
+  }
   if (deletedFiles.length > 0) {
-    commitParts.push(`Delete ${limitFileList(deletedFiles)}`);
+    descriptionParts.push(`Deleted:`);
+    deletedFiles.forEach((file) => descriptionParts.push(`  - ${file}`));
+    descriptionParts.push("");
   }
 
-  const commitMessage = commitParts.join('; ');
-  fs.writeFileSync(commitMsgFile, commitMessage);
+  const description = descriptionParts.join("\n");
 
+  const commitMessage = firstLine + (description ? "\n\n" + description : "");
+  fs.writeFileSync(commitMsgFile, commitMessage);
 } catch (error) {
   process.exit(0);
 }
