@@ -1,5 +1,6 @@
 antfu.browse-lite
 antfu.vite
+astro-build.astro-vscode
 bradlc.vscode-tailwindcss
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
@@ -13,8 +14,6 @@ editorconfig.editorconfig
 esbenp.prettier-vscode
 figma.figma-vscode-extension
 firefox-devtools.vscode-firefox-debug
-ginfuru.ginfuru-vscode-jekyll-syntax
-ginfuru.vscode-jekyll-snippets
 github.github-vscode-theme
 github.remotehub
 github.vscode-github-actions
@@ -35,17 +34,16 @@ ms-vscode.makefile-tools
 ms-vscode.remote-explorer
 ms-vscode.remote-repositories
 naumovs.color-highlight
-neilding.language-liquid
 pkief.material-icon-theme
 pranaygp.vscode-css-peek
 redhat.vscode-yaml
 ritwickdey.liveserver
 shd101wyy.markdown-preview-enhanced
-sissel.shopify-liquid
 sumneko.lua
 tobias-z.vscode-harpoon
 tomoki1207.pdf
 tyriar.lorem-ipsum
+unifiedjs.vscode-mdx
 usernamehw.errorlens
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode

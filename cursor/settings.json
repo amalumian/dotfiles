@@ -38,6 +38,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "trailing",
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
 
   // ========== Git ==========
   "git.enableCommitSigning": true,
