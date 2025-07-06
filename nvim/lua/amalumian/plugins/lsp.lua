@@ -196,6 +196,14 @@ return {
         },
         dockerls = {},
         docker_compose_language_service = {},
+        astro = {
+          filetypes = { 'astro' },
+          cmd = { 'astro-ls', '--stdio' },
+          init_options = {
+            typescript = {},
+          },
+          root_markers = { 'package.json', 'tsconfig.json', 'jsconfig.json', '.git' },
+        },
         gopls = {
           settings = {
             gopls = {
@@ -251,6 +259,7 @@ return {
         'gomodifytags',
         'impl',
         'delve',
+        'astro-language-server',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

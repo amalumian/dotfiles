@@ -42,6 +42,7 @@ return {
       markdown = { 'prettier', 'markdownlint-cli2', 'markdown-toc' },
       yaml = { 'prettier' },
       go = { 'goimports', 'gofumpt' },
+      astro = { 'prettier' },
     },
   },
 }
