@@ -8,6 +8,4 @@ export PATH="/Applications/Racket v8.16/bin:$PATH"
 export GPG_TTY=$(tty)
 export PAGER="bat"
 
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)" # Apple Silicon
-# eval "$(/usr/local/Homebrew/bin/brew shellenv)" # Intel
+eval "$(/opt/homebrew/bin/brew shellenv)"

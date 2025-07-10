@@ -30,7 +30,7 @@ keepingyouawake
 keyboardcleantool
 logi-options+
 obs
-raycast
+maccy
 spotify
 yandex-music
 transmission

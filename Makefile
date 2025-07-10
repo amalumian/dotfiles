@@ -4,7 +4,7 @@ setup: git-hooks homebrew git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty
 
 git-hooks:
 	@echo "Installing git hooks..."
-	@ln -sf "$$(pwd)/git/hooks/prepare-commit-msg" .git/hooks/prepare-commit-msg
+	@ln -sf "$$(pwd)/.git-hooks/prepare-commit-msg" .git/hooks/prepare-commit-msg
 	@chmod +x .git/hooks/prepare-commit-msg
 	@echo "Hook installed: .git/hooks/prepare-commit-msg"
 
@@ -13,13 +13,6 @@ homebrew:
 	eval "$$(/opt/homebrew/bin/brew shellenv)" && \
 	xargs brew install < $(PWD)/homebrew/formulae.txt && \
 	xargs brew install --cask < $(PWD)/homebrew/casks.txt
-	@echo "The following applications need additional configuration:"
-	@echo "  - DeepL: Exclude all programming-related apps"
-	@echo "  - AltTab: Set appearance to App Icons"
-	@echo "  - Raycast:"
-	@echo "    - Set hotkey to CMD + Space"
-	@echo "    - Configure navigation bindings to Vim style"
-	@echo "    - Set clipboard history hotkey to CMD + Shift + C"
 	@echo "The following applications need to be installed manually:"
 	@echo "  - Command X"
 	@echo "  - Kindle"
@@ -59,6 +52,8 @@ ssh:
 gnupg:
 	mkdir -p ~/.gnupg
 	cp -R $(PWD)/gnupg/. ~/.gnupg/
+	chmod 700 ~/.gnupg
+	chmod 700 ~/.gnupg/*
 	@echo "Starting GPG key generation. Please follow the prompts:"
 	@echo "  Kind of key: RSA and RSA"
 	@echo "  Keysize: 4096"
