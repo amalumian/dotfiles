@@ -29,10 +29,6 @@ return {
       'typescript',
       'yaml',
       'dockerfile',
-      'go',
-      'gomod',
-      'gowork',
-      'gosum',
     },
     auto_install = true,
     highlight = {

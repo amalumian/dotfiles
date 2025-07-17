@@ -38,11 +38,10 @@ return {
       javascriptreact = { 'prettier' },
       typescript = { 'prettier' },
       typescriptreact = { 'prettier' },
-      lua = { 'stylua' },
+      astro = { 'prettier' },
       markdown = { 'prettier', 'markdownlint-cli2', 'markdown-toc' },
       yaml = { 'prettier' },
-      go = { 'goimports', 'gofumpt' },
-      astro = { 'prettier' },
+      lua = { 'stylua' },
     },
   },
 }

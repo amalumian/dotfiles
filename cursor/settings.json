@@ -134,43 +134,6 @@
     {
       "before": ["<leader>", "e"],
       "commands": ["workbench.action.quickOpen"]
-    },
-    // Harpoon
-    {
-      "before": ["<C-e>"],
-      "commands": ["vscode-harpoon.editEditors"]
-    },
-    {
-      "before": ["<leader>", "<C-h>"],
-      "commands": ["vscode-harpoon.addEditor1"]
-    },
-    {
-      "before": ["<leader>", "<C-j>"],
-      "commands": ["vscode-harpoon.addEditor2"]
-    },
-    {
-      "before": ["<leader>", "<C-k>"],
-      "commands": ["vscode-harpoon.addEditor3"]
-    },
-    {
-      "before": ["<leader>", "<C-l>"],
-      "commands": ["vscode-harpoon.addEditor4"]
-    },
-    {
-      "before": ["<C-h>"],
-      "commands": ["vscode-harpoon.gotoEditor1"]
-    },
-    {
-      "before": ["<C-j>"],
-      "commands": ["vscode-harpoon.gotoEditor2"]
-    },
-    {
-      "before": ["<C-k>"],
-      "commands": ["vscode-harpoon.gotoEditor3"]
-    },
-    {
-      "before": ["<C-l>"],
-      "commands": ["vscode-harpoon.gotoEditor4"]
     }
   ],
   "vim.visualModeKeyBindings": [

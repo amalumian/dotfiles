@@ -77,17 +77,11 @@ asdf:
 	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.15.0
 	. ~/.asdf/asdf.sh && \
 	asdf plugin add nodejs && \
-	asdf plugin add golang && \
 	asdf plugin add lua && \
-	asdf plugin add ruby && \
 	asdf install nodejs latest && \
-	asdf install golang latest && \
 	asdf install lua latest && \
-	asdf install ruby latest && \
 	asdf global nodejs latest && \
-	asdf global golang latest && \
 	asdf global lua latest && \
-	asdf global ruby latest
 
 npm:
 	xargs npm install -g < $(PWD)/npm/global-packages.txt
