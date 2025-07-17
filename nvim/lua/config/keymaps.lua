@@ -11,7 +11,7 @@ end, { desc = '[E]explorer Oil' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
--- Do the same as previous but for searching
+-- Cursor stays in the middle while searching
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
@@ -19,7 +19,7 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
--- Greatest remap ever
+-- Delete without yanking
 vim.keymap.set('x', '<leader>p', [["_dP]])
 
 -- Delete text into a black hole
@@ -35,8 +35,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[Q]uery [L]ocation List' })
 
--- theprimeagen's keymap
-vim.keymap.set('n', '<C-p>', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
 -- Open float diagnostic
 vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float, { desc = '[V]iew [D]iagnostics' })
+
+-- theprimeagen's keymap
+vim.keymap.set('n', '<C-p>', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
