@@ -15,7 +15,7 @@ return {
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
-      { 'j-hui/fidget.nvim',    opts = {} },
+      { 'j-hui/fidget.nvim', opts = {} },
 
       'saghen/blink.cmp',
     },
@@ -113,13 +113,8 @@ return {
 
       local servers = {
         vtsls = {},
-        eslint = {
-          settings = {
-            workingDirectories = { mode = 'auto' },
-          },
-        },
+        eslint = {},
         cssls = {},
-        tailwindcss = {},
         html = {},
         jsonls = {},
         yamlls = {},
@@ -149,7 +144,6 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua',
         'js-debug-adapter',
-        'tailwindcss-language-server',
         'css-lsp',
         'shellcheck',
         'prettier',
