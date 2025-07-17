@@ -48,3 +48,6 @@ fi
 plugins=(git vi-mode fzf docker docker-compose you-should-use zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
+
+# Aider
+. "$HOME/.local/bin/env"
