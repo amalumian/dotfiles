@@ -1,8 +1,5 @@
 return {
   {
-    'wuelnerdotexe/vim-astro',
-  },
-  {
     'windwp/nvim-ts-autotag',
     opts = {},
   },
