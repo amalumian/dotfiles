@@ -86,27 +86,15 @@
     },
     // LSP
     {
-      "before": ["g", "p", "d"],
-      "commands": ["editor.action.peekDefinition"]
+      "before": ["g", "r", "d"],
+      "commands": ["editor.action.goToDeclaration"]
     },
     {
-      "before": ["g", "i"],
+      "before": ["g", "r", "i"],
       "commands": ["editor.action.goToImplementation"]
     },
     {
-      "before": ["g", "p", "i"],
-      "commands": ["editor.action.peekImplementation"]
-    },
-    {
-      "before": ["g", "D"],
-      "commands": ["editor.action.goToTypeDefinition"]
-    },
-    {
-      "before": ["g", "p", "D"],
-      "commands": ["editor.action.peekTypeDefinition"]
-    },
-    {
-      "before": ["g", "r"],
+      "before": ["g", "r", "r"],
       "commands": ["editor.action.referenceSearch.trigger"]
     },
     {
@@ -114,12 +102,8 @@
       "commands": ["editor.action.rename"]
     },
     {
-      "before": ["g", "c", "a"],
+      "before": ["g", "r", "a"],
       "commands": ["editor.action.quickFix"]
-    },
-    {
-      "before": ["g", "h"],
-      "commands": ["editor.action.showDefinitionPreviewHover"]
     },
     // Search
     {
