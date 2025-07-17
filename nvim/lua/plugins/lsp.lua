@@ -156,7 +156,6 @@ return {
         'markdownlint-cli2',
         'markdown-toc',
         'hadolint',
-        'astro-language-server',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
