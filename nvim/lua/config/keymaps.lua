@@ -5,7 +5,7 @@ vim.keymap.set('n', '<leader>e', function()
   else
     vim.cmd 'Oil'
   end
-end)
+end, { desc = '[E]explorer Oil' })
 
 -- Cursor stays in the middle during jumps
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
@@ -33,10 +33,10 @@ vim.keymap.set('n', '-', '<C-x>')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[Q]uery [L]ocation List' })
 
 -- theprimeagen's keymap
 vim.keymap.set('n', '<C-p>', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Open float diagnostic
-vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float, { desc = '[V]iew [D]iagnostics' })
