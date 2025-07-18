@@ -11,6 +11,7 @@ tree
 tldr
 ripgrep
 htop
+ollama
 shellcheck
 lazygit
 lazydocker

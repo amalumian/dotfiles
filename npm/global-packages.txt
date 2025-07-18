@@ -1,6 +1,5 @@
 @astrojs/language-server
 @nestjs/cli
-@openai/codex
 @vtsls/language-server
 autocannon
 bash-language-server
@@ -19,6 +18,7 @@ markdownlint-cli
 markuplint
 neovim
 npm
+opencode-ai
 prettier
 stylelint-config-recommended
 stylelint-config-standard

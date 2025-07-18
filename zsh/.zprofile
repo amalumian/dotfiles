@@ -10,9 +10,3 @@ export PAGER="bat"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Ollama
-export OLLAMA_API_BASE=http://127.0.0.1:11434
-
-# Aider
-. "$HOME/.local/bin/env"
-
