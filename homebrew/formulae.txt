@@ -26,3 +26,4 @@ gnupg
 pinentry-mac
 pandoc
 gh
+btop
