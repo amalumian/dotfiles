@@ -11,6 +11,7 @@ dsznajder.es7-react-js-snippets
 eamodio.gitlens
 ecmel.vscode-html-css
 editorconfig.editorconfig
+enkia.tokyo-night
 esbenp.prettier-vscode
 figma.figma-vscode-extension
 firefox-devtools.vscode-firefox-debug
