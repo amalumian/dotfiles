@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty cursor cursor-extensions zed system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh mise npm nvim tmux aerospace ghostty cursor cursor-extensions zed system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh asdf npm nvim tmux aerospace ghostty cursor cursor-extensions zed system
+setup: git-hooks homebrew git ssh gnupg zsh mise npm nvim tmux aerospace ghostty cursor cursor-extensions zed system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -73,15 +73,10 @@ zsh:
 	ln -snf $(PWD)/zsh/.zshrc ~/
 	ln -snf $(PWD)/zsh/.zprofile ~/
 
-asdf:
-	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.15.0
-	. ~/.asdf/asdf.sh && \
-	asdf plugin add nodejs && \
-	asdf plugin add lua && \
-	asdf install nodejs latest && \
-	asdf install lua latest && \
-	asdf global nodejs latest && \
-	asdf global lua latest && \
+mise:
+	curl https://mise.run | sh && \
+	. ~/.local/bin/mise && \
+	mise use --global node@22 lua@5.1
 
 npm:
 	xargs npm install -g < $(PWD)/npm/global-packages.txt

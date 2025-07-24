@@ -9,4 +9,5 @@ export GPG_TTY=$(tty)
 export PAGER="bat"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/Users/amalumian/.local/bin/mise activate zsh)"
 eval "$(zoxide init zsh --cmd cd)"

@@ -30,3 +30,5 @@ cmatrix
 imagemagick
 ghostscript
 fish
+ast-grep
+wget
