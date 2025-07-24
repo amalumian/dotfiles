@@ -27,3 +27,6 @@ ollama
 imageoptim-cli
 shellcheck
 cmatrix
+imagemagick
+ghostscript
+fish

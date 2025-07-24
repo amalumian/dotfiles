@@ -15,7 +15,8 @@ eslint-plugin-react
 eslint
 imageoptim-cli
 jsonlint
-markdownlint-cli
+markdown-toc
+markdownlint-cli2
 markuplint
 neovim
 npm
