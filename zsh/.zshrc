@@ -1,13 +1,3 @@
-# Aliases
-alias vim="nvim"
-alias zshconfig="nvim $HOME/.zshrc"
-alias zshsource="source $HOME/.zshrc"
-alias sshconfig="nvim $HOME/.ssh/config"
-alias gitconfig="nvim $HOME/.gitconfig"
-alias dotfiles="cd $HOME/Developer/dotfiles/"
-alias www="cd $HOME/Developer/malumian/www/"
-alias finance="cd $HOME/Developer/malumian/finance/"
-
 # asdf
 . "$HOME/.asdf/asdf.sh"
 fpath=(${ASDF_DIR}/completions $fpath)
@@ -49,3 +39,6 @@ plugins=(git vi-mode fzf docker docker-compose you-should-use zsh-autosuggestion
 
 source $ZSH/oh-my-zsh.sh
 
+# Aliases
+alias vim="nvim"
+alias ls='eza --all --long --group --group-directories-first --icons --header --time-style long-iso'

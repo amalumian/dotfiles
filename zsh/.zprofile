@@ -9,4 +9,4 @@ export GPG_TTY=$(tty)
 export PAGER="bat"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
+eval "$(zoxide init zsh --cmd cd)"
