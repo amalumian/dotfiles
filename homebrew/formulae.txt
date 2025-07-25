@@ -32,3 +32,4 @@ ghostscript
 fish
 ast-grep
 wget
+git-delta

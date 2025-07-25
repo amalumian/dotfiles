@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh mise npm nvim tmux aerospace ghostty cursor cursor-extensions zed system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh mise npm nvim lazygit tmux aerospace ghostty cursor cursor-extensions zed system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh mise npm nvim tmux aerospace ghostty cursor cursor-extensions zed system
+setup: git-hooks homebrew git ssh gnupg zsh mise npm nvim lazygit tmux aerospace ghostty cursor cursor-extensions zed system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -87,6 +87,10 @@ nvim:
 	rm -rf ~/.local/state/nvim
 	rm -rf ~/.cache/nvim
 	ln -snf $(PWD)/nvim ~/.config/nvim
+
+lazygit:
+	rm -f ~/Library/Application\ Support/lazygit/config.yml
+	ln -snf $(PWD)/lazygit/config.yml ~/Library/Application\ Support/lazygit/
 
 tmux:
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

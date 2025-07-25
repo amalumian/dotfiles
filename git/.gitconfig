@@ -1,21 +1,26 @@
 [user]
-	name = Arthur Malumian
-	email = arthurmalumian@gmail.com
-	signingkey = KEYID
+  name = Arthur Malumian
+  email = arthurmalumian@gmail.com
+  signingkey = KEYID
 [core]
-	editor = nvim
-	excludesfile = ~/.gitignore_global
-	autocrlf = input
-	safecrlf = warn
-	pager = bat
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
+  safecrlf = warn
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  dark = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [commit]
-	gpgsign = true
+  gpgsign = true
 [merge]
-	tool = nvimdiff
-	conflictstyle = diff3
+  tool = nvimdiff
+  conflictstyle = zdiff3
 [diff]
-	tool = nvimdiff
+  tool = nvimdiff
 [difftool]
-	prompt = false
+  prompt = false
