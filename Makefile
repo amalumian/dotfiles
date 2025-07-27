@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh mise npm nvim lazygit tmux aerospace ghostty cursor cursor-extensions zed system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-extensions zed system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh mise npm nvim lazygit tmux aerospace ghostty cursor cursor-extensions zed system
+setup: git-hooks homebrew git ssh gnupg zsh mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-extensions zed system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -101,6 +101,9 @@ aerospace:
 	rm -f ~/.aerospace.toml
 	ln -snf $(PWD)/aerospace/.aerospace.toml ~/
 
+borders:
+	brew tap FelixKratz/formulae && brew install borders
+
 ghostty:
 	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
 	ln -snf $(PWD)/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
@@ -137,6 +140,8 @@ system:
 	@echo "Disable press and hold"
 	defaults write -g ApplePressAndHoldEnabled -bool false
 	killall Dock || true
+	@echo "Disable windows opening animations"
+	defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 
 	@echo "System Settings:"
 	@echo "Appearance:"
