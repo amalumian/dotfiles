@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-extensions zed system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-extensions zed system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-extensions zed system
+setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-extensions zed system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -72,6 +72,16 @@ zsh:
 	rm -f ~/.zprofile
 	ln -snf $(PWD)/zsh/.zshrc ~/
 	ln -snf $(PWD)/zsh/.zprofile ~/
+
+bat:
+	mkdir -p "$(bat --config-dir)/themes"
+	cd "$(bat --config-dir)/themes"
+	curl -O https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_moon.tmTheme
+	bat cache --build
+
+eza:
+	mkdir ~/Library/Application\ Support/eza
+	ln -snf $(PWD)/eza/theme.yml ~/Library/Application\ Support/eza/
 
 mise:
 	curl https://mise.run | sh && \
