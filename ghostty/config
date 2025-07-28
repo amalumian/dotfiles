@@ -6,5 +6,6 @@ macos-titlebar-style = hidden
 mouse-hide-while-typing = true
 cursor-style = block
 cursor-style-blink = false
+shell-integration-features = no-cursor
 cursor-text = #1b1d2b
 cursor-color = #82aaff
