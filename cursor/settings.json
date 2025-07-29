@@ -7,8 +7,6 @@
   "window.zoomLevel": 3,
   "window.density.editorTabHeight": "compact",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
-  "workbench.preferredLightColorTheme": "Tokyo Night Storm",
   "window.autoDetectColorScheme": true,
   "terminal.integrated.cursorStyle": "block",
   "editor.cursorStyle": "block",
