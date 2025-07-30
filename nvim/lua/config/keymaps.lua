@@ -1,8 +1,8 @@
--- Cursor stays in the middle during jumps
+-- Stay in the middle during jumps
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
--- Cursor stays in the middle while searching
+-- Stay in the middle while searching
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -13,5 +13,5 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- Paste without yanking
 vim.keymap.set("x", "<leader>P", [["_dP]], { desc = "Paste (BH)" })
 
--- Delete text into a black hole
+-- Delete without yanking
 vim.keymap.set({ "n", "v" }, "<leader>D", [["_d]], { desc = "Delete (BH)" })
