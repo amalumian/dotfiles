@@ -158,7 +158,7 @@ alt-shift-semicolon = 'mode service'
 6 = 'main'
 7 = 'main'
 8 = 'main'
-9 = 'main'
+9 = ['secondary', 'main']
 10 = ['secondary', 'main']
 
 # 'service' binding mode declaration.
