@@ -33,3 +33,4 @@ fish
 ast-grep
 wget
 git-delta
+spotify_player
