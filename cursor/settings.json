@@ -4,7 +4,7 @@
   "cursor.cpp.enablePartialAccepts": true,
 
   // ========== Visuals ==========
-  "window.zoomLevel": 3,
+  "window.zoomLevel": 2,
   "window.density.editorTabHeight": "compact",
   "workbench.iconTheme": "material-icon-theme",
   "window.autoDetectColorScheme": true,
