@@ -8,6 +8,7 @@ return {
         "node_modules",
         "package-lock.json",
         "yarn.lock",
+        "dist",
       },
       sources = {
         files = { ignored = true, hidden = true },
