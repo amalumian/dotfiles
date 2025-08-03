@@ -1,3 +1,5 @@
+-- https://www.lazyvim.org/configuration/recipes#add-eslint-and-use-it-for-formatting
+
 return {
   -- "neovim/nvim-lspconfig",
   -- opts = {
