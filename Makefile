@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-extensions zed system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-cli cursor-extensions zed system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-extensions zed system
+setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-cli cursor-extensions zed system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -164,6 +164,9 @@ cursor:
 	ln -snf $(PWD)/cursor/keybindings.json ~/Library/Application\ Support/Cursor/User/
 	rm -f ~/Library/Application\ Support/Cursor/User/settings.json
 	ln -snf $(PWD)/cursor/settings.json ~/Library/Application\ Support/Cursor/User/
+
+cursor-cli:
+	curl https://cursor.com/install -fsS | bash
 
 cursor-extensions:
 	@echo "Installing extensions from extensions.txt..."

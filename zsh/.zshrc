@@ -6,6 +6,7 @@ export TERM=tmux-256color
 export PATH="/Library/PostgreSQL/17/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/Applications/Racket v8.16/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export GPG_TTY=$(tty)
 export PAGER="bat"
 
