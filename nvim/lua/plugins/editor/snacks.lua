@@ -9,6 +9,7 @@ return {
         "package-lock.json",
         "yarn.lock",
         "dist",
+        "build",
       },
       sources = {
         files = { ignored = true, hidden = true },
