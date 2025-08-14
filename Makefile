@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-cli cursor-extensions zed system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor cursor-cli cursor-extensions zed system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace borders ghostty cursor cursor-cli cursor-extensions zed system
+setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor cursor-cli cursor-extensions zed system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -13,35 +13,20 @@ homebrew:
 	@if ! command -v brew >/dev/null 2>&1; then \
 		/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
 	fi
-	@echo "Installing Homebrew packages..."
-	@if [ -f /opt/homebrew/bin/brew ]; then \
-		eval "$$(/opt/homebrew/bin/brew shellenv)"; \
-	fi
-	@if [ -f $(PWD)/homebrew/formulae.txt ]; then \
-		xargs -I {} brew install {} < $(PWD)/homebrew/formulae.txt || echo "Some formulae failed to install"; \
-	fi
-	@if [ -f $(PWD)/homebrew/casks.txt ]; then \
-		xargs -I {} brew install --cask {} < $(PWD)/homebrew/casks.txt || echo "Some casks failed to install"; \
-	fi
+	@eval "$$(/opt/homebrew/bin/brew shellenv)" && \
+		echo "Installing Homebrew packages from Brewfile..." && \
+		brew bundle --file="$(PWD)/homebrew/Brewfile" || echo "brew bundle encountered errors"
 	@echo "The following applications need to be installed manually:"
-	@echo "  - Command X"
+	@echo "  - FoXray"
 	@echo "  - Kindle"
 	@echo "  - Spark"
 	@echo "  - FileZilla"
-	@echo "  - PostgreSQL"
-	@echo "  - Racket"
-	@echo "  - FoXray"
-	@echo "  - Electrum"
-	@echo "  - Exodus"
 	@echo "  - Fade In"
 	@echo "  - DaVinci Resolve"
 	@echo "  - Steam"
-	@echo "  - Aseprite"
-	@echo "  - Blender"
-	@echo "  - Godot"
 	@echo "  - Battle.net"
-	@echo "  - League of Legends"
-	@echo "  - balenaEtcher"
+	@echo "  - Electrum"
+	@echo "  - Exodus"
 
 git:
 	cp -R $(PWD)/git/. ~/
@@ -73,7 +58,7 @@ gnupg:
 	mkdir -p ~/.gnupg
 	cp -R $(PWD)/gnupg/. ~/.gnupg/
 	chmod 700 ~/.gnupg
-	chmod 700 ~/.gnupg/*
+	chmod 600 ~/.gnupg/*
 	@echo "Starting GPG key generation. Please follow the prompts:"
 	@echo "  Kind of key: RSA and RSA"
 	@echo "  Keysize: 4096"
@@ -81,11 +66,11 @@ gnupg:
 	@gpg --full-generate-key
 	@echo "Key generated, now configuring git..."
 	@KEYID=$$(gpg --list-secret-keys --keyid-format LONG | grep '^sec' | awk '{print $$2}' | cut -d'/' -f2); \
-	@echo "KEYID: $$KEYID"; \
-	@echo "Public key copied to clipboard"; \
+	echo "KEYID: $$KEYID"; \
+	echo "Public key copied to clipboard"; \
 	gpg --armor --export $$KEYID | pbcopy; \
 	git config --global user.signingkey $$KEYID; \
-	@echo "Git configured to sign commits with key $$KEYID"
+	echo "Git configured to sign commits with key $$KEYID"
 
 zsh:
 	rm -f ~/.zshrc
@@ -152,11 +137,6 @@ tmux:
 aerospace:
 	rm -f ~/.aerospace.toml
 	ln -snf $(PWD)/aerospace/.aerospace.toml ~/
-
-borders:
-	@echo "Installing borders..."
-	@brew tap FelixKratz/formulae 2>/dev/null || echo "Failed to tap formula"
-	@brew install borders 2>/dev/null || echo "Failed to install borders"
 
 ghostty:
 	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
