@@ -7,6 +7,7 @@
   "window.zoomLevel": 2,
   "window.density.editorTabHeight": "compact",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.activityBar.orientation": "vertical",
   "window.autoDetectColorScheme": true,
   "terminal.integrated.cursorStyle": "block",
   "editor.cursorStyle": "block",
