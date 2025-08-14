@@ -95,10 +95,13 @@ zsh:
 
 bat:
 	@echo "Setting up bat..."
-	@mkdir -p "$(bat --config-dir)/themes" 2>/dev/null || echo "bat not installed, skipping"
-	@cd "$(bat --config-dir)/themes" 2>/dev/null && \
-	curl -O https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_moon.tmTheme 2>/dev/null || echo "Failed to download theme"
-	@bat cache --build 2>/dev/null || echo "bat not installed"
+	@if command -v bat >/dev/null 2>&1; then \
+		mkdir -p "$$(bat --config-dir)/themes"; \
+		ln -snf "$(PWD)/bat/tokyonight_moon.tmTheme" "$$(bat --config-dir)/themes"; \
+		bat cache --build; \
+	else \
+		echo "bat not installed, skipping"; \
+	fi
 
 eza:
 	mkdir -p ~/Library/Application\ Support/eza
