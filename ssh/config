@@ -4,7 +4,3 @@ Host github.com
 	IdentityFile ~/.ssh/github
 	AddKeysToAgent yes
 	UseKeychain yes
-Host pwn.college
-	HostName pwn.college
-	User hacker
-	IdentityFile ~/.ssh/pwncollege
