@@ -44,7 +44,7 @@ brew "git-delta"
 brew "postgresql@17"
 
 # Casks
-cask "basictex"
+cask "mactex-no-gui"
 cask "nikitabobko/tap/aerospace"
 cask "karabiner-elements"
 cask "flameshot"
