@@ -133,6 +133,9 @@ tmux:
 	fi
 	rm -f ~/.tmux.conf
 	ln -snf $(PWD)/tmux/.tmux.conf ~/
+	ln -snf $(PWD)/tmux/tmux-sessionizer ~/.local/bin/
+	mkdir -p ~/.config/tmux-sessionizer
+	ln -snf $(PWD)/tmux/tmux-sessionizer.conf ~/.config/tmux-sessionizer/
 
 aerospace:
 	rm -f ~/.aerospace.toml

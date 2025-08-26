@@ -80,3 +80,6 @@ export BAT_THEME="tokyonight_moon"
 # Aliases
 alias vim="nvim"
 alias ls='eza --all --long --group --group-directories-first --icons --header --time-style long-iso'
+
+# tmux-sessionizer
+bindkey -s ^f "tmux-sessionizer\n"
