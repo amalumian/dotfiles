@@ -24,7 +24,7 @@ PANE_CACHE_FILE="$PANE_CACHE_DIR/panes.cache"
 # programatic windows
 #
 # how to use:
-# tmux-sessionizer -w 0 will execute the first command in window -t 69.
+# tmux-sessionizer -w 0 will execute the first command in window -t 10.
 # TS_SESSION_COMMANDS=(<cmd1> <cmd2>)
 #
 # TS_LOG=true # will write logs to ~/.local/share/tmux-sessionizer/tmux-sessionizer.logs
@@ -265,7 +265,7 @@ handle_session_cmd() {
 
 handle_window_session_cmd() {
     local current_session="$1"
-    start_index=$((69 + $session_idx))
+    start_index=$((10 + $session_idx))
     target="$current_session:$start_index"
 
     log "target: $target command $session_cmd has-session=$(tmux has-session -t="$target" 2> /dev/null)"
