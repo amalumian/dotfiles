@@ -89,8 +89,8 @@ bat:
 	fi
 
 eza:
-	mkdir -p ~/Library/Application\ Support/eza
-	ln -snf $(PWD)/eza/theme.yml ~/Library/Application\ Support/eza/
+	rm -rf ~/Library/Application\ Support/eza
+	ln -snf $(PWD)/eza ~/Library/Application\ Support/eza
 
 mise:
 	@echo "Installing mise..."
