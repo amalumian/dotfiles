@@ -151,10 +151,11 @@ alt-shift-semicolon = 'mode service'
 
 # App shortcuts
 alt-b = 'exec-and-forget open -a /Applications/Safari.app'
-alt-c = 'exec-and-forget open -a /Applications/Google\ Chrome.app'
+alt-shift-b = 'exec-and-forget open -a /Applications/Google\ Chrome.app'
 alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
 alt-n = 'exec-and-forget open -a /Applications/Obsidian.app'
 alt-m = 'exec-and-forget open -a /Applications/Spotify.app'
+alt-c = 'exec-and-forget open -a /Applications/Telegram.app'
 
 [workspace-to-monitor-force-assignment]
 1 = 'main'
@@ -204,6 +205,10 @@ run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'com.tdesktop.Telegram'
+run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
