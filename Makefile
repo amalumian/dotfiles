@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor cursor-cli cursor-extensions zed system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor-config cursor-cli cursor-extensions system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor cursor-cli cursor-extensions zed system
+setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor-config cursor-cli cursor-extensions system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -27,6 +27,8 @@ homebrew:
 	@echo "  - Battle.net"
 	@echo "  - Electrum"
 	@echo "  - Exodus"
+	@echo "  - Aserprite"
+	@echo "  - Godot"
 
 git:
 	cp -R $(PWD)/git/. ~/
@@ -145,7 +147,7 @@ ghostty:
 	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
 	ln -snf $(PWD)/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
 
-cursor:
+cursor-config:
 	rm -f ~/Library/Application\ Support/Cursor/User/keybindings.json
 	ln -snf $(PWD)/cursor/keybindings.json ~/Library/Application\ Support/Cursor/User/
 	rm -f ~/Library/Application\ Support/Cursor/User/settings.json
@@ -175,12 +177,6 @@ cursor-extensions:
 		echo "cursor command not found"; \
 	fi
 	@echo "Extensions synchronization complete"
-
-zed:
-	rm -f ~/.config/zed/settings.json
-	ln -snf $(PWD)/zed/settings.json ~/.config/zed/
-	rm -f ~/.config/zed/keymap.json
-	ln -snf $(PWD)/zed/keymap.json ~/.config/zed/
 
 system:
 	@echo "Set dock autohide delay to 0"
