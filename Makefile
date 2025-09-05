@@ -28,7 +28,6 @@ homebrew:
 	@echo "  - Electrum"
 	@echo "  - Exodus"
 	@echo "  - Aserprite"
-	@echo "  - Godot"
 
 git:
 	cp -R $(PWD)/git/. ~/
