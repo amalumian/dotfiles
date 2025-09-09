@@ -42,7 +42,7 @@ if [ ! -d "$PLUGINS_DIR/zsh-syntax-highlighting" ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$PLUGINS_DIR/zsh-syntax-highlighting"
 fi
 
-plugins=(git mise docker docker-compose you-should-use zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
+plugins=(git mise docker docker-compose you-should-use zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
