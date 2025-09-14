@@ -42,6 +42,7 @@ brew "ast-grep"
 brew "wget"
 brew "git-delta"
 brew "postgresql@17"
+brew "starship"
 
 # Casks
 cask "mactex-no-gui"

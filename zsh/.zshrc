@@ -1,26 +1,8 @@
-# Variables
-export ZSH="$HOME/.oh-my-zsh"
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export TERM=tmux-256color
-export GPG_TTY=$(tty)
-export PAGER="bat"
-export BAT_THEME="tokyonight_moon"
-
-# PATHs
-export PATH="/Library/PostgreSQL/17/bin:$PATH"
-export PATH="/usr/local/mysql/bin:$PATH"
-export PATH="/Applications/Racket v8.16/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-
 # Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "Oh My Zsh is not installed. Installing..."
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
-
-# zsh Theme
-ZSH_THEME="robbyrussell"
 
 # Plugins
 PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
@@ -81,3 +63,6 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # Matrix
 print -P "%F{46}Wake up, $USER...%f"
+
+# starship
+eval "$(starship init zsh)"
