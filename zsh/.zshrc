@@ -30,11 +30,6 @@ if [ ! -d "$PLUGINS_DIR/you-should-use" ]; then
     git clone https://github.com/MichaelAquilina/zsh-you-should-use.git "$PLUGINS_DIR/you-should-use"
 fi
 
-if [ ! -d "$PLUGINS_DIR/zsh-autocomplete" ]; then
-    echo "Installing zsh-autocomplete plugin..."
-    git clone https://github.com/marlonrichert/zsh-autocomplete.git "$PLUGINS_DIR/zsh-autocomplete"
-fi
-
 if [ ! -d "$PLUGINS_DIR/zsh-autosuggestions" ]; then
     echo "Installing zsh-autosuggestions plugin..."
     git clone https://github.com/zsh-users/zsh-autosuggestions.git "$PLUGINS_DIR/zsh-autosuggestions"
@@ -45,7 +40,7 @@ if [ ! -d "$PLUGINS_DIR/zsh-syntax-highlighting" ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$PLUGINS_DIR/zsh-syntax-highlighting"
 fi
 
-plugins=(git mise you-should-use zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete vi-mode)
+plugins=(git mise you-should-use zsh-autosuggestions zsh-syntax-highlighting vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
