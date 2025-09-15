@@ -1,11 +1,7 @@
 # Options
 cask_args appdir: "~/Applications" #, require_sha: true
 
-# Taps
-tap "FelixKratz/formulae"
-
 # Formulae
-brew "borders"
 brew "curl"
 brew "git"
 brew "gh"
