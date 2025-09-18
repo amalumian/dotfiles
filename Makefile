@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty wezterm cursor-config cursor-cli cursor-extensions system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor-config cursor-cli cursor-extensions system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty wezterm cursor-config cursor-cli cursor-extensions system
+setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor-config cursor-cli cursor-extensions system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -145,10 +145,6 @@ aerospace:
 ghostty:
 	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
 	ln -snf $(PWD)/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
-
-wezterm:
-	rm -f ~/.wezterm.lua
-	ln -snf $(PWD)/wezterm/.wezterm.lua ~/
 
 cursor-config:
 	rm -f ~/Library/Application\ Support/Cursor/User/keybindings.json
