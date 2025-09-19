@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor-config cursor-cli cursor-extensions system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor-cli system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor-config cursor-cli cursor-extensions system
+setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor-cli system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -146,36 +146,8 @@ ghostty:
 	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
 	ln -snf $(PWD)/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
 
-cursor-config:
-	rm -f ~/Library/Application\ Support/Cursor/User/keybindings.json
-	ln -snf $(PWD)/cursor/keybindings.json ~/Library/Application\ Support/Cursor/User/
-	rm -f ~/Library/Application\ Support/Cursor/User/settings.json
-	ln -snf $(PWD)/cursor/settings.json ~/Library/Application\ Support/Cursor/User/
-
 cursor-cli:
 	curl https://cursor.com/install -fsS | bash
-
-cursor-extensions:
-	@echo "Installing extensions from extensions.txt..."
-	@if [ -f $(PWD)/cursor/extensions.txt ]; then \
-		while read extension; do \
-			cursor --install-extension "$$extension" 2>/dev/null || echo "Failed to install extension: $$extension"; \
-		done < $(PWD)/cursor/extensions.txt; \
-	else \
-		echo "cursor/extensions.txt not found"; \
-	fi
-	@echo "Checking for extensions that need to be removed..."
-	@if command -v cursor >/dev/null 2>&1; then \
-		cursor --list-extensions 2>/dev/null | while read installed_ext; do \
-			if ! grep -q "^$$installed_ext$$" $(PWD)/cursor/extensions.txt 2>/dev/null; then \
-				echo "Removing extension: $$installed_ext"; \
-				cursor --uninstall-extension "$$installed_ext" 2>/dev/null; \
-			fi; \
-		done; \
-	else \
-		echo "cursor command not found"; \
-	fi
-	@echo "Extensions synchronization complete"
 
 system:
 	@echo "Set dock autohide delay to 0"
