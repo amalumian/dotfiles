@@ -1,4 +1,5 @@
 gui:
+  mouseEvents: false
   sidePanelWidth: 0.3
   nerdFontsVersion: "3"
   theme:
