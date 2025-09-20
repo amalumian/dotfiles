@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor-cli system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty kitty cursor-cli system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty cursor-cli system
+setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty kitty cursor-cli system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -145,6 +145,10 @@ aerospace:
 ghostty:
 	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
 	ln -snf $(PWD)/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
+
+kitty:
+	rm -rf ~/.config/kitty
+	ln -snf $(PWD)/kitty ~/.config/kitty
 
 cursor-cli:
 	curl https://cursor.com/install -fsS | bash
