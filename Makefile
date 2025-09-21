@@ -40,7 +40,7 @@ ssh:
 		cp ~/.ssh/config ~/.ssh/config.bak.$$(date +%Y%m%d%H%M%S); \
 		echo "Backup of existing ~/.ssh/config saved."; \
 	fi
-	cp $(PWD)/.ssh/config ~/.ssh/config
+	cp $(PWD)/amalumian/.ssh/config ~/.ssh/config
 	@if [ ! -f ~/.ssh/github ]; then \
 		echo "Generating SSH key..."; \
 		ssh-keygen -t ed25519 -C "github" -f ~/.ssh/github -N ""; \
@@ -57,7 +57,7 @@ ssh:
 
 gnupg:
 	mkdir -p ~/.gnupg
-	cp -R $(PWD)/.gnupg/. ~/.gnupg/
+	cp -R $(PWD)/amalumian/.gnupg/. ~/.gnupg/
 	chmod 700 ~/.gnupg
 	chmod 600 ~/.gnupg/*
 	@echo "Starting GPG key generation. Please follow the prompts:"
