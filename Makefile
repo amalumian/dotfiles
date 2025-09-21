@@ -92,11 +92,13 @@ mise:
 	@echo "Installing mise..."
 	@if ! command -v mise >/dev/null 2>&1; then \
 		curl -fsSL https://mise.run | sh; \
+		rm -rf ~/.config/mise && \
+		ln -snf $(PWD)/amalumian/.config/mise ~/.config/mise; \
 	fi
-	@if [ -f ~/.local/bin/mise ]; then \
-		. ~/.local/bin/mise && mise use --global node@22 lua@5.1; \
-	elif command -v mise >/dev/null 2>&1; then \
-		mise use --global node@22 lua@5.1; \
+	@if command -v mise >/dev/null 2>&1; then \
+		mise install; \
+	elif [ -f ~/.local/bin/mise ]; then \
+		~/.local/bin/mise install; \
 	else \
 		echo "mise not available"; \
 	fi

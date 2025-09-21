@@ -1,0 +1,5 @@
+[tools]
+go = "latest"
+lua = "5.1"
+node = "22"
+rust = "latest"
