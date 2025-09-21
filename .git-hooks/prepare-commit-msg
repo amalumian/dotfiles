@@ -42,46 +42,71 @@ try {
   });
 
   const getAllPaths = (files) => {
-    return [...new Set(files.map((file) => file.split("/")[0]))];
+    const skipDirectories = [
+      "amalumian",
+      ".config",
+      ".local",
+      "Library",
+      "Application Support",
+    ];
+    return [
+      ...new Set(
+        files.map((file) => {
+          const parts = file.split("/");
+          for (let i = 0; i < parts.length; i++) {
+            if (!skipDirectories.includes(parts[i])) {
+              return parts[i];
+            }
+          }
+          return parts[parts.length - 1];
+        }),
+      ),
+    ];
   };
 
   const allNewPaths = getAllPaths(newFiles);
   const allModifiedPaths = getAllPaths(modifiedFiles);
   const allRenamedPaths = getAllPaths(renamedFiles);
   const allDeletedPaths = getAllPaths(deletedFiles);
-
   const firstLineParts = [];
+
   if (allNewPaths.length > 0) {
     firstLineParts.push(`Add to ${allNewPaths.join(", ")}`);
   }
+
   if (allModifiedPaths.length > 0) {
     firstLineParts.push(`Modify in ${allModifiedPaths.join(", ")}`);
   }
+
   if (allRenamedPaths.length > 0) {
     firstLineParts.push(`Rename in ${allRenamedPaths.join(", ")}`);
   }
+
   if (allDeletedPaths.length > 0) {
     firstLineParts.push(`Delete from ${allDeletedPaths.join(", ")}`);
   }
 
   const firstLine = firstLineParts.join("; ");
-
   const descriptionParts = [];
+
   if (newFiles.length > 0) {
     descriptionParts.push(`Added:`);
     newFiles.forEach((file) => descriptionParts.push(`  - ${file}`));
     descriptionParts.push("");
   }
+
   if (modifiedFiles.length > 0) {
     descriptionParts.push(`Modified:`);
     modifiedFiles.forEach((file) => descriptionParts.push(`  - ${file}`));
     descriptionParts.push("");
   }
+
   if (renamedFiles.length > 0) {
     descriptionParts.push(`Renamed:`);
     renamedFiles.forEach((file) => descriptionParts.push(`  - ${file}`));
     descriptionParts.push("");
   }
+
   if (deletedFiles.length > 0) {
     descriptionParts.push(`Deleted:`);
     deletedFiles.forEach((file) => descriptionParts.push(`  - ${file}`));
@@ -89,8 +114,8 @@ try {
   }
 
   const description = descriptionParts.join("\n");
-
   const commitMessage = firstLine + (description ? "\n\n" + description : "");
+
   fs.writeFileSync(commitMsgFile, commitMessage);
 } catch (error) {
   process.exit(0);
