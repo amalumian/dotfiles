@@ -1,6 +1,6 @@
-.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty kitty cursor-cli system setup
+.PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace kitty cursor-cli system setup
 
-setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace ghostty kitty cursor-cli system
+setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace kitty cursor-cli system
 
 git-hooks:
 	@echo "Installing git hooks..."
@@ -15,7 +15,7 @@ homebrew:
 	fi
 	@eval "$$(/opt/homebrew/bin/brew shellenv)" && \
 		echo "Installing Homebrew packages from Brewfile..." && \
-		brew bundle --file="$(PWD)/homebrew/Brewfile" || echo "brew bundle encountered errors"
+		brew bundle --file="$(PWD)/amalumian/Brewfile" || echo "brew bundle encountered errors"
 	@echo "The following applications need to be installed manually:"
 	@echo "  - FoXray"
 	@echo "  - Kindle"
@@ -24,13 +24,13 @@ homebrew:
 	@echo "  - Fade In"
 	@echo "  - DaVinci Resolve"
 	@echo "  - Steam"
-	@echo "  - Battle.net"
 	@echo "  - Electrum"
 	@echo "  - Exodus"
 	@echo "  - Aserprite"
 
 git:
-	cp -R $(PWD)/git/. ~/
+	cp $(PWD)/amalumian/.gitconfig ~/.gitconfig
+	cp $(PWD)/amalumian/.gitignore_global ~/.gitignore_global
 
 ssh:
 	@echo "Setting up SSH..."
@@ -40,7 +40,7 @@ ssh:
 		cp ~/.ssh/config ~/.ssh/config.bak.$$(date +%Y%m%d%H%M%S); \
 		echo "Backup of existing ~/.ssh/config saved."; \
 	fi
-	cp $(PWD)/ssh/config ~/.ssh/config
+	cp $(PWD)/.ssh/config ~/.ssh/config
 	@if [ ! -f ~/.ssh/github ]; then \
 		echo "Generating SSH key..."; \
 		ssh-keygen -t ed25519 -C "github" -f ~/.ssh/github -N ""; \
@@ -57,7 +57,7 @@ ssh:
 
 gnupg:
 	mkdir -p ~/.gnupg
-	cp -R $(PWD)/gnupg/. ~/.gnupg/
+	cp -R $(PWD)/.gnupg/. ~/.gnupg/
 	chmod 700 ~/.gnupg
 	chmod 600 ~/.gnupg/*
 	@echo "Starting GPG key generation. Please follow the prompts:"
@@ -76,22 +76,17 @@ gnupg:
 zsh:
 	rm -f ~/.zshrc
 	rm -f ~/.zprofile
-	ln -snf $(PWD)/zsh/.zshrc ~/
-	ln -snf $(PWD)/zsh/.zprofile ~/
+	ln -snf $(PWD)/amalumian/.zshrc ~/
+	ln -snf $(PWD)/amalumian/.zprofile ~/
 
 bat:
-	@echo "Setting up bat..."
-	@if command -v bat >/dev/null 2>&1; then \
-		mkdir -p "$$(bat --config-dir)/themes"; \
-		ln -snf "$(PWD)/bat/tokyonight_moon.tmTheme" "$$(bat --config-dir)/themes"; \
-		bat cache --build; \
-	else \
-		echo "bat not installed, skipping"; \
-	fi
+	rm -rf ~/.config/bat
+	ln -snf $(PWD)/amalumian/.config/bat ~/.config/bat
+	bat cache --build;
 
 eza:
 	rm -rf ~/Library/Application\ Support/eza
-	ln -snf $(PWD)/eza ~/Library/Application\ Support/eza
+	ln -snf $(PWD)/amalumian/Library/Application\ Support/eza ~/Library/Application\ Support/eza
 
 mise:
 	@echo "Installing mise..."
@@ -107,48 +102,33 @@ mise:
 	fi
 
 npm:
-	@echo "Installing global npm packages..."
-	@if [ -f $(PWD)/npm/global-packages.txt ]; then \
-		xargs -I {} npm install -g {} < $(PWD)/npm/global-packages.txt || echo "Some npm packages failed to install"; \
-	else \
-		echo "npm/global-packages.txt not found"; \
-	fi
+	xargs -I {} npm install -g {} < $(PWD)/amalumian/npm-global-packages.txt || echo "Some npm packages failed to install"; \
 
 nvim:
 	rm -rf ~/.config/nvim
 	rm -rf ~/.local/share/nvim
 	rm -rf ~/.local/state/nvim
 	rm -rf ~/.cache/nvim
-	ln -snf $(PWD)/nvim ~/.config/nvim
+	ln -snf $(PWD)/amalumian/.config/nvim ~/.config/nvim
 
 lazygit:
 	rm -f ~/Library/Application\ Support/lazygit/config.yml
-	ln -snf $(PWD)/lazygit/config.yml ~/Library/Application\ Support/lazygit/
+	ln -snf $(PWD)/amalumian/Library/Application\ Support/lazygit/config.yml ~/Library/Application\ Support/lazygit/
 
 tmux:
-	@echo "Setting up tmux..."
-	@if [ ! -d ~/.tmux/plugins/tpm ]; then \
-		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm; \
-	else \
-		echo "TPM already installed"; \
-	fi
 	rm -f ~/.tmux.conf
-	ln -snf $(PWD)/tmux/.tmux.conf ~/
-	ln -snf $(PWD)/bin/tmux-sessionizer ~/.local/bin/
 	rm -rf ~/.config/tmux-sessionizer
-	ln -snf $(PWD)/tmux/tmux-sessionizer ~/.config/tmux-sessionizer
+	ln -snf $(PWD)/amalumian/.tmux.conf ~/
+	ln -snf $(PWD)/amalumian/.local/bin/tmux-sessionizer ~/.local/bin/
+	ln -snf $(PWD)/amalumian/.config/tmux-sessionizer ~/.config/tmux-sessionizer
 
 aerospace:
 	rm -f ~/.aerospace.toml
-	ln -snf $(PWD)/aerospace/.aerospace.toml ~/
-
-ghostty:
-	rm -f ~/Library/Application\ Support/com.mitchellh.ghostty/config
-	ln -snf $(PWD)/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
+	ln -snf $(PWD)/amalumian/.aerospace.toml ~/
 
 kitty:
 	rm -rf ~/.config/kitty
-	ln -snf $(PWD)/kitty ~/.config/kitty
+	ln -snf $(PWD)/amalumian/.config/kitty ~/.config/kitty
 
 cursor-cli:
 	curl https://cursor.com/install -fsS | bash
