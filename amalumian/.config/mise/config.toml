@@ -1,5 +1,6 @@
 [tools]
-go = "latest"
-lua = "5.1"
 node = "22"
+deno = "latest"
+go = "latest"
 rust = "latest"
+lua = "5.1"
