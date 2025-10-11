@@ -161,39 +161,36 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
 run = "move-node-to-workspace 1"
-
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace 2"
-
 [[on-window-detected]]
 if.app-id = "net.kovidgoyal.kitty"
 run = "move-node-to-workspace 3"
-
 [[on-window-detected]]
-if.app-id = 'md.obsidian'
+if.app-id = 'org.jkiss.dbeaver.core.product'
 run = 'move-node-to-workspace 4'
-
+[[on-window-detected]]
+if.app-id = 'com.figma.Desktop'
+run = 'move-node-to-workspace 4'
 [[on-window-detected]]
 if.app-id = 'org.gimp.gimp-3.0'
+run = 'move-node-to-workspace 4'
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 5'
-
 [[on-window-detected]]
 if.app-id = 'com.apple.reminders'
 run = 'move-node-to-workspace 6'
-
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
 run = 'move-node-to-workspace 7'
-
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
 run = 'move-node-to-workspace 8'
-
 [[on-window-detected]]
 if.app-id = 'com.tdesktop.Telegram'
 run = 'move-node-to-workspace 9'
-
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace 10'
