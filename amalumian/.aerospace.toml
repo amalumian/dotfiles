@@ -165,7 +165,7 @@ run = "move-node-to-workspace 1"
 if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace 2"
 [[on-window-detected]]
-if.app-id = "net.kovidgoyal.kitty"
+if.app-id = "com.googlecode.iterm2"
 run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'org.jkiss.dbeaver.core.product'
