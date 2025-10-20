@@ -17,7 +17,7 @@ homebrew:
 		echo "Installing Homebrew packages from Brewfile..." && \
 		brew bundle --file="$(PWD)/amalumian/Brewfile" || echo "brew bundle encountered errors"
 	@echo "The following applications need to be installed manually:"
-	@echo "  - FoXray"
+	@echo "  - Hiddify"
 	@echo "  - Kindle"
 	@echo "  - Spark"
 	@echo "  - FileZilla"
