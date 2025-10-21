@@ -20,13 +20,12 @@ homebrew:
 	@echo "  - Hiddify"
 	@echo "  - Kindle"
 	@echo "  - Spark"
-	@echo "  - FileZilla"
 	@echo "  - Fade In"
 	@echo "  - DaVinci Resolve"
 	@echo "  - Steam"
+	@echo "  - Aserprite"
 	@echo "  - Electrum"
 	@echo "  - Exodus"
-	@echo "  - Aserprite"
 
 git:
 	cp $(PWD)/amalumian/.gitconfig ~/.gitconfig
