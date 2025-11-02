@@ -28,6 +28,6 @@ gui:
     defaultFgColor:
       - "#c8d3f5"
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never
+  pagers:
+    - pager: delta --dark --paging=never
+      colorArg: always
