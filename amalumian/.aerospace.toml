@@ -110,7 +110,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-t = 'move-node-to-workspace T'
     # cmd-alt-ctrl-shift-t = 'move-node-to-workspace T'
 
-    alt-enter = 'exec-and-forget open -a /Applications/iTerm.app'
+    alt-enter = ['exec-and-forget open -a /Applications/iTerm.app', 'workspace T']
     # cmd-alt-ctrl-enter = 'exec-and-forget open -a /Applications/iTerm.app'
     cmd-alt-ctrl-f = 'exec-and-forget open -a "Finder"'
     cmd-alt-ctrl-b = 'exec-and-forget open -a /Applications/Safari.app'
