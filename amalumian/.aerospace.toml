@@ -74,18 +74,17 @@ automatically-unhide-macos-hidden-apps = true
     # cmd-alt-ctrl-4 = 'workspace 4'
     alt-5 = 'workspace 5' # Notes
     # cmd-alt-ctrl-5 = 'workspace 5'
-    alt-6 = 'workspace 6' # Reminders
+    alt-6 = 'workspace 6' # Telegram
     # cmd-alt-ctrl-6 = 'workspace 6'
-    alt-7 = 'workspace 7' # Calendar
+    alt-7 = 'workspace 7' # Spotify
     # cmd-alt-ctrl-7 = 'workspace 7'
-    alt-8 = 'workspace 8' # Mail
+    alt-8 = 'workspace 8' # Reminders
     # cmd-alt-ctrl-8 = 'workspace 8'
-    alt-9 = 'workspace 9' # Telegram
+    alt-9 = 'workspace 9' # Calendar
     # cmd-alt-ctrl-9 = 'workspace 9'
-    alt-0 = 'workspace 10' # Spotify
+    alt-0 = 'workspace 10' # Mail
     # cmd-alt-ctrl-0 = 'workspace 10'
 
-    # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
     # cmd-alt-ctrl-shift-1 = 'move-node-to-workspace 1'
     alt-shift-2 = 'move-node-to-workspace 2'
