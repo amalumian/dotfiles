@@ -68,22 +68,24 @@ automatically-unhide-macos-hidden-apps = true
     # cmd-alt-ctrl-1 = 'workspace 1'
     alt-2 = 'workspace 2' # Browser 1
     # cmd-alt-ctrl-2 = 'workspace 2'
-    alt-3 = 'workspace 3' # Terminal
+    alt-3 = 'workspace 3' # App for work
     # cmd-alt-ctrl-3 = 'workspace 3'
-    alt-4 = 'workspace 4' # Some additional app for work
+    alt-4 = 'workspace 4' # Notes
     # cmd-alt-ctrl-4 = 'workspace 4'
-    alt-5 = 'workspace 5' # Notes
+    alt-5 = 'workspace 5' # Telegram
     # cmd-alt-ctrl-5 = 'workspace 5'
-    alt-6 = 'workspace 6' # Telegram
+    alt-6 = 'workspace 6' # Spotify
     # cmd-alt-ctrl-6 = 'workspace 6'
-    alt-7 = 'workspace 7' # Spotify
+    alt-7 = 'workspace 7' # Reminders
     # cmd-alt-ctrl-7 = 'workspace 7'
-    alt-8 = 'workspace 8' # Reminders
+    alt-8 = 'workspace 8' # Calendar
     # cmd-alt-ctrl-8 = 'workspace 8'
-    alt-9 = 'workspace 9' # Calendar
+    alt-9 = 'workspace 9' # Mail
     # cmd-alt-ctrl-9 = 'workspace 9'
-    alt-0 = 'workspace 10' # Mail
+    alt-0 = 'workspace 10' # Other
     # cmd-alt-ctrl-0 = 'workspace 10'
+    alt-t = 'workspace T' # Terminal
+    # cmd-alt-ctrl-t = 'workspace T'
 
     alt-shift-1 = 'move-node-to-workspace 1'
     # cmd-alt-ctrl-shift-1 = 'move-node-to-workspace 1'
@@ -105,8 +107,11 @@ automatically-unhide-macos-hidden-apps = true
     # cmd-alt-ctrl-shift-9 = 'move-node-to-workspace 9'
     alt-shift-0 = 'move-node-to-workspace 10'
     # cmd-alt-ctrl-shift-0 = 'move-node-to-workspace 10'
+    alt-shift-t = 'move-node-to-workspace T'
+    # cmd-alt-ctrl-shift-t = 'move-node-to-workspace T'
 
-    cmd-alt-ctrl-enter = 'exec-and-forget open -a /Applications/iTerm.app'
+    alt-enter = 'exec-and-forget open -a /Applications/iTerm.app'
+    # cmd-alt-ctrl-enter = 'exec-and-forget open -a /Applications/iTerm.app'
     cmd-alt-ctrl-f = 'exec-and-forget open -a "Finder"'
     cmd-alt-ctrl-b = 'exec-and-forget open -a /Applications/Safari.app'
     cmd-alt-ctrl-shift-b = 'exec-and-forget open -a /Applications/Google\ Chrome.app'
@@ -128,6 +133,7 @@ automatically-unhide-macos-hidden-apps = true
     8 = 'main'
     9 = 'main'
     10 = ['secondary', 'main']
+    T = 'main'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.Safari'
@@ -138,43 +144,43 @@ automatically-unhide-macos-hidden-apps = true
     run = "move-node-to-workspace 2"
 
 [[on-window-detected]]
-    if.app-id = "com.googlecode.iterm2"
-    run = "move-node-to-workspace 3"
-
-[[on-window-detected]]
     if.app-id = 'org.jkiss.dbeaver.core.product'
-    run = 'move-node-to-workspace 4'
+    run = 'move-node-to-workspace 3'
 [[on-window-detected]]
     if.app-id = 'com.figma.Desktop'
-    run = 'move-node-to-workspace 4'
+    run = 'move-node-to-workspace 3'
 [[on-window-detected]]
     if.app-id = 'org.gimp.gimp-3.0'
-    run = 'move-node-to-workspace 4'
+    run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
     if.app-id = 'md.obsidian'
-    run = 'move-node-to-workspace 5'
+    run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
     if.app-id = 'com.tdesktop.Telegram'
-    run = 'move-node-to-workspace 6'
+    run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
     if.app-id = 'com.spotify.client'
-    run = 'move-node-to-workspace 7'
+    run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.reminders'
-    run = 'move-node-to-workspace 8'
+    run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.iCal'
-    run = 'move-node-to-workspace 9'
+    run = 'move-node-to-workspace 8'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.mail'
-    run = 'move-node-to-workspace 10'
+    run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
     if.app-id = 'com.valvesoftware.steam.helper'
-    run = 'layout tiling'
+    run = ['layout tiling', 'move-node-to-workspace 10']
+
+[[on-window-detected]]
+    if.app-id = "com.googlecode.iterm2"
+    run = "move-node-to-workspace T"
