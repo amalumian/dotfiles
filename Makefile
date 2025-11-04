@@ -134,6 +134,7 @@ kitty:
 cursor-cli:
 	curl https://cursor.com/install -fsS | bash
 
+# TODO: Replace all echos with command line instructions
 system:
 	@echo "Set dock autohide delay to 0"
 	defaults write com.apple.dock autohide-delay -float 0
@@ -151,7 +152,7 @@ system:
 	@echo "Apple Intelligence & Siri: false"
 	@echo "Control Center:"
 	@echo "  - Clock: Flash the time separators"
-	@echo "  - Automatically hide and show the menu bar: In Full Screen Only"
+	@echo "  - Automatically hide and show the menu bar: Always"
 	@echo "Desktop & Dock:"
 	@echo "  - Position on screen: Left"
 	@echo "  - Minimize windows using: Scale Effect"
@@ -171,7 +172,6 @@ system:
 	@echo "  - Hot Corners: False"
 	@echo "Display:"
 	@echo "  - Automatically adjust brightness: False"
-	@echo "  - Resolution: 1280x800"
 	@echo "Lock Screen:"
 	@echo "  - Show 24-hour time: False"
 	@echo "Trackpad:"
@@ -181,11 +181,19 @@ system:
 	@echo "  - Tap to click: On"
 	@echo "  - Notification center: Off"
 	@echo "Keyboard:"
+	@echo "  - Caps Lock: Control"
+	@echo "  - Spotlight: Command + Space"
+	@echo "  - Finder search window: Option + Command + Space"
+	@echo "  - Select the next input source: Option + Space"
+	@echo "  - Select the previous input source: Control + Option + Space"
+	@echo "  - Save picture of screen as a file: Command + Shift + 1"
+	@echo "  - Save picture of screen to the clipboard: Command + Shift + 2"
+	@echo "  - Save picture of selected area as a file: Command + Shift + 3"
+	@echo "  - Save picture of selected area to the clipboard: Command + Shift + 4"
+	@echo "  - Screenshot and recording options: Command + Shift + 5"
 	@echo "  - Key repeat rate: Max"
 	@echo "  - Delay until repeat: Max"
 	@echo "  - Adjust keyboard brightness in low light: False"
-	@echo "  - Caps Lock: Control"
-	@echo "  - Spotlight: Off"
 	@echo "  - Press Globe key to: Do Nothing"
 	@echo "  - Keyboard navigation: True"
 	@echo "  - Input Sources: English (US), Russian (PC)"
