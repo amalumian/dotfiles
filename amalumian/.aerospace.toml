@@ -84,8 +84,6 @@ automatically-unhide-macos-hidden-apps = true
     # cmd-alt-ctrl-9 = 'workspace 9'
     alt-0 = 'workspace 10' # Other
     # cmd-alt-ctrl-0 = 'workspace 10'
-    alt-t = 'workspace T' # Terminal
-    # cmd-alt-ctrl-t = 'workspace T'
 
     alt-shift-1 = 'move-node-to-workspace 1'
     # cmd-alt-ctrl-shift-1 = 'move-node-to-workspace 1'
@@ -107,10 +105,8 @@ automatically-unhide-macos-hidden-apps = true
     # cmd-alt-ctrl-shift-9 = 'move-node-to-workspace 9'
     alt-shift-0 = 'move-node-to-workspace 10'
     # cmd-alt-ctrl-shift-0 = 'move-node-to-workspace 10'
-    alt-shift-t = 'move-node-to-workspace T'
-    # cmd-alt-ctrl-shift-t = 'move-node-to-workspace T'
 
-    alt-enter = ['exec-and-forget open -a /Applications/iTerm.app', 'workspace T']
+    alt-enter = ['exec-and-forget open -a /Applications/iTerm.app', 'workspace 10']
     # cmd-alt-ctrl-enter = 'exec-and-forget open -a /Applications/iTerm.app'
     cmd-alt-ctrl-b = 'exec-and-forget open -a /Applications/Safari.app'
     cmd-alt-ctrl-g = 'exec-and-forget open -a /Applications/Google\ Chrome.app'
@@ -123,6 +119,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-m = 'exec-and-forget open -a /System/Applications/Mail.app'
     cmd-alt-ctrl-n = 'exec-and-forget open -a /System/Applications/Notes.app'
     cmd-alt-ctrl-r = 'exec-and-forget open -a /System/Applications/Reminders.app'
+    cmd-alt-ctrl-p = 'exec-and-forget open -a /System/Applications/Preview.app'
     cmd-alt-ctrl-f = 'exec-and-forget open -a "Finder"'
 
 [workspace-to-monitor-force-assignment]
@@ -134,9 +131,8 @@ automatically-unhide-macos-hidden-apps = true
     6 = 'main'
     7 = 'main'
     8 = 'main'
-    9 = 'main'
-    10 = ['secondary', 'main']
-    T = 'main'
+    9 = ['secondary', 'main']
+    10 = 'main'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.Safari'
@@ -181,9 +177,9 @@ automatically-unhide-macos-hidden-apps = true
     run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
-    if.app-id = 'com.valvesoftware.steam.helper'
-    run = ['layout tiling', 'move-node-to-workspace 10']
+if.app-id = "com.googlecode.iterm2"
+run = "move-node-to-workspace 10"
 
 [[on-window-detected]]
-    if.app-id = "com.googlecode.iterm2"
-    run = "move-node-to-workspace T"
+    if.app-id = 'com.valvesoftware.steam.helper'
+    run = ['layout tiling']
