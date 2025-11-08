@@ -73,6 +73,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-enter = ['exec-and-forget open -a /Applications/iTerm.app', 'workspace 10']
     cmd-alt-ctrl-a = 'exec-and-forget open -a /Applications/ChatGPT.app'
     cmd-alt-ctrl-v = 'exec-and-forget open -a /Applications/Hiddify.app'
+    cmd-alt-ctrl-r = 'exec-and-forget open -a /System/Applications/Reminders.app'
     cmd-alt-ctrl-c = 'exec-and-forget open -a /System/Applications/Calendar.app'
     cmd-alt-ctrl-m = 'exec-and-forget open -a /System/Applications/Mail.app'
     cmd-alt-ctrl-n = 'exec-and-forget open -a /System/Applications/Notes.app'
