@@ -60,6 +60,10 @@ alias ls='eza --all --long --group --group-directories-first --icons --header --
 
 # tmux-sessionizer
 bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s '\eh' "tmux-sessionizer -s 0\n"
+bindkey -s '\ej' "tmux-sessionizer -s 1\n"
+bindkey -s '\ek' "tmux-sessionizer -s 2\n"
+bindkey -s '\el' "tmux-sessionizer -s 3\n"
 
 # Matrix
 print -P "%F{46}Wake up, $USER...%f"
