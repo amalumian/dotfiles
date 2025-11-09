@@ -123,9 +123,11 @@ automatically-unhide-macos-hidden-apps = true
     run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
+    if.app-id = 'com.apple.reminders'
+    run = 'move-node-to-workspace 9'
+[[on-window-detected]]
     if.app-id = 'com.apple.iCal'
     run = 'move-node-to-workspace 9'
-
 [[on-window-detected]]
     if.app-id = 'com.apple.mail'
     run = 'move-node-to-workspace 9'
