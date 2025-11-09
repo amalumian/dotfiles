@@ -50,8 +50,8 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-6 = 'workspace 6' # Spotify
     cmd-alt-ctrl-7 = 'workspace 7'
     cmd-alt-ctrl-8 = 'workspace 8'
-    cmd-alt-ctrl-9 = 'workspace 9'
-    cmd-alt-ctrl-0 = 'workspace 10'
+    cmd-alt-ctrl-9 = 'workspace 9' # Mail/Calendar/Reminders
+    cmd-alt-ctrl-0 = 'workspace 10' # Terminal
 
     cmd-alt-ctrl-shift-1 = 'move-node-to-workspace 1'
     cmd-alt-ctrl-shift-2 = 'move-node-to-workspace 2'
@@ -70,7 +70,8 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-o = ['exec-and-forget open -a /Applications/Obsidian.app', 'workspace 4']
     cmd-alt-ctrl-t = ['exec-and-forget open -a /Applications/Telegram.app', 'workspace 5']
     cmd-alt-ctrl-s = ['exec-and-forget open -a /Applications/Spotify.app', 'workspace 6']
-    cmd-alt-ctrl-enter = ['exec-and-forget open -a /Applications/iTerm.app', 'workspace 10']
+    # cmd-alt-ctrl-enter = ['exec-and-forget open -a /Applications/iTerm.app', 'workspace 10']
+    cmd-alt-ctrl-enter = ['exec-and-forget open -a /Applications/kitty.app', 'workspace 10']
     cmd-alt-ctrl-a = 'exec-and-forget open -a /Applications/ChatGPT.app'
     cmd-alt-ctrl-v = 'exec-and-forget open -a /Applications/Hiddify.app'
     cmd-alt-ctrl-r = 'exec-and-forget open -a /System/Applications/Reminders.app'
@@ -132,6 +133,9 @@ automatically-unhide-macos-hidden-apps = true
     if.app-id = 'com.apple.mail'
     run = 'move-node-to-workspace 9'
 
+# [[on-window-detected]]
+#   if.app-id = "com.googlecode.iterm2"
+#   run = "move-node-to-workspace 10"
 [[on-window-detected]]
-  if.app-id = "com.googlecode.iterm2"
+  if.app-id = "net.kovidgoyal.kitty"
   run = "move-node-to-workspace 10"
