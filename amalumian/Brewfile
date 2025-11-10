@@ -2,7 +2,6 @@
 cask_args appdir: "~/Applications" #, require_sha: true
 
 # Formulae
-brew "curl"
 brew "git"
 brew "gh"
 brew "gpg2"
