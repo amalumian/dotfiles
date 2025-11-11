@@ -1,5 +1,7 @@
 .PHONY: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace kitty cursor-cli system setup
 
+# TODO: Refactor all commands
+
 setup: git-hooks homebrew git ssh gnupg zsh bat eza mise npm nvim lazygit tmux aerospace kitty cursor-cli system
 
 git-hooks:
@@ -20,12 +22,10 @@ homebrew:
 	@echo "  - Hiddify"
 	@echo "  - Kindle"
 	@echo "  - Spark"
-	@echo "  - Fade In"
-	@echo "  - DaVinci Resolve"
-	@echo "  - Steam"
-	@echo "  - Aserprite"
 	@echo "  - Electrum"
 	@echo "  - Exodus"
+	@echo "  - Fade In"
+	@echo "  - DaVinci Resolve"
 
 git:
 	cp $(PWD)/amalumian/.gitconfig ~/.gitconfig
