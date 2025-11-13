@@ -11,6 +11,5 @@ neovim
 npm
 opencode-ai
 prettier
-typescript
 yarn
 tree-sitter-cli
