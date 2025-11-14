@@ -4,16 +4,6 @@
       "name": "amalumian",
       "selected": true,
       "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" },
-      "simple_modifications": [
-        {
-          "from": { "key_code": "caps_lock" },
-          "to": [{ "key_code": "left_control" }]
-        },
-        {
-          "from": { "key_code": "left_control" },
-          "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
-        }
-      ],
       "devices": [
         {
           "identifiers": {
@@ -24,7 +14,17 @@
           "ignore": false,
           "ignore_vendor_events": true,
           "manipulate_caps_lock_led": false,
-          "treat_as_built_in_keyboard": true
+          "disable_built_in_keyboard_if_exists": true
+        }
+      ],
+      "simple_modifications": [
+        {
+          "from": { "key_code": "caps_lock" },
+          "to": [{ "key_code": "left_control" }]
+        },
+        {
+          "from": { "key_code": "left_control" },
+          "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
         }
       ],
       "complex_modifications": {
