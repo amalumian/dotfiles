@@ -154,7 +154,7 @@ system:
 	@echo "  - Clock: Flash the time separators"
 	@echo "  - Automatically hide and show the menu bar: In Full Screen Only"
 	@echo "Desktop & Dock:"
-	@echo "  - Position on screen: Left"
+	@echo "  - Position on screen: Bottom"
 	@echo "  - Minimize windows using: Scale Effect"
 	@echo "  - Animate opening applications: False"
 	@echo "  - Automatically hide and show the Dock: True"
