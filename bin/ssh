@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+set -e
+
+source "$(dirname "$0")/../lib/paths"
+
+echo "Setting up SSH..."
+
+mkdir -p ~/.ssh
+cp ~/.ssh/config ~/.ssh/config.bak.$(date +%Y%m%d%H%M%S) 2>/dev/null || true
+cp "$DOTFILES_DIR/.ssh/config" ~/.ssh/config
+ssh-keygen -t ed25519 -C "github" -f ~/.ssh/github -N "" 2>/dev/null || true
+eval "$(ssh-agent -s)" 2>/dev/null || true
+ssh-add --apple-use-keychain ~/.ssh/github 2>/dev/null || true
+pbcopy < ~/.ssh/github.pub 2>/dev/null || true

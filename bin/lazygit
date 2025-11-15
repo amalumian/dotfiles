@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+set -e
+
+source "$(dirname "$0")/../lib/paths"
+
+echo "Setting up Lazygit..."
+
+rm -f ~/Library/"Application Support"/lazygit/config.yml
+ln -snf "$DOTFILES_DIR/Library/Application Support/lazygit/config.yml" ~/Library/"Application Support"/lazygit/

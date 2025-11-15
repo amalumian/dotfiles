@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+set -e
+
+source "$(dirname "$0")/../lib/paths"
+
+echo "Setting up Mise..."
+
+rm -rf ~/.config/mise
+ln -snf "$DOTFILES_DIR/.config/mise" ~/.config/mise
+mise install

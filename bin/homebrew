@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+set -e
+
+source "$(dirname "$0")/../lib/paths"
+
+echo "Setting up Homebrew..."
+
+if ! command -v brew >/dev/null 2>&1; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+brew bundle --file="$DOTFILES_DIR/Brewfile" 2>/dev/null || true
+
+echo "The following applications need to be installed manually:"
+echo "  - Hiddify"
+echo "  - Kindle"
+echo "  - Spark"
+echo "  - Electrum"
+echo "  - Exodus"
+echo "  - Fade In"
+echo "  - DaVinci Resolve"

@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+set -e
+
+source "$(dirname "$0")/../lib/paths"
+
+echo "Setting up GnuPG..."
+
+mkdir -p ~/.gnupg
+cp -R "$DOTFILES_DIR/.gnupg/." ~/.gnupg/
+chmod 700 ~/.gnupg
+chmod 600 ~/.gnupg/*
+
+echo "Starting GPG key generation. Please follow the prompts:"
+echo "  Kind of key: RSA and RSA"
+echo "  Keysize: 4096"
+echo "  Expiration: 0 (does not expire)"
+gpg --full-generate-key
+
+echo "Key generated, now configuring git..."
+KEYID=$(gpg --list-secret-keys --keyid-format LONG | grep '^sec' | awk '{print $2}' | cut -d'/' -f2)
+echo "KEYID: $KEYID"
+gpg --armor --export $KEYID | pbcopy
+echo "Public key copied to clipboard"
+git config --global user.signingkey $KEYID
+echo "Git configured to sign commits with key $KEYID"

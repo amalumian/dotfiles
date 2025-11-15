@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+set -e
+
+source "$(dirname "$0")/../lib/paths"
+
+echo "Setting up Git..."
+
+cp "$DOTFILES_DIR/.gitconfig" ~/.gitconfig
+cp "$DOTFILES_DIR/.gitignore_global" ~/.gitignore_global
