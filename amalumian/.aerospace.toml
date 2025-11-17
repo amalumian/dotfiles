@@ -70,7 +70,6 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-o = ['exec-and-forget open -a /Applications/Obsidian.app', 'workspace 4']
     cmd-alt-ctrl-t = ['exec-and-forget open -a /Applications/Telegram.app', 'workspace 5']
     cmd-alt-ctrl-s = ['exec-and-forget open -a /Applications/Spotify.app', 'workspace 6']
-    # cmd-alt-ctrl-enter = ['exec-and-forget open -a /Applications/iTerm.app', 'workspace 10']
     cmd-alt-ctrl-enter = ['exec-and-forget open -a /Applications/kitty.app', 'workspace 10']
     cmd-alt-ctrl-a = 'exec-and-forget open -a /Applications/ChatGPT.app'
     cmd-alt-ctrl-v = 'exec-and-forget open -a /Applications/Hiddify.app'
@@ -114,6 +113,9 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'md.obsidian'
     run = 'move-node-to-workspace 4'
+[[on-window-detected]]
+    if.app-id = 'com.apple.Notes'
+    run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
     if.app-id = 'com.tdesktop.Telegram'
@@ -133,9 +135,6 @@ automatically-unhide-macos-hidden-apps = true
     if.app-id = 'com.apple.mail'
     run = 'move-node-to-workspace 9'
 
-# [[on-window-detected]]
-#   if.app-id = "com.googlecode.iterm2"
-#   run = "move-node-to-workspace 10"
 [[on-window-detected]]
   if.app-id = "net.kovidgoyal.kitty"
   run = "move-node-to-workspace 10"
