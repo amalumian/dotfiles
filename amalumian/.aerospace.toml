@@ -65,7 +65,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-shift-0 = 'move-node-to-workspace 10'
 
     cmd-alt-ctrl-b = ['exec-and-forget open -a /Applications/Safari.app', 'workspace 1']
-    cmd-alt-ctrl-shift-b = ['exec-and-forget open -a /Applications/Google\ Chrome.app', 'workspace 2']
+    cmd-alt-ctrl-shift-b = ['exec-and-forget open -a /Applications/Firefox.app', 'workspace 2']
     cmd-alt-ctrl-d = ['exec-and-forget open -a /Applications/DBeaver.app', 'workspace 3']
     cmd-alt-ctrl-o = ['exec-and-forget open -a /Applications/Obsidian.app', 'workspace 4']
     cmd-alt-ctrl-t = ['exec-and-forget open -a /Applications/Telegram.app', 'workspace 5']
@@ -97,7 +97,7 @@ automatically-unhide-macos-hidden-apps = true
     run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
-    if.app-id = 'com.google.Chrome'
+    if.app-id = 'org.mozilla.firefox'
     run = "move-node-to-workspace 2"
 
 [[on-window-detected]]
