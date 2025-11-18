@@ -68,8 +68,6 @@ echo "  - Show Path Bar: True"
 echo "  - Show Status Bar: True"
 echo "  - Create \"Developer\" directory in home directory"
 
-echo "Set dock autohide delay to 0"
-defaults write com.apple.dock autohide-delay -float 0
 echo "Disable press and hold"
 defaults write -g ApplePressAndHoldEnabled -bool false
 echo "Disable windows opening animations"
