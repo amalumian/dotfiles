@@ -14,6 +14,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle --file="$DOTFILES_DIR/Brewfile" 2>/dev/null || true
 
 echo "The following applications need to be installed manually:"
+echo "  - Racket"
 echo "  - Hiddify"
 echo "  - Kindle"
 echo "  - Spark"

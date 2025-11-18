@@ -14,4 +14,5 @@ export BAT_THEME="tokyonight_moon"
 
 # PATHs
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+export PATH="/Applications/Racket v8.18/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
