@@ -50,7 +50,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-6 = 'workspace 6' # Music
     cmd-alt-ctrl-7 = 'workspace 7'
     cmd-alt-ctrl-8 = 'workspace 8'
-    cmd-alt-ctrl-9 = 'workspace 9' # Mail/Calendar/Reminders
+    cmd-alt-ctrl-9 = 'workspace 9' # Mail / Calendar / Reminders
     cmd-alt-ctrl-0 = 'workspace 10' # Terminal
 
     cmd-alt-ctrl-shift-1 = 'move-node-to-workspace 1'
