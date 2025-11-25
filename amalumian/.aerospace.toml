@@ -17,7 +17,6 @@ automatically-unhide-macos-hidden-apps = true
     outer.top =        0
     outer.right =      0
 
-# Space is empty, need to bind something useful
 [mode.main.binding]
     cmd-h = []     # Disable "hide application"
     cmd-alt-h = [] # Disable "hide others"
@@ -81,6 +80,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-e = 'exec-and-forget open -a /Users/$(whoami)/Applications/Excalidraw.app'
     cmd-alt-ctrl-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/ChatGPT.app'
     cmd-alt-ctrl-shift-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/Perplexity.app'
+    cmd-alt-ctrl-space = 'exec-and-forget open -a "Finder"'
 
 [workspace-to-monitor-force-assignment]
     1 = 'main'
