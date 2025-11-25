@@ -20,8 +20,7 @@ make setup
 - **Shell**: Zsh with Oh My Zsh
 - **Oh My Zsh Plugins**:
   - git
-  - mise
+  - vi-mode
   - you-should-use
   - zsh-autosuggestions
   - zsh-syntax-highlighting
-  - vi-mode
