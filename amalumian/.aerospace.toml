@@ -76,7 +76,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-c = ['exec-and-forget open -a /System/Applications/Calendar.app', 'workspace 9']
     cmd-alt-ctrl-m = ['exec-and-forget open -a /System/Applications/Mail.app', 'workspace 9']
     cmd-alt-ctrl-n = ['exec-and-forget open -a /System/Applications/Notes.app', 'workspace 9']
-    cmd-alt-ctrl-enter = ['exec-and-forget open -a /Applications/kitty.app', 'workspace 10']
+    cmd-alt-ctrl-enter = ['exec-and-forget open -a /Applications/Ghostty.app', 'workspace 10']
     cmd-alt-ctrl-x = 'exec-and-forget open -a /Users/$(whoami)/Applications/X.app'
     cmd-alt-ctrl-e = 'exec-and-forget open -a /Users/$(whoami)/Applications/Excalidraw.app'
     cmd-alt-ctrl-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/ChatGPT.app'
@@ -138,5 +138,5 @@ automatically-unhide-macos-hidden-apps = true
     run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
-  if.app-id = "net.kovidgoyal.kitty"
+  if.app-id = "com.mitchellh.ghostty"
   run = "move-node-to-workspace 10"

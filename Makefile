@@ -1,6 +1,6 @@
-.PHONY: git-hooks system homebrew zsh git ssh gnupg mise npm bat eza lazygit nvim tmux kitty aerospace cursor setup
+.PHONY: git-hooks system homebrew zsh git ssh gnupg mise npm bat eza lazygit nvim tmux kitty ghostty aerospace cursor setup
 
-setup: git-hooks system homebrew zsh git ssh gnupg mise npm bat eza lazygit nvim tmux kitty aerospace cursor
+setup: git-hooks system homebrew zsh git ssh gnupg mise npm bat eza lazygit nvim tmux kitty ghostty aerospace cursor
 
 git-hooks:
 	./bin/git-hooks
@@ -46,6 +46,9 @@ tmux:
 
 kitty:
 	./bin/kitty
+
+ghostty:
+	./bin/ghostty
 
 aerospace:
 	./bin/aerospace
