@@ -14,14 +14,14 @@ make setup
 ## Overview
 
 - **Terminal**: Ghostty
+- **Font**: MesloLGL Nerd Font Mono (16pt)
+- **Color Scheme**: TokyoNight Moon
 - **Prompt**: Starship
 - **Shell**: Zsh with Oh My Zsh
-- **Shell Plugins**:
+- **Oh My Zsh Plugins**:
   - git
   - mise
   - you-should-use
   - zsh-autosuggestions
   - zsh-syntax-highlighting
   - vi-mode
-- **Color Scheme**: TokyoNight Moon
-- **Font**: MesloLGL Nerd Font Mono (16pt)
