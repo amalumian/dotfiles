@@ -6,4 +6,4 @@ source "$(dirname "$0")/../lib/paths"
 
 echo "Setting up NPM..."
 
-xargs -I {} npm install -g {} < "$DOTFILES_DIR/NPM" 2>/dev/null || true
+xargs -I {} npm install -g {} < "$DOTFILES_DIR/npm" 2>/dev/null || true

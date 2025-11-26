@@ -1,3 +1,17 @@
+export ZSH="$HOME/.oh-my-zsh"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export TERM=tmux-256color
+export GPG_TTY=$(tty)
+export PAGER="bat"
+export BAT_THEME="tokyonight_moon"
+export XDG_CONFIG_HOME="$HOME/.config"
+export EZA_CONFIG_DIR="$HOME/.config/eza"
+
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+export PATH="/Applications/Racket v8.18/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
 # Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "Installing Oh My Zsh..."
