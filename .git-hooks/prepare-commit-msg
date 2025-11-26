@@ -46,8 +46,6 @@ try {
       "amalumian",
       ".config",
       ".local",
-      "Library",
-      "Application Support",
     ];
     return [
       ...new Set(
