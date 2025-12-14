@@ -71,16 +71,16 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-o = ['exec-and-forget open -a /Applications/Obsidian.app', 'workspace 4']
     cmd-alt-ctrl-t = ['exec-and-forget open -a /Applications/Telegram.app', 'workspace 5']
     cmd-alt-ctrl-s = ['exec-and-forget open -a /Applications/Spotify.app', 'workspace 6']
-    cmd-alt-ctrl-r = ['exec-and-forget open -a /System/Applications/Reminders.app', 'workspace 9']
-    cmd-alt-ctrl-c = ['exec-and-forget open -a /System/Applications/Calendar.app', 'workspace 9']
-    cmd-alt-ctrl-m = ['exec-and-forget open -a /System/Applications/Mail.app', 'workspace 9']
-    cmd-alt-ctrl-n = ['exec-and-forget open -a /System/Applications/Notes.app', 'workspace 9']
+    cmd-alt-ctrl-r = ['exec-and-forget open -a /System/Applications/Reminders.app', 'workspace 7']
+    cmd-alt-ctrl-n = ['exec-and-forget open -a /System/Applications/Notes.app', 'workspace 7']
+    cmd-alt-ctrl-c = ['exec-and-forget open -a /System/Applications/Calendar.app', 'workspace 8']
+    cmd-alt-ctrl-m = ['exec-and-forget open -a /System/Applications/Mail.app', 'workspace 8']
+    cmd-alt-ctrl-space = ['exec-and-forget open -a /Applications/Zed.app', 'workspace 9']
     cmd-alt-ctrl-enter = ['exec-and-forget open -a /Applications/iTerm.app', 'workspace 10']
     cmd-alt-ctrl-x = 'exec-and-forget open -a /Users/$(whoami)/Applications/X.app'
     cmd-alt-ctrl-e = 'exec-and-forget open -a /Users/$(whoami)/Applications/Excalidraw.app'
     cmd-alt-ctrl-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/ChatGPT.app'
     cmd-alt-ctrl-shift-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/Perplexity.app'
-    cmd-alt-ctrl-space = 'exec-and-forget open -a "Finder"'
 
 [workspace-to-monitor-force-assignment]
     1 = 'main'
@@ -90,8 +90,8 @@ automatically-unhide-macos-hidden-apps = true
     5 = 'main'
     6 = 'main'
     7 = 'main'
-    8 = 'main'
-    9 = ['secondary', 'main']
+    8 = ['secondary', 'main']
+    9 = 'main'
     10 = 'main'
 
 [[on-window-detected]]
@@ -126,16 +126,21 @@ automatically-unhide-macos-hidden-apps = true
 
 [[on-window-detected]]
     if.app-id = 'com.apple.reminders'
-    run = 'move-node-to-workspace 9'
-[[on-window-detected]]
-    if.app-id = 'com.apple.iCal'
-    run = 'move-node-to-workspace 9'
-[[on-window-detected]]
-    if.app-id = 'com.apple.mail'
-    run = 'move-node-to-workspace 9'
+    run = 'move-node-to-workspace 7'
 [[on-window-detected]]
     if.app-id = 'com.apple.Notes'
-    run = 'move-node-to-workspace 9'
+    run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.iCal'
+    run = 'move-node-to-workspace 8'
+[[on-window-detected]]
+    if.app-id = 'com.apple.mail'
+    run = 'move-node-to-workspace 8'
+
+[[on-window-detected]]
+  if.app-id = "dev.zed.Zed"
+  run = "move-node-to-workspace 9"
 
 [[on-window-detected]]
   if.app-id = "com.googlecode.iterm2"
