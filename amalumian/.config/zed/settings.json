@@ -1,9 +1,25 @@
 {
+  // Languages
+  "languages": {
+    "TSX": {
+      "formatter": [
+        {
+          "code_action": "source.fixAll.eslint"
+        },
+        {
+          "external": {
+            "command": "prettier",
+            "arguments": ["--stdin-filepath", "{buffer_path}"]
+          }
+        }
+      ],
+      "format_on_save": "on"
+    }
+  },
   // Keymap
   "base_keymap": "VSCode",
   // Editor
   "autosave": "off",
-  "format_on_save": "off",
   "use_autoclose": false,
   // VIM
   "vim_mode": true,
