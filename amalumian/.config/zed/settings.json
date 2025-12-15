@@ -36,7 +36,7 @@
     }
   },
   "tab_bar": {
-    "show": true
+    "show": false
   },
   "scrollbar": {
     "show": "never"
