@@ -1,21 +1,21 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
   // Keymap
   "base_keymap": "VSCode",
-
+  // Editor
+  "autosave": "off",
+  "format_on_save": "off",
+  "use_autoclose": false,
   // VIM
   "vim_mode": true,
   "vim": {
-    "toggle_relative_line_numbers": true
+    "toggle_relative_line_numbers": true,
+    "cursor_shape": {
+      "insert": "block",
+      "normal": "block",
+      "replace": "block",
+      "visual": "block"
+    }
   },
-
   // UI
   "buffer_font_family": ".ZedMono",
   "ui_font_size": 16,
@@ -25,23 +25,29 @@
     "light": "Tokyo Night Moon",
     "dark": "Tokyo Night Moon"
   },
-  "icon_theme": "Material Icon Theme",
   "terminal": {
-    "font_family": "ZedMono Nerd Font Mono",
+    "font_family": "MesloLGL Nerd Font Mono",
     "font_size": 16
   },
   "diagnostics": {
     "inline": {
-      "enabled": true
+      "enabled": true,
+      "max_severity": "all"
     }
   },
   "tab_bar": {
-    "show": false
+    "show": true
   },
   "scrollbar": {
     "show": "never"
   },
-
+  "title_bar": {
+    // "show_sign_in": false // For work
+  },
+  "use_system_window_tabs": true, // macOS only
+  "inlay_hints": {
+    "enabled": true
+  },
   // Extensions
   "auto_install_extensions": {
     "astro": true,
@@ -51,16 +57,23 @@
     "html": true,
     "latex": true,
     "lua": true,
-    "material-icon-theme": true,
     "react-typescript-snippets": true,
     "scss": true,
     "tokyo-night": true,
     "toml": true
   },
-
   // Telemetry
   "telemetry": {
     "diagnostics": false,
     "metrics": false
+  },
+  // AI
+  // "disable_ai": true,
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-opus-4-5-thinking"
+    },
+    "model_parameters": []
   }
 }
