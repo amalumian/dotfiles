@@ -7,22 +7,60 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  // Keymap
   "base_keymap": "VSCode",
-  "tab_bar": {
-    "show": false
-  },
-  "buffer_font_family": "MesloLGL Nerd Font Mono",
-  "icon_theme": "Material Icon Theme",
+
+  // VIM
   "vim_mode": true,
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
+  "vim": {
+    "toggle_relative_line_numbers": true
   },
+
+  // UI
+  "buffer_font_family": ".ZedMono",
   "ui_font_size": 16,
   "buffer_font_size": 16.0,
   "theme": {
     "mode": "system",
     "light": "Tokyo Night Moon",
     "dark": "Tokyo Night Moon"
+  },
+  "icon_theme": "Material Icon Theme",
+  "terminal": {
+    "font_family": "ZedMono Nerd Font Mono",
+    "font_size": 16
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "tab_bar": {
+    "show": true
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+
+  // Extensions
+  "auto_install_extensions": {
+    "astro": true,
+    "basher": true,
+    "dockerfile": true,
+    "emmet": true,
+    "html": true,
+    "latex": true,
+    "lua": true,
+    "material-icon-theme": true,
+    "react-typescript-snippets": true,
+    "scss": true,
+    "tokyo-night": true,
+    "toml": true
+  },
+
+  // Telemetry
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
   }
 }
