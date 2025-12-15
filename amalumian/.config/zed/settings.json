@@ -60,7 +60,8 @@
     "react-typescript-snippets": true,
     "scss": true,
     "tokyo-night": true,
-    "toml": true
+    "toml": true,
+    "make": true
   },
   // Telemetry
   "telemetry": {
