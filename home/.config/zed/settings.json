@@ -2,6 +2,10 @@
   // Languages
   "languages": {
     "TSX": {
+      "inlay_hints": {
+        "enabled": true
+      },
+      "format_on_save": "on",
       "formatter": [
         {
           "code_action": "source.fixAll.eslint"
@@ -12,8 +16,7 @@
             "arguments": ["--stdin-filepath", "{buffer_path}"]
           }
         }
-      ],
-      "format_on_save": "on"
+      ]
     }
   },
   // Keymap
@@ -41,6 +44,11 @@
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha"
   },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha"
+  },
   "terminal": {
     "font_family": "MesloLGL Nerd Font Mono",
     "font_size": 18
@@ -60,10 +68,6 @@
   "title_bar": {
     // "show_sign_in": false // For work
   },
-  "use_system_window_tabs": true, // macOS only
-  "inlay_hints": {
-    "enabled": true
-  },
   // Extensions
   "auto_install_extensions": {
     "astro": true,
@@ -78,7 +82,8 @@
     "tokyo-night": true,
     "toml": true,
     "make": true,
-    "catppuccin": true
+    "catppuccin": true,
+    "catppuccin-icons": true
   },
   // Telemetry
   "telemetry": {
