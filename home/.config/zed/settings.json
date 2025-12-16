@@ -34,16 +34,16 @@
   },
   // UI
   "buffer_font_family": ".ZedMono",
-  "ui_font_size": 16,
-  "buffer_font_size": 16.0,
+  "ui_font_size": 18,
+  "buffer_font_size": 18.0,
   "theme": {
     "mode": "system",
-    "light": "Tokyo Night Moon",
-    "dark": "Tokyo Night Moon"
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha"
   },
   "terminal": {
     "font_family": "MesloLGL Nerd Font Mono",
-    "font_size": 16
+    "font_size": 18
   },
   "diagnostics": {
     "inline": {
@@ -77,7 +77,8 @@
     "scss": true,
     "tokyo-night": true,
     "toml": true,
-    "make": true
+    "make": true,
+    "catppuccin": true
   },
   // Telemetry
   "telemetry": {
