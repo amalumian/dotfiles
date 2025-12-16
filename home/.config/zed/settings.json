@@ -3,21 +3,21 @@
   "languages": {
     "TSX": {
       "inlay_hints": {
-        "enabled": true
+        "enabled": true,
       },
       "format_on_save": "on",
       "formatter": [
         {
-          "code_action": "source.fixAll.eslint"
+          "code_action": "source.fixAll.eslint",
         },
         {
           "external": {
             "command": "prettier",
-            "arguments": ["--stdin-filepath", "{buffer_path}"]
-          }
-        }
-      ]
-    }
+            "arguments": ["--stdin-filepath", "{buffer_path}"],
+          },
+        },
+      ],
+    },
   },
   // Keymap
   "base_keymap": "VSCode",
@@ -32,42 +32,47 @@
       "insert": "block",
       "normal": "block",
       "replace": "block",
-      "visual": "block"
-    }
+      "visual": "block",
+    },
   },
   // UI
-  "buffer_font_family": ".ZedMono",
-  "ui_font_size": 18,
-  "buffer_font_size": 18.0,
+  "ui_font_family": "MesloLGL Nerd Font Mono",
+  "ui_font_size": 16,
+  "buffer_font_family": "MesloLGL Nerd Font Mono",
+  "buffer_font_size": 16,
+  "terminal": {
+    "font_family": "MesloLGL Nerd Font Mono",
+    "font_size": 16,
+  },
+  "relative_line_numbers": "enabled",
+  "cursor_blink": true,
+  "cursor_shape": "block",
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha",
   },
   "icon_theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
-  },
-  "terminal": {
-    "font_family": "MesloLGL Nerd Font Mono",
-    "font_size": 18
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha",
   },
   "diagnostics": {
     "inline": {
       "enabled": true,
-      "max_severity": "all"
-    }
+      "max_severity": "all",
+    },
   },
   "tab_bar": {
-    "show": true
+    "show": true,
   },
   "scrollbar": {
-    "show": "never"
+    "show": "never",
   },
   "title_bar": {
     // "show_sign_in": false // For work
   },
+  "scroll_beyond_last_line": "off",
   // Extensions
   "auto_install_extensions": {
     "astro": true,
@@ -83,20 +88,21 @@
     "toml": true,
     "make": true,
     "catppuccin": true,
-    "catppuccin-icons": true
+    "catppuccin-icons": true,
+    "git-firefly": true,
   },
   // Telemetry
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   // AI
   // "disable_ai": true,
   "agent": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-opus-4-5-thinking"
+      "model": "claude-opus-4-5-thinking",
     },
-    "model_parameters": []
-  }
+    "model_parameters": [],
+  },
 }
