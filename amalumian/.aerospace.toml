@@ -41,107 +41,72 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-shift-k = 'move up'
     cmd-alt-ctrl-shift-l = 'move right'
 
-    cmd-alt-ctrl-1 = 'workspace 1' # Browser (Personal)
-    cmd-alt-ctrl-2 = 'workspace 2' # Browser (Work)
-    cmd-alt-ctrl-3 = 'workspace 3' # Work Apps (Figma / DBeaver / Postman)
-    cmd-alt-ctrl-4 = 'workspace 4' # Notes
-    cmd-alt-ctrl-5 = 'workspace 5' # Messenger
-    cmd-alt-ctrl-6 = 'workspace 6' # Music
-    cmd-alt-ctrl-7 = 'workspace 7'
-    cmd-alt-ctrl-8 = 'workspace 8'
-    cmd-alt-ctrl-9 = 'workspace 9' # Mail / Calendar / Reminders
-    cmd-alt-ctrl-0 = 'workspace 10' # Terminal
-
+    cmd-alt-ctrl-1 = 'workspace 1'
+    cmd-alt-ctrl-2 = 'workspace 2'
+    cmd-alt-ctrl-3 = 'workspace 3'
+    cmd-alt-ctrl-4 = 'workspace 4'
     cmd-alt-ctrl-shift-1 = 'move-node-to-workspace 1'
     cmd-alt-ctrl-shift-2 = 'move-node-to-workspace 2'
     cmd-alt-ctrl-shift-3 = 'move-node-to-workspace 3'
     cmd-alt-ctrl-shift-4 = 'move-node-to-workspace 4'
-    cmd-alt-ctrl-shift-5 = 'move-node-to-workspace 5'
-    cmd-alt-ctrl-shift-6 = 'move-node-to-workspace 6'
-    cmd-alt-ctrl-shift-7 = 'move-node-to-workspace 7'
-    cmd-alt-ctrl-shift-8 = 'move-node-to-workspace 8'
-    cmd-alt-ctrl-shift-9 = 'move-node-to-workspace 9'
-    cmd-alt-ctrl-shift-0 = 'move-node-to-workspace 10'
 
-    cmd-alt-ctrl-b = ['exec-and-forget open -a /Applications/Safari.app', 'workspace 1']
-    cmd-alt-ctrl-shift-b = ['exec-and-forget open -a /Applications/Firefox.app', 'workspace 2']
-    cmd-alt-ctrl-d = ['exec-and-forget open -a /Applications/DBeaver.app', 'workspace 3']
-    cmd-alt-ctrl-f = ['exec-and-forget open -a /Applications/Figma.app', 'workspace 3']
-    cmd-alt-ctrl-p = ['exec-and-forget open -a /Applications/Postman.app', 'workspace 3']
-    cmd-alt-ctrl-o = ['exec-and-forget open -a /Applications/Obsidian.app', 'workspace 4']
-    cmd-alt-ctrl-t = ['exec-and-forget open -a /Applications/Telegram.app', 'workspace 5']
-    cmd-alt-ctrl-s = ['exec-and-forget open -a /Applications/Spotify.app', 'workspace 6']
-    cmd-alt-ctrl-r = ['exec-and-forget open -a /System/Applications/Reminders.app', 'workspace 7']
-    cmd-alt-ctrl-n = ['exec-and-forget open -a /System/Applications/Notes.app', 'workspace 7']
-    cmd-alt-ctrl-c = ['exec-and-forget open -a /System/Applications/Calendar.app', 'workspace 8']
-    cmd-alt-ctrl-m = ['exec-and-forget open -a /System/Applications/Mail.app', 'workspace 8']
-    cmd-alt-ctrl-z = ['exec-and-forget open -a /Applications/Zed.app', 'workspace 9']
-    cmd-alt-ctrl-enter = ['exec-and-forget open -a /Applications/iTerm.app', 'workspace 10']
-    cmd-alt-ctrl-x = 'exec-and-forget open -a /Users/$(whoami)/Applications/X.app'
-    cmd-alt-ctrl-e = 'exec-and-forget open -a /Users/$(whoami)/Applications/Excalidraw.app'
     cmd-alt-ctrl-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/ChatGPT.app'
-    cmd-alt-ctrl-shift-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/Perplexity.app'
+    cmd-alt-ctrl-b = ['workspace [B]rowser', 'exec-and-forget open -a /Applications/Safari.app']
+    cmd-alt-ctrl-c = ['workspace [C]alendar', 'exec-and-forget open -a /System/Applications/Calendar.app']
+    cmd-alt-ctrl-d = ['workspace [D]atabase', 'exec-and-forget open -a /Applications/DBeaver.app']
+    cmd-alt-ctrl-e = ['workspace [E]mail', 'exec-and-forget open -a /System/Applications/Mail.app']
+    cmd-alt-ctrl-f = 'exec-and-forget open -a Finder'
+    cmd-alt-ctrl-g = ['workspace [G]UI', 'exec-and-forget open -a /Applications/Figma.app']
+    cmd-alt-ctrl-m = ['workspace [M]usic', 'exec-and-forget open -a /Applications/Spotify.app']
+    cmd-alt-ctrl-n = ['workspace [N]otes', 'exec-and-forget open -a /Applications/Obsidian.app']
+    cmd-alt-ctrl-p = ['workspace [P]aint', 'exec-and-forget open -a /Users/$(whoami)/Applications/Excalidraw.app']
+    cmd-alt-ctrl-r = ['workspace [R]eddit', 'exec-and-forget open -a /Users/$(whoami)/Applications/Reddit.app']
+    cmd-alt-ctrl-s = ['workspace [S]ocial', 'exec-and-forget open -a /Applications/Telegram.app']
+    cmd-alt-ctrl-t = ['workspace [T]est', 'exec-and-forget open -a /Applications/Postman.app']
+    cmd-alt-ctrl-w = ['workspace [W]ork', 'exec-and-forget open -a /Applications/Firefox.app']
+    cmd-alt-ctrl-x = ['workspace [X]', 'exec-and-forget open -a /Users/$(whoami)/Applications/X.app']
+    cmd-alt-ctrl-z = ['workspace [Z]ed', 'exec-and-forget open -a /Applications/Zed.app']
+    cmd-alt-ctrl-enter = ['workspace [Return]', 'exec-and-forget open -a /Applications/iTerm.app']
 
 [workspace-to-monitor-force-assignment]
     1 = 'main'
     2 = 'main'
     3 = 'main'
-    4 = 'main'
-    5 = 'main'
-    6 = 'main'
-    7 = 'main'
-    8 = ['secondary', 'main']
-    9 = 'main'
-    10 = 'main'
+    4 = ['secondary', 'main']
 
 [[on-window-detected]]
     if.app-id = 'com.apple.Safari'
-    run = "move-node-to-workspace 1"
-
-[[on-window-detected]]
-    if.app-id = 'org.mozilla.firefox'
-    run = "move-node-to-workspace 2"
-
-[[on-window-detected]]
-    if.app-id = 'org.jkiss.dbeaver.core.product'
-    run = 'move-node-to-workspace 3'
-[[on-window-detected]]
-    if.app-id = 'com.figma.Desktop'
-    run = 'move-node-to-workspace 3'
-[[on-window-detected]]
-    if.app-id = 'com.postmanlabs.mac'
-    run = 'move-node-to-workspace 3'
-
-[[on-window-detected]]
-    if.app-id = 'md.obsidian'
-    run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-    if.app-id = 'com.tdesktop.Telegram'
-    run = 'move-node-to-workspace 5'
-
-[[on-window-detected]]
-    if.app-id = 'com.spotify.client'
-    run = 'move-node-to-workspace 6'
-
-[[on-window-detected]]
-    if.app-id = 'com.apple.reminders'
-    run = 'move-node-to-workspace 7'
-[[on-window-detected]]
-    if.app-id = 'com.apple.Notes'
-    run = 'move-node-to-workspace 7'
-
+    run = "move-node-to-workspace [B]rowser"
 [[on-window-detected]]
     if.app-id = 'com.apple.iCal'
-    run = 'move-node-to-workspace 8'
+    run = 'move-node-to-workspace [C]alendar'
+[[on-window-detected]]
+    if.app-id = 'org.jkiss.dbeaver.core.product'
+    run = 'move-node-to-workspace [D]atabase'
 [[on-window-detected]]
     if.app-id = 'com.apple.mail'
-    run = 'move-node-to-workspace 8'
-
+    run = 'move-node-to-workspace [E]mail'
 [[on-window-detected]]
-  if.app-id = "dev.zed.Zed"
-  run = "move-node-to-workspace 9"
-
+    if.app-id = 'com.figma.Desktop'
+    run = 'move-node-to-workspace [G]UI'
 [[on-window-detected]]
-  if.app-id = "com.googlecode.iterm2"
-  run = "move-node-to-workspace 10"
+    if.app-id = 'com.spotify.client'
+    run = 'move-node-to-workspace [M]usic'
+[[on-window-detected]]
+    if.app-id = 'md.obsidian'
+    run = 'move-node-to-workspace [N]otes'
+[[on-window-detected]]
+    if.app-id = 'com.tdesktop.Telegram'
+    run = 'move-node-to-workspace [S]ocial'
+[[on-window-detected]]
+    if.app-id = 'com.postmanlabs.mac'
+    run = 'move-node-to-workspace [T]est'
+[[on-window-detected]]
+    if.app-id = 'org.mozilla.firefox'
+    run = "move-node-to-workspace [W]ork"
+[[on-window-detected]]
+    if.app-id = "dev.zed.Zed"
+    run = "move-node-to-workspace [Z]ed"
+[[on-window-detected]]
+    if.app-id = "com.googlecode.iterm2"
+    run = "move-node-to-workspace [Return]"
