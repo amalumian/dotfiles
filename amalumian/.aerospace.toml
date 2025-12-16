@@ -63,6 +63,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-r = ['workspace [R]eddit', 'exec-and-forget open -a /Users/$(whoami)/Applications/Reddit.app']
     cmd-alt-ctrl-s = ['workspace [S]ocial', 'exec-and-forget open -a /Applications/Telegram.app']
     cmd-alt-ctrl-t = ['workspace [T]est', 'exec-and-forget open -a /Applications/Postman.app']
+    cmd-alt-ctrl-v = 'exec-and-forget open -a Preview'
     cmd-alt-ctrl-w = ['workspace [W]ork', 'exec-and-forget open -a /Applications/Firefox.app']
     cmd-alt-ctrl-x = ['workspace [X]', 'exec-and-forget open -a /Users/$(whoami)/Applications/X.app']
     cmd-alt-ctrl-z = ['workspace [Z]ed', 'exec-and-forget open -a /Applications/Zed.app']
