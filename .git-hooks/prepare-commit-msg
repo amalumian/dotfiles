@@ -43,7 +43,7 @@ try {
 
   const getAllPaths = (files) => {
     const skipDirectories = [
-      "amalumian",
+      "home",
       ".config",
       ".local",
     ];
