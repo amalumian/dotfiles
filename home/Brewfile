@@ -22,6 +22,7 @@ brew "imagemagick"
 brew "imageoptim-cli"
 brew "lazydocker"
 brew "lazygit"
+brew "mas"
 brew "mise"
 brew "neovim"
 brew "ollama"
@@ -52,6 +53,7 @@ cask "deepl"
 cask "discord"
 cask "docker"
 cask "dropbox"
+cask "electrum"
 cask "figma"
 cask "firefox"
 cask "font-meslo-lg-nerd-font"
@@ -81,3 +83,9 @@ cask "telegram"
 cask "transmission"
 cask "yandex-music"
 cask "zed"
+
+# mas
+mas "DaVinci Resolve", id: 571213070
+mas "Kindle", id: 302584613
+mas "Shadowrocket", id: 932747118
+# mas "Fade In", id: 488557039

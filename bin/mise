@@ -9,3 +9,6 @@ echo "Setting up Mise..."
 rm -rf ~/.config/mise
 ln -snf "$DOTFILES_DIR/.config/mise" ~/.config/mise
 mise install
+
+echo "The following language need to be installed manually:"
+echo "  - Racket"
