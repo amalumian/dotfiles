@@ -1,5 +1,5 @@
 # Options
-cask_args appdir: "~/Applications" #, require_sha: true
+cask_args appdir: "/Applications" #, require_sha: true
 
 # Formulae
 brew "ast-grep"
@@ -32,6 +32,7 @@ brew "pkg-config"
 brew "postgresql@17"
 brew "ripgrep"
 brew "shellcheck"
+brew "shfmt"
 brew "starship"
 brew "tldr"
 brew "tmux"
