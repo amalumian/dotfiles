@@ -49,13 +49,13 @@
   "cursor_shape": "block",
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Mocha",
-    "dark": "Catppuccin Mocha",
+    "light": "Catppuccin Macchiato",
+    "dark": "Catppuccin Macchiato",
   },
   "icon_theme": {
     "mode": "system",
-    "light": "Catppuccin Mocha",
-    "dark": "Catppuccin Mocha",
+    "light": "Catppuccin Macchiato",
+    "dark": "Catppuccin Macchiato",
   },
   "diagnostics": {
     "inline": {
