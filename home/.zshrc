@@ -69,7 +69,6 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 "
 
 # Aliases
-alias vim="nvim"
 alias ls='eza --all --long --group --group-directories-first --icons --header --time-style long-iso'
 
 # tmux-sessionizer
