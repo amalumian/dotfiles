@@ -41,14 +41,14 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-shift-k = 'move up'
     cmd-alt-ctrl-shift-l = 'move right'
 
-    cmd-alt-ctrl-1 = 'workspace 1'
-    cmd-alt-ctrl-2 = 'workspace 2'
-    cmd-alt-ctrl-3 = 'workspace 3'
-    cmd-alt-ctrl-4 = 'workspace 4'
-    cmd-alt-ctrl-shift-1 = 'move-node-to-workspace 1'
-    cmd-alt-ctrl-shift-2 = 'move-node-to-workspace 2'
-    cmd-alt-ctrl-shift-3 = 'move-node-to-workspace 3'
-    cmd-alt-ctrl-shift-4 = 'move-node-to-workspace 4'
+    cmd-alt-ctrl-1 = 'workspace [1]'
+    cmd-alt-ctrl-2 = 'workspace [2]'
+    cmd-alt-ctrl-3 = 'workspace [3]'
+    cmd-alt-ctrl-4 = 'workspace [4]'
+    cmd-alt-ctrl-shift-1 = 'move-node-to-workspace [1]'
+    cmd-alt-ctrl-shift-2 = 'move-node-to-workspace [2]'
+    cmd-alt-ctrl-shift-3 = 'move-node-to-workspace [3]'
+    cmd-alt-ctrl-shift-4 = 'move-node-to-workspace [4]'
 
     cmd-alt-ctrl-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/ChatGPT.app'
     cmd-alt-ctrl-b = ['workspace [B]rowser', 'exec-and-forget open -a /Applications/Safari.app']
@@ -70,10 +70,10 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-enter = ['workspace [Return]', 'exec-and-forget open -a /Applications/iTerm.app']
 
 [workspace-to-monitor-force-assignment]
-    1 = 'main'
-    2 = 'main'
-    3 = 'main'
-    4 = ['secondary', 'main']
+   '[1]' = 'main'
+   '[2]' = 'main'
+   '[3]' = 'main'
+   '[4]' = ['secondary', 'main']
 
 [[on-window-detected]]
     if.app-id = 'com.apple.Safari'
