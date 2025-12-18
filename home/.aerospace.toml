@@ -64,7 +64,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-s = ['workspace [S]ocial', 'exec-and-forget open -a /Applications/Telegram.app']
     cmd-alt-ctrl-t = ['workspace [T]est', 'exec-and-forget open -a /Applications/Postman.app']
     cmd-alt-ctrl-v = 'exec-and-forget open -a Preview'
-    cmd-alt-ctrl-w = ['workspace [W]ork', 'exec-and-forget open -a /Applications/Firefox.app']
+    cmd-alt-ctrl-w = ['workspace [W]ork', 'exec-and-forget open -a /Applications/Google\ Chrome.app']
     cmd-alt-ctrl-x = ['workspace [X]', 'exec-and-forget open -a /Users/$(whoami)/Applications/X.app']
     cmd-alt-ctrl-z = ['workspace [Z]ed', 'exec-and-forget open -a /Applications/Zed.app']
     cmd-alt-ctrl-enter = ['workspace [Return]', 'exec-and-forget open -a /Applications/iTerm.app']
@@ -103,7 +103,7 @@ automatically-unhide-macos-hidden-apps = true
     if.app-id = 'com.postmanlabs.mac'
     run = 'move-node-to-workspace [T]est'
 [[on-window-detected]]
-    if.app-id = 'org.mozilla.firefox'
+    if.app-id = 'com.google.Chrome'
     run = "move-node-to-workspace [W]ork"
 [[on-window-detected]]
     if.app-id = "dev.zed.Zed"
