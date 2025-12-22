@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+set -e
+
+source "$(dirname "$0")/../lib/paths"
+
+echo "Setting up VIM..."
+
+rm -f ~/.vimrc
+ln -snf "$DOTFILES_DIR/.vimrc" ~/
