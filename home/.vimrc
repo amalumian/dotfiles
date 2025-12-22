@@ -8,7 +8,7 @@ set nocompatible
 
 filetype plugin indent on  " Load plugins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
-colorscheme wildcharm      " Change colorscheme
+colorscheme murphy         " Change colorscheme
 
 set autoindent             " Indent according to previous line.
 set expandtab              " Use spaces instead of tabs.
