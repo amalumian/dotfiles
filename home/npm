@@ -1,6 +1,6 @@
 @anthropic-ai/claude-code
-@nestjs/cli
 @mermaid-js/mermaid-cli
+@nestjs/cli
 autocannon
 cloc
 corepack
@@ -11,5 +11,5 @@ neovim
 npm
 opencode-ai
 prettier
-yarn
 tree-sitter-cli
+yarn

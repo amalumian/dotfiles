@@ -13,9 +13,9 @@ brew "fish"
 brew "fzf"
 brew "gh"
 brew "ghostscript"
-brew "git"
 brew "git-delta"
 brew "git-filter-repo"
+brew "git"
 brew "gnupg"
 brew "gpg2"
 brew "imagemagick"
@@ -57,10 +57,10 @@ cask "electrum"
 cask "figma"
 cask "firefox"
 cask "font-meslo-lg-nerd-font"
+cask "ghostty"
 cask "gimp"
 cask "google-chrome"
 cask "google-drive"
-cask "ghostty"
 cask "hiddenbar"
 cask "iterm2"
 cask "karabiner-elements"
@@ -68,8 +68,8 @@ cask "keepingyouawake"
 cask "keyboardcleantool"
 cask "keycastr"
 cask "kitty"
-cask "logitech-g-hub"
 cask "logi-options+"
+cask "logitech-g-hub"
 cask "mactex-no-gui"
 cask "monitorcontrol"
 cask "multipass"
@@ -85,8 +85,8 @@ cask "transmission"
 cask "yandex-music"
 cask "zed"
 
-# mas
+# App Store
 mas "DaVinci Resolve", id: 571213070
+# mas "Fade In", id: 488557039
 mas "Kindle", id: 302584613
 mas "Shadowrocket", id: 932747118
-# mas "Fade In", id: 488557039
