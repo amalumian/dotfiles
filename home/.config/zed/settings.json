@@ -71,12 +71,12 @@
   },
   // UI
   "ui_font_family": "MesloLGL Nerd Font Mono",
-  "ui_font_size": 16,
+  "ui_font_size": 18,
   "buffer_font_family": "MesloLGL Nerd Font Mono",
-  "buffer_font_size": 16,
+  "buffer_font_size": 18,
   "terminal": {
     "font_family": "MesloLGL Nerd Font Mono",
-    "font_size": 16,
+    "font_size": 18,
   },
   "relative_line_numbers": "enabled",
   "cursor_blink": true,
