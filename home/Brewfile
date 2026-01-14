@@ -47,6 +47,7 @@ cask "appcleaner"
 cask "audacity"
 cask "balenaetcher"
 cask "chatgpt"
+# cask "clash-verge-rev"
 cask "cyberduck"
 cask "dbeaver-community"
 cask "deepl"
@@ -87,6 +88,5 @@ cask "zed"
 
 # App Store
 mas "DaVinci Resolve", id: 571213070
-# mas "Fade In", id: 488557039
 mas "Kindle", id: 302584613
 mas "Shadowrocket", id: 932747118
