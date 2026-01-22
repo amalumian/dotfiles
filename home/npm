@@ -1,6 +1,7 @@
 @anthropic-ai/claude-code
 @mermaid-js/mermaid-cli
 @nestjs/cli
+@openai/codex
 autocannon
 cloc
 corepack
