@@ -58,14 +58,15 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-f = 'exec-and-forget open -a Finder'
     cmd-alt-ctrl-g = ['workspace [G]UI', 'exec-and-forget open -a /Applications/Figma.app']
     cmd-alt-ctrl-m = ['workspace [M]usic', 'exec-and-forget open -a /Applications/Spotify.app']
-    cmd-alt-ctrl-n = ['workspace [N]otes', 'exec-and-forget open -a /Applications/Obsidian.app']
-    cmd-alt-ctrl-p = ['workspace [P]aint', 'exec-and-forget open -a /Users/$(whoami)/Applications/Excalidraw.app']
-    cmd-alt-ctrl-r = ['workspace [R]eddit', 'exec-and-forget open -a /Users/$(whoami)/Applications/Reddit.app']
+    cmd-alt-ctrl-n = ['workspace [N]otes', 'exec-and-forget open -a /System/Applications/Notes.app']
+    cmd-alt-ctrl-o = ['workspace [O]bsidian', 'exec-and-forget open -a /Applications/Obsidian.app']
+    cmd-alt-ctrl-p = 'exec-and-forget open -a /Users/$(whoami)/Applications/Excalidraw.app'
+    cmd-alt-ctrl-r = ['workspace [R]eminders', 'exec-and-forget open -a /System/Applications/Reminders.app']
     cmd-alt-ctrl-s = ['workspace [S]ocial', 'exec-and-forget open -a /Applications/Telegram.app']
     cmd-alt-ctrl-t = ['workspace [T]est', 'exec-and-forget open -a /Applications/Postman.app']
     cmd-alt-ctrl-v = 'exec-and-forget open -a Preview'
     cmd-alt-ctrl-w = ['workspace [W]ork', 'exec-and-forget open -a /Applications/Google\ Chrome.app']
-    cmd-alt-ctrl-x = ['workspace [X]', 'exec-and-forget open -a /Users/$(whoami)/Applications/X.app']
+    cmd-alt-ctrl-x = 'exec-and-forget open -a /Users/$(whoami)/Applications/X.app'
     cmd-alt-ctrl-z = ['workspace [Z]ed', 'exec-and-forget open -a /Applications/Zed.app']
     cmd-alt-ctrl-enter = ['workspace [Return]', 'exec-and-forget open -a /Applications/Ghostty.app']
 
@@ -94,8 +95,14 @@ automatically-unhide-macos-hidden-apps = true
     if.app-id = 'com.spotify.client'
     run = 'move-node-to-workspace [M]usic'
 [[on-window-detected]]
-    if.app-id = 'md.obsidian'
+    if.app-id = 'com.apple.Notes'
     run = 'move-node-to-workspace [N]otes'
+[[on-window-detected]]
+    if.app-id = 'md.obsidian'
+    run = 'move-node-to-workspace [O]bsidian'
+[[on-window-detected]]
+    if.app-id = 'com.apple.reminders'
+    run = 'move-node-to-workspace [R]eminders'
 [[on-window-detected]]
     if.app-id = 'com.tdesktop.Telegram'
     run = 'move-node-to-workspace [S]ocial'
