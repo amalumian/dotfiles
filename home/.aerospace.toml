@@ -67,6 +67,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-v = 'exec-and-forget open -a Preview'
     cmd-alt-ctrl-w = ['workspace [W]ork', 'exec-and-forget open -a /Applications/Google\ Chrome.app']
     cmd-alt-ctrl-x = 'exec-and-forget open -a /Users/$(whoami)/Applications/X.app'
+    cmd-alt-ctrl-y = 'exec-and-forget open -a /Users/$(whoami)/Applications/YouTube.app'
     cmd-alt-ctrl-z = ['workspace [Z]ed', 'exec-and-forget open -a /Applications/Zed.app']
     cmd-alt-ctrl-enter = ['workspace [Return]', 'exec-and-forget open -a /Applications/Ghostty.app']
 
