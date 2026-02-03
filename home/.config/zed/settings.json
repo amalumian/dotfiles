@@ -104,7 +104,8 @@
     "show": "never",
   },
   "title_bar": {
-    // "show_sign_in": false // For work
+    // For work
+    // "show_sign_in": false
   },
   // Extensions
   "auto_install_extensions": {
