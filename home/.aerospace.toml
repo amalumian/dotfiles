@@ -50,27 +50,23 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-shift-3 = 'move-node-to-workspace [3]'
     cmd-alt-ctrl-shift-4 = 'move-node-to-workspace [4]'
 
-    cmd-alt-ctrl-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/ChatGPT.app'
     cmd-alt-ctrl-b = ['workspace [B]rowser', 'exec-and-forget open -a /Applications/Safari.app']
     cmd-alt-ctrl-c = ['workspace [C]alendar', 'exec-and-forget open -a /System/Applications/Calendar.app']
     cmd-alt-ctrl-d = ['workspace [D]atabase', 'exec-and-forget open -a /Applications/DBeaver.app']
     cmd-alt-ctrl-e = ['workspace [E]mail', 'exec-and-forget open -a /System/Applications/Mail.app']
-    cmd-alt-ctrl-f = 'exec-and-forget open -a Finder'
     cmd-alt-ctrl-g = ['workspace [G]UI', 'exec-and-forget open -a /Applications/Figma.app']
     cmd-alt-ctrl-i = ['workspace [I]nbox', 'exec-and-forget open -a /Applications/NetNewsWire.app']
     cmd-alt-ctrl-m = ['workspace [M]usic', 'exec-and-forget open -a /Applications/Spotify.app']
     cmd-alt-ctrl-n = ['workspace [N]otes', 'exec-and-forget open -a /System/Applications/Notes.app']
     cmd-alt-ctrl-o = ['workspace [O]bsidian', 'exec-and-forget open -a /Applications/Obsidian.app']
-    cmd-alt-ctrl-p = 'exec-and-forget open -a /Users/$(whoami)/Applications/Excalidraw.app'
+    cmd-alt-ctrl-p = ['workspace [P]ostman', 'exec-and-forget open -a /Applications/Postman.app']
     cmd-alt-ctrl-r = ['workspace [R]eminders', 'exec-and-forget open -a /System/Applications/Reminders.app']
     cmd-alt-ctrl-s = ['workspace [S]ocial', 'exec-and-forget open -a /Applications/Telegram.app']
-    cmd-alt-ctrl-t = ['workspace [T]est', 'exec-and-forget open -a /Applications/Postman.app']
-    cmd-alt-ctrl-v = 'exec-and-forget open -a Preview'
     cmd-alt-ctrl-w = ['workspace [W]ork', 'exec-and-forget open -a /Applications/Google\ Chrome.app']
-    cmd-alt-ctrl-x = 'exec-and-forget open -a /Users/$(whoami)/Applications/X.app'
-    cmd-alt-ctrl-y = 'exec-and-forget open -a /Users/$(whoami)/Applications/YouTube.app'
     cmd-alt-ctrl-z = ['workspace [Z]ed', 'exec-and-forget open -a /Applications/Zed.app']
     cmd-alt-ctrl-enter = ['workspace [Return]', 'exec-and-forget open -a /Applications/Ghostty.app']
+    cmd-alt-ctrl-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/ChatGPT.app'
+    cmd-alt-ctrl-f = 'exec-and-forget open -a Finder'
 
 [workspace-to-monitor-force-assignment]
    '[1]' = 'main'
@@ -106,14 +102,14 @@ automatically-unhide-macos-hidden-apps = true
     if.app-id = 'md.obsidian'
     run = 'move-node-to-workspace [O]bsidian'
 [[on-window-detected]]
+    if.app-id = 'com.postmanlabs.mac'
+    run = 'move-node-to-workspace [P]ostman'
+[[on-window-detected]]
     if.app-id = 'com.apple.reminders'
     run = 'move-node-to-workspace [R]eminders'
 [[on-window-detected]]
     if.app-id = 'com.tdesktop.Telegram'
     run = 'move-node-to-workspace [S]ocial'
-[[on-window-detected]]
-    if.app-id = 'com.postmanlabs.mac'
-    run = 'move-node-to-workspace [T]est'
 [[on-window-detected]]
     if.app-id = 'com.google.Chrome'
     run = "move-node-to-workspace [W]ork"
