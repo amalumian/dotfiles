@@ -57,6 +57,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-e = ['workspace [E]mail', 'exec-and-forget open -a /System/Applications/Mail.app']
     cmd-alt-ctrl-f = 'exec-and-forget open -a Finder'
     cmd-alt-ctrl-g = ['workspace [G]UI', 'exec-and-forget open -a /Applications/Figma.app']
+    cmd-alt-ctrl-i = ['workspace [I]nbox', 'exec-and-forget open -a /Applications/NetNewsWire.app']
     cmd-alt-ctrl-m = ['workspace [M]usic', 'exec-and-forget open -a /Applications/Spotify.app']
     cmd-alt-ctrl-n = ['workspace [N]otes', 'exec-and-forget open -a /System/Applications/Notes.app']
     cmd-alt-ctrl-o = ['workspace [O]bsidian', 'exec-and-forget open -a /Applications/Obsidian.app']
@@ -92,6 +93,9 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.figma.Desktop'
     run = 'move-node-to-workspace [G]UI'
+[[on-window-detected]]
+    if.app-id = 'com.ranchero.NetNewsWire-Evergreen'
+    run = 'move-node-to-workspace [I]nbox'
 [[on-window-detected]]
     if.app-id = 'com.spotify.client'
     run = 'move-node-to-workspace [M]usic'
