@@ -15,9 +15,7 @@ brew bundle --file="$DOTFILES_DIR/Brewfile" 2>/dev/null || true
 
 echo "The following applications need to be installed manually:"
 echo "  - Hiddify"
-echo "  - Spark"
 echo "  - Exodus"
 echo "The following applications need to be installed as PWA:"
 echo "  - ChatGPT"
 echo "  - Excalidraw"
-echo "  - X"
