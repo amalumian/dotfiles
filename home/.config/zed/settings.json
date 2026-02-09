@@ -103,10 +103,6 @@
   "scrollbar": {
     "show": "never",
   },
-  "title_bar": {
-    // For work
-    // "show_sign_in": false
-  },
   // Extensions
   "auto_install_extensions": {
     "astro": true,
@@ -132,14 +128,7 @@
   },
   // AI
   // "disable_ai": true,
-  "agent": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5",
-    },
-    "model_parameters": [],
-  },
-  "features": {
-    "edit_prediction_provider": "zed",
+  "edit_predictions": {
+    "provider": "zed",
   },
 }
