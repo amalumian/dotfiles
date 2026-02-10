@@ -123,6 +123,7 @@
     "catppuccin": true,
     "catppuccin-icons": true,
     "git-firefly": true,
+    "sql": true,
   },
   // Telemetry
   "telemetry": {
@@ -131,6 +132,11 @@
   },
   // AI
   // "disable_ai": true,
+  "agent_servers": {
+    "opencode": {
+      "type": "registry",
+    },
+  },
   "edit_predictions": {
     "provider": "zed",
   },
