@@ -6,6 +6,13 @@
       "shift shift": "file_finder::Toggle",
     },
   },
+  // AI
+  {
+    "context": "Editor && edit_prediction_conflict && showing_completions",
+    "bindings": {
+      "tab": "editor::AcceptEditPrediction",
+    },
+  },
   // VIM
   {
     "context": "Editor && vim_mode == normal",

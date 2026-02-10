@@ -103,6 +103,9 @@
   "scrollbar": {
     "show": "never",
   },
+  "collaboration_panel": {
+    "button": false,
+  },
   // Extensions
   "auto_install_extensions": {
     "astro": true,
