@@ -1,16 +1,12 @@
-@anthropic-ai/claude-code
 @mermaid-js/mermaid-cli
 @nestjs/cli
-@openai/codex
 autocannon
 cloc
 corepack
-imageoptim-cli
 markdown-toc
 markdownlint-cli2
 neovim
 npm
-opencode-ai
 prettier
 tree-sitter-cli
 yarn
