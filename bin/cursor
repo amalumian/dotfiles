@@ -1,9 +1,0 @@
-#!/bin/zsh
-
-set -e
-
-source "$(dirname "$0")/../lib/paths"
-
-echo "Setting up Cursor..."
-
-curl https://cursor.com/install -fsS | bash
