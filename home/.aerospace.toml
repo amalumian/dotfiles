@@ -62,11 +62,10 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-p = ['workspace [P]ostman', 'exec-and-forget open -a /Applications/Postman.app']
     cmd-alt-ctrl-r = ['workspace [R]eminders', 'exec-and-forget open -a /System/Applications/Reminders.app']
     cmd-alt-ctrl-s = ['workspace [S]ocial', 'exec-and-forget open -a /Applications/Telegram.app']
-    cmd-alt-ctrl-t = ['workspace [T]ranslate', 'exec-and-forget open -a /Applications/DeepL.app']
+    cmd-alt-ctrl-t = ['workspace [T]erminal', 'exec-and-forget open -a /Applications/Ghostty.app']
     cmd-alt-ctrl-v = ['workspace [V]PN', 'exec-and-forget open -a /Applications/Shadowrocket.app']
     cmd-alt-ctrl-w = ['workspace [W]ork', 'exec-and-forget open -a /Applications/Google\ Chrome.app']
-    cmd-alt-ctrl-z = ['workspace [Z]ed', 'exec-and-forget open -a /Applications/Zed.app']
-    cmd-alt-ctrl-enter = ['workspace [Return]', 'exec-and-forget open -a /Applications/Ghostty.app']
+    cmd-alt-ctrl-enter = ['workspace [Enter]', 'exec-and-forget open -a /Applications/Zed.app']
     cmd-alt-ctrl-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/ChatGPT.app'
     cmd-alt-ctrl-f = 'exec-and-forget open -a Finder'
 
@@ -113,8 +112,8 @@ automatically-unhide-macos-hidden-apps = true
     if.app-id = 'com.tdesktop.Telegram'
     run = 'move-node-to-workspace [S]ocial'
 [[on-window-detected]]
-    if.app-id = 'com.linguee.DeepLCopyTranslator'
-    run = 'move-node-to-workspace [T]ranslate'
+    if.app-id = "com.mitchellh.ghostty"
+    run = 'move-node-to-workspace [T]erminal'
 [[on-window-detected]]
     if.app-id = 'com.liguangming.Shadowrocket'
     run = 'move-node-to-workspace [V]PN'
@@ -123,7 +122,4 @@ automatically-unhide-macos-hidden-apps = true
     run = "move-node-to-workspace [W]ork"
 [[on-window-detected]]
     if.app-id = "dev.zed.Zed"
-    run = "move-node-to-workspace [Z]ed"
-[[on-window-detected]]
-    if.app-id = "com.mitchellh.ghostty"
-    run = "move-node-to-workspace [Return]"
+    run = "move-node-to-workspace [Enter]"

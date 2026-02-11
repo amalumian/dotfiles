@@ -76,20 +76,20 @@
   "buffer_font_size": 18,
   "terminal": {
     "font_family": "MesloLGL Nerd Font Mono",
-    "font_size": 18,
+    "font_size": 16,
   },
   "relative_line_numbers": "enabled",
   "cursor_blink": true,
   "cursor_shape": "block",
   "theme": {
     "mode": "dark",
-    "light": "Catppuccin Macchiato",
-    "dark": "Catppuccin Macchiato",
+    "light": "Tokyo Night Moon",
+    "dark": "Tokyo Night Moon",
   },
   "icon_theme": {
     "mode": "dark",
-    "light": "Catppuccin Macchiato",
-    "dark": "Catppuccin Macchiato",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark",
   },
   "diagnostics": {
     "inline": {
@@ -110,20 +110,19 @@
   "auto_install_extensions": {
     "astro": true,
     "basher": true,
+    "colored-zed-icons-theme": true,
     "dockerfile": true,
     "emmet": true,
+    "git-firefly": true,
     "html": true,
     "latex": true,
     "lua": true,
+    "make": true,
     "react-typescript-snippets": true,
     "scss": true,
+    "sql": true,
     "tokyo-night": true,
     "toml": true,
-    "make": true,
-    "catppuccin": true,
-    "catppuccin-icons": true,
-    "git-firefly": true,
-    "sql": true,
   },
   // Telemetry
   "telemetry": {
