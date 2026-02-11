@@ -1,12 +1,9 @@
-@mermaid-js/mermaid-cli
 @nestjs/cli
 autocannon
-cloc
 corepack
 markdown-toc
 markdownlint-cli2
 neovim
 npm
 prettier
-tree-sitter-cli
 yarn
