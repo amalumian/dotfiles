@@ -74,6 +74,8 @@
   "ui_font_size": 18,
   "buffer_font_family": ".ZedMono",
   "buffer_font_size": 18,
+  "agent_ui_font_size": 18,
+  "agent_buffer_font_size": 16,
   "terminal": {
     "font_family": "MesloLGL Nerd Font Mono",
     "font_size": 16,
