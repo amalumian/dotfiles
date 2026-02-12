@@ -7,7 +7,9 @@ source "$(dirname "$0")/../lib/paths"
 echo "Setting up Tmux..."
 
 rm -f ~/.tmux.conf
+rm -rf ~/.config/tmux
 rm -rf ~/.config/tmux-sessionizer
 ln -snf "$DOTFILES_DIR/.tmux.conf" ~/
 ln -snf "$DOTFILES_DIR/.local/bin/tmux-sessionizer" ~/.local/bin/
+ln -snf "$DOTFILES_DIR/.config/tmux" ~/.config/tmux
 ln -snf "$DOTFILES_DIR/.config/tmux-sessionizer" ~/.config/tmux-sessionizer

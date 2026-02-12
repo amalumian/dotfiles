@@ -84,13 +84,13 @@
   "cursor_shape": "block",
   "theme": {
     "mode": "dark",
-    "light": "Tokyo Night Moon",
-    "dark": "Tokyo Night Moon",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha",
   },
   "icon_theme": {
     "mode": "dark",
-    "light": "Colored Zed Icons Theme Dark",
-    "dark": "Colored Zed Icons Theme Dark",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha",
   },
   "diagnostics": {
     "inline": {
@@ -111,7 +111,8 @@
   "auto_install_extensions": {
     "astro": true,
     "basher": true,
-    "colored-zed-icons-theme": true,
+    "catppuccin": true,
+    "catppuccin-icons": true,
     "dockerfile": true,
     "emmet": true,
     "git-firefly": true,
@@ -122,7 +123,6 @@
     "react-typescript-snippets": true,
     "scss": true,
     "sql": true,
-    "tokyo-night": true,
     "toml": true,
   },
   // Telemetry

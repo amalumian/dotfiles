@@ -10,21 +10,41 @@
   pager = delta
 [interactive]
   diffFilter = delta --color-only
+[delta "catppuccin-mocha"]
+	blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
+	commit-decoration-style = "#6c7086" bold box ul
+	dark = true
+	file-decoration-style = "#6c7086"
+	file-style = "#cdd6f4"
+	hunk-header-decoration-style = "#6c7086" box ul
+	hunk-header-file-style = bold
+	hunk-header-line-number-style = bold "#a6adc8"
+	hunk-header-style = file line-number syntax
+	line-numbers-left-style = "#6c7086"
+	line-numbers-minus-style = bold "#f38ba8"
+	line-numbers-plus-style = bold "#a6e3a1"
+	line-numbers-right-style = "#6c7086"
+	line-numbers-zero-style = "#6c7086"
+	# 35% red 65% base
+	minus-emph-style = bold syntax "#694559"
+	# 20% red 80% base
+	minus-style = syntax "#493447"
+	# 35% green 65% base
+	plus-emph-style = bold syntax "#4e6356"
+	# 20% green 80% base
+	plus-style = syntax "#394545"
+	map-styles = \
+		bold purple => syntax "#5b4e74", \
+		bold blue => syntax "#445375", \
+		bold cyan => syntax "#446170", \
+		bold yellow => syntax "#6b635b"
+	# Should match the name of the bat theme
+	syntax-theme = Catppuccin Mocha
 [delta]
+  features = catppuccin-mocha
   navigate = true
   line-numbers = true
   side-by-side = false
-  minus-style                   = syntax "#3a273a"
-  minus-non-emph-style          = syntax "#3a273a"
-  minus-emph-style              = syntax "#6b2e43"
-  minus-empty-line-marker-style = syntax "#3a273a"
-  line-numbers-minus-style      = "#e26a75"
-  plus-style                    = syntax "#273849"
-  plus-non-emph-style           = syntax "#273849"
-  plus-emph-style               = syntax "#305f6f"
-  plus-empty-line-marker-style  = syntax "#273849"
-  line-numbers-plus-style       = "#b8db87"
-  line-numbers-zero-style       = "#3b4261"
 [init]
   defaultBranch = main
 [commit]
