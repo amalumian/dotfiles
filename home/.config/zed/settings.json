@@ -77,6 +77,7 @@
   "terminal": {
     "font_family": "MesloLGL Nerd Font Mono",
     "font_size": 16,
+    "option_as_meta": true,
   },
   "relative_line_numbers": "enabled",
   "cursor_blink": true,
