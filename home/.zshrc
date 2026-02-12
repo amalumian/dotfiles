@@ -6,6 +6,7 @@ export PAGER="bat"
 export BAT_THEME="Catppuccin Mocha"
 export XDG_CONFIG_HOME="$HOME/.config"
 export EZA_CONFIG_DIR="$HOME/.config/eza"
+export STARSHIP_CONFIG="$HOME/.starship.toml"
 
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 export PATH="/Applications/Racket v8.18/bin:$PATH"
