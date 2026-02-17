@@ -113,8 +113,10 @@
   "auto_install_extensions": {
     "astro": true,
     "basher": true,
-    "catppuccin": true,
     "catppuccin-icons": true,
+    "catppuccin": true,
+    "css-modules-kit": true,
+    "css-variables": true,
     "dockerfile": true,
     "emmet": true,
     "git-firefly": true,
@@ -141,5 +143,13 @@
   },
   "edit_predictions": {
     "provider": "zed",
+  },
+  "agent": {
+    "favorite_models": [],
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-opus-4-6"
+    },
+    "model_parameters": []
   },
 }
