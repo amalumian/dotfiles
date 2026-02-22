@@ -85,13 +85,13 @@
   "cursor_blink": true,
   "cursor_shape": "block",
   "theme": {
-    "mode": "dark",
-    "light": "Catppuccin Mocha",
+    "mode": "system",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha",
   },
   "icon_theme": {
-    "mode": "dark",
-    "light": "Catppuccin Mocha",
+    "mode": "system",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha",
   },
   "diagnostics": {
@@ -148,8 +148,8 @@
     "favorite_models": [],
     "inline_assistant_model": {
       "provider": "zed.dev",
-      "model": "claude-opus-4-6"
+      "model": "claude-opus-4-6",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
 }
