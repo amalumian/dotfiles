@@ -147,11 +147,9 @@
     "provider": "zed",
   },
   "agent": {
-    "favorite_models": [],
     "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "claude-opus-4-6",
     },
-    "model_parameters": [],
   },
 }
