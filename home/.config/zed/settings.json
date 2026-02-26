@@ -85,14 +85,14 @@
   "cursor_blink": true,
   "cursor_shape": "block",
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha",
+    "dark": "Matte Black",
   },
   "icon_theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha",
+    "dark": "Colored Zed Icons Theme Dark",
   },
   "diagnostics": {
     "inline": {
@@ -117,6 +117,7 @@
     "catppuccin": true,
     "css-modules-kit": true,
     "css-variables": true,
+    "colored-zed-icons-theme": true,
     "dockerfile": true,
     "emmet": true,
     "git-firefly": true,
@@ -124,6 +125,7 @@
     "latex": true,
     "lua": true,
     "make": true,
+    "matte-black": true,
     "react-typescript-snippets": true,
     "scss": true,
     "sql": true,
