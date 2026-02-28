@@ -103,9 +103,6 @@
   "tab_bar": {
     "show": false,
   },
-  "scrollbar": {
-    "show": "never",
-  },
   "collaboration_panel": {
     "button": false,
   },
