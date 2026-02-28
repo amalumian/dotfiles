@@ -3,7 +3,7 @@
   "languages": {
     "JavaScript": {
       "inlay_hints": {
-        "enabled": false,
+        "enabled": true,
       },
       "format_on_save": "on",
       "formatter": [
@@ -20,7 +20,7 @@
     },
     "TypeScript": {
       "inlay_hints": {
-        "enabled": false,
+        "enabled": true,
       },
       "format_on_save": "on",
       "formatter": [
@@ -37,7 +37,7 @@
     },
     "TSX": {
       "inlay_hints": {
-        "enabled": false,
+        "enabled": true,
       },
       "format_on_save": "on",
       "formatter": [
@@ -87,12 +87,12 @@
   "theme": {
     "mode": "dark",
     "light": "Catppuccin Latte",
-    "dark": "Matte Black",
+    "dark": "Catppuccin Mocha",
   },
   "icon_theme": {
     "mode": "dark",
     "light": "Catppuccin Latte",
-    "dark": "Colored Zed Icons Theme Dark",
+    "dark": "Catppuccin Mocha",
   },
   "diagnostics": {
     "inline": {
