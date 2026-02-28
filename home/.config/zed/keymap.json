@@ -1,10 +1,8 @@
 [
   // General
   {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-/": "workspace::ToggleBottomDock",
-    },
+    "context": "",
+    "bindings": {},
   },
   // AI
   {
