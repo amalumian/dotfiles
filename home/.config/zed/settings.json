@@ -106,6 +106,7 @@
   "collaboration_panel": {
     "button": false,
   },
+  "diff_view_style": "unified",
   // Extensions
   "auto_install_extensions": {
     "astro": true,
