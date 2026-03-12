@@ -136,6 +136,9 @@
   // AI
   // "disable_ai": true,
   "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
     "opencode": {
       "type": "registry",
     },
