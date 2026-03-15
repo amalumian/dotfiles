@@ -31,6 +31,7 @@ automatically-unhide-macos-hidden-apps = true
 
     cmd-alt-ctrl-minus = 'resize smart -50'
     cmd-alt-ctrl-equal = 'resize smart +50'
+    cmd-alt-ctrl-0 = 'balance-sizes'
 
     cmd-alt-ctrl-h = 'focus left'
     cmd-alt-ctrl-j = 'focus down'
