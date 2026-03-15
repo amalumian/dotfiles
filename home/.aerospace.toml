@@ -63,6 +63,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-p = ['workspace [P]ostman', 'exec-and-forget open -a /Applications/Postman.app']
     cmd-alt-ctrl-r = ['workspace [R]eminders', 'exec-and-forget open -a /System/Applications/Reminders.app']
     cmd-alt-ctrl-s = ['workspace [S]ocial', 'exec-and-forget open -a /Applications/Telegram.app']
+    cmd-alt-ctrl-t = ['workspace [T]V', 'exec-and-forget open -a /System/Applications/TV.app']
     cmd-alt-ctrl-v = ['workspace [V]PN', 'exec-and-forget open -a /Applications/Shadowrocket.app']
     cmd-alt-ctrl-w = ['workspace [W]ork', 'exec-and-forget open -a /Applications/Google\ Chrome.app']
     cmd-alt-ctrl-space = ['workspace [Space]', 'exec-and-forget open -a /Applications/Zed.app']
@@ -112,6 +113,9 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.tdesktop.Telegram'
     run = 'move-node-to-workspace [S]ocial'
+[[on-window-detected]]
+    if.app-id = 'com.apple.TV'
+    run = 'move-node-to-workspace [T]V'
 [[on-window-detected]]
     if.app-id = 'com.liguangming.Shadowrocket'
     run = 'move-node-to-workspace [V]PN'
