@@ -1,8 +1,8 @@
 [tools]
 lua = "5.1"
 node = "latest"
-rust = "latest"
-go = "latest"
+# rust = "latest"
+# go = "latest"
 # python = "latest"
 # ruby = "latest"
 # clojure = "latest"
