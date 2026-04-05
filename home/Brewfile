@@ -49,18 +49,17 @@ brew "zoxide"
 
 # Casks
 cask "appcleaner"
-cask "audacity"
+# cask "audacity"
 # cask "balenaetcher"
 cask "manaflow-ai/tap/cmux"
 cask "chatgpt"
-cask "claude-code"
-cask "cyberduck"
+# cask "claude-code"
+# cask "cyberduck"
 cask "dbeaver-community"
 cask "deepl"
-cask "discord"
-# cask "docker"
+# cask "discord"
 cask "dropbox"
-cask "electrum"
+# cask "electrum"
 cask "figma"
 cask "firefox"
 cask "font-meslo-lg-nerd-font"
@@ -74,7 +73,6 @@ cask "karabiner-elements"
 cask "keepingyouawake"
 cask "keyboardcleantool"
 cask "keycastr"
-cask "kitty"
 cask "logi-options+"
 # cask "logitech-g-hub"
 cask "mactex-no-gui"
@@ -93,6 +91,6 @@ cask "yandex-music"
 cask "zed"
 
 # App Store
-mas "DaVinci Resolve", id: 571213070
+# mas "DaVinci Resolve", id: 571213070
 mas "Kindle", id: 302584613
 mas "Shadowrocket", id: 932747118

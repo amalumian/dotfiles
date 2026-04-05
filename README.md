@@ -15,13 +15,7 @@ make setup
 
 - **Terminal**: Ghostty
 - **Editor**: Zed
-- **Font**: MesloLGL Nerd Font Mono (16pt)
+- **Font**: Berkeley Mono
 - **Color Scheme**: Catppuccin Mocha
 - **Prompt**: Starship
 - **Shell**: Zsh with Oh My Zsh
-- **Oh My Zsh Plugins**:
-  - git
-  - vi-mode
-  - you-should-use
-  - zsh-autosuggestions
-  - zsh-syntax-highlighting
