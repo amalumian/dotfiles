@@ -1,5 +1,5 @@
 theme = Catppuccin Mocha
-font-family = MesloLGL Nerd Font Mono
+font-family = BerkeleyMono Nerd Font Mono
 font-size = 18
 macos-option-as-alt = true
 macos-titlebar-style = transparent
