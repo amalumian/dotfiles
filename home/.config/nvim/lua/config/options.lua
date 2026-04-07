@@ -1,6 +1,8 @@
 vim.g.autoformat = false
 vim.g.snacks_animate = false
 vim.g.root_spec = { "cwd" }
+
+vim.g.lazyvim_ts_lsp = "tsgo"
 -- vim.g.lazyvim_prettier_needs_config = true
 
 vim.opt.shell = "zsh"
