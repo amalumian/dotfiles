@@ -104,9 +104,20 @@
     "show": false,
   },
   "collaboration_panel": {
+    "dock": "left",
     "button": false,
   },
   "diff_view_style": "unified",
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+
   // Extensions
   "auto_install_extensions": {
     "astro": true,
@@ -145,6 +156,7 @@
     "provider": "zed",
   },
   "agent": {
+    "dock": "right",
     "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "claude-opus-4-6",
