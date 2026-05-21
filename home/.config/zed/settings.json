@@ -1,5 +1,4 @@
 {
-  // Languages
   "languages": {
     "JavaScript": {
       "inlay_hints": {
@@ -53,12 +52,9 @@
       ],
     },
   },
-  // Keymap
   "base_keymap": "VSCode",
-  // Editor
   "autosave": "off",
   "use_autoclose": false,
-  // VIM
   "vim_mode": true,
   "vim": {
     "toggle_relative_line_numbers": true,
@@ -69,7 +65,6 @@
       "visual": "block",
     },
   },
-  // UI
   "ui_font_family": "Berkeley Mono",
   "ui_font_size": 18,
   "buffer_font_family": "Berkeley Mono",
@@ -123,8 +118,6 @@
   "git_panel": {
     "dock": "left",
   },
-
-  // Extensions
   "auto_install_extensions": {
     "astro": true,
     "basher": true,
@@ -143,12 +136,10 @@
     "sql": true,
     "toml": true,
   },
-  // Telemetry
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
   },
-  // AI
   "agent_servers": {
     "codex-acp": {
       "type": "registry",
