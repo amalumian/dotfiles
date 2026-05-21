@@ -80,17 +80,23 @@
     "font_family": "BerkeleyMono Nerd Font Mono",
     "font_size": 16,
     "option_as_meta": true,
+    "shell": {
+      "with_arguments": {
+        "program": "zsh",
+        "args": ["--no-rcs"],
+      },
+    },
   },
   "relative_line_numbers": "enabled",
   "cursor_blink": true,
   "cursor_shape": "block",
   "theme": {
-    "mode": "dark",
+    "mode": "system",
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha",
   },
   "icon_theme": {
-    "mode": "dark",
+    "mode": "system",
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha",
   },
