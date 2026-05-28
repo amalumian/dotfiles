@@ -47,7 +47,6 @@ brew "zoxide"
 
 # Casks
 cask "appcleaner"
-cask "audacity"
 cask "balenaetcher"
 cask "cyberduck"
 cask "dbeaver-community"
@@ -79,6 +78,5 @@ cask "transmission"
 cask "zed"
 
 # App Store
-mas "DaVinci Resolve", id: 571213070
 mas "Kindle", id: 302584613
 mas "Shadowrocket", id: 932747118
