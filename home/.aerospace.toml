@@ -60,7 +60,6 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-i = ['workspace [I]nbox', 'exec-and-forget open -a /Applications/NetNewsWire.app']
     cmd-alt-ctrl-m = ['workspace [M]usic', 'exec-and-forget open -a /Applications/Spotify.app']
     cmd-alt-ctrl-n = ['workspace [N]otes', 'exec-and-forget open -a /System/Applications/Notes.app']
-    cmd-alt-ctrl-o = ['workspace [O]bsidian', 'exec-and-forget open -a /Applications/Obsidian.app']
     cmd-alt-ctrl-p = ['workspace [P]ostman', 'exec-and-forget open -a /Applications/Postman.app']
     cmd-alt-ctrl-r = ['workspace [R]eminders', 'exec-and-forget open -a /System/Applications/Reminders.app']
     cmd-alt-ctrl-s = ['workspace [S]ocial', 'exec-and-forget open -a /Applications/Telegram.app']
@@ -102,9 +101,6 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.apple.Notes'
     run = 'move-node-to-workspace [N]otes'
-[[on-window-detected]]
-    if.app-id = 'md.obsidian'
-    run = 'move-node-to-workspace [O]bsidian'
 [[on-window-detected]]
     if.app-id = 'com.postmanlabs.mac'
     run = 'move-node-to-workspace [P]ostman'
