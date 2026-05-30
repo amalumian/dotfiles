@@ -1,5 +1,5 @@
 # Options
-cask_args appdir: "/Applications" #, require_sha: true
+cask_args appdir: "/Applications"
 
 # Formulae
 brew "anomalyco/tap/opencode"
@@ -71,7 +71,6 @@ cask "nikitabobko/tap/aerospace"
 cask "obs"
 cask "obsidian"
 cask "postman"
-cask "spotify"
 cask "telegram"
 cask "transmission"
 cask "zed"
