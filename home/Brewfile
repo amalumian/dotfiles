@@ -44,7 +44,6 @@ brew "wget"
 brew "zoxide"
 
 cask "appcleaner"
-cask "balenaetcher"
 cask "cyberduck"
 cask "dbeaver-community"
 cask "deepl"
