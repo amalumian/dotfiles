@@ -1,7 +1,5 @@
-# Options
 cask_args appdir: "/Applications"
 
-# Formulae
 brew "anomalyco/tap/opencode"
 brew "ast-grep"
 brew "bat"
@@ -45,7 +43,6 @@ brew "webp"
 brew "wget"
 brew "zoxide"
 
-# Casks
 cask "appcleaner"
 cask "balenaetcher"
 cask "cyberduck"
@@ -74,7 +71,3 @@ cask "postman"
 cask "telegram"
 cask "transmission"
 cask "zed"
-
-# App Store
-mas "Kindle", id: 302584613
-mas "Shadowrocket", id: 932747118
