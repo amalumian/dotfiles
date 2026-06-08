@@ -47,23 +47,25 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-2 = 'workspace [2]'
     cmd-alt-ctrl-3 = 'workspace [3]'
     cmd-alt-ctrl-4 = 'workspace [4]'
+    cmd-alt-ctrl-5 = 'workspace [5]'
+    cmd-alt-ctrl-6 = 'workspace [6]'
     cmd-alt-ctrl-shift-1 = 'move-node-to-workspace [1]'
     cmd-alt-ctrl-shift-2 = 'move-node-to-workspace [2]'
     cmd-alt-ctrl-shift-3 = 'move-node-to-workspace [3]'
     cmd-alt-ctrl-shift-4 = 'move-node-to-workspace [4]'
+    cmd-alt-ctrl-shift-5 = 'move-node-to-workspace [5]'
+    cmd-alt-ctrl-shift-6 = 'move-node-to-workspace [6]'
 
     cmd-alt-ctrl-b = ['workspace [B]rowser', 'exec-and-forget open -a /Applications/Safari.app']
     cmd-alt-ctrl-c = ['workspace [C]alendar', 'exec-and-forget open -a /System/Applications/Calendar.app']
     cmd-alt-ctrl-d = ['workspace [D]atabase', 'exec-and-forget open -a /Applications/DBeaver.app']
     cmd-alt-ctrl-e = ['workspace [E]mail', 'exec-and-forget open -a /System/Applications/Mail.app']
-    cmd-alt-ctrl-g = ['workspace [G]UI', 'exec-and-forget open -a /Applications/Figma.app']
     cmd-alt-ctrl-i = ['workspace [I]nbox', 'exec-and-forget open -a /Applications/NetNewsWire.app']
     cmd-alt-ctrl-m = ['workspace [M]usic', 'exec-and-forget open -a /System/Applications/Music.app']
     cmd-alt-ctrl-n = ['workspace [N]otes', 'exec-and-forget open -a /System/Applications/Notes.app']
     cmd-alt-ctrl-p = ['workspace [P]ostman', 'exec-and-forget open -a /Applications/Postman.app']
     cmd-alt-ctrl-r = ['workspace [R]eminders', 'exec-and-forget open -a /System/Applications/Reminders.app']
     cmd-alt-ctrl-s = ['workspace [S]ocial', 'exec-and-forget open -a /Applications/Telegram.app']
-    cmd-alt-ctrl-t = ['workspace [T]V', 'exec-and-forget open -a /System/Applications/TV.app']
     cmd-alt-ctrl-w = ['workspace [W]ork', 'exec-and-forget open -a /Applications/Google\ Chrome.app']
     cmd-alt-ctrl-space = ['workspace [Space]', 'exec-and-forget open -a /Applications/Zed.app']
     cmd-alt-ctrl-enter = ['workspace [Enter]', 'exec-and-forget open -a /Applications/Ghostty.app']
@@ -89,9 +91,6 @@ automatically-unhide-macos-hidden-apps = true
     if.app-id = 'com.apple.mail'
     run = 'move-node-to-workspace [E]mail'
 [[on-window-detected]]
-    if.app-id = 'com.figma.Desktop'
-    run = 'move-node-to-workspace [G]UI'
-[[on-window-detected]]
     if.app-id = 'com.ranchero.NetNewsWire-Evergreen'
     run = 'move-node-to-workspace [I]nbox'
 [[on-window-detected]]
@@ -109,9 +108,6 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.tdesktop.Telegram'
     run = 'move-node-to-workspace [S]ocial'
-[[on-window-detected]]
-    if.app-id = 'com.apple.TV'
-    run = 'move-node-to-workspace [T]V'
 [[on-window-detected]]
     if.app-id = 'com.google.Chrome'
     run = 'move-node-to-workspace [W]ork'
