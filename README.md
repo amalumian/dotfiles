@@ -13,9 +13,9 @@ make setup
 
 ## Overview
 
-- **Terminal**: Ghostty
+- **Terminal**: kitty
 - **Editor**: Zed
-- **Font**: Berkeley Mono / SF Mono
+- **Font**: Berkeley Mono / SF Mono / MesloLG
 - **Color Scheme**: Catppuccin Mocha
 - **Prompt**: Starship
 - **Shell**: Zsh with Oh My Zsh
