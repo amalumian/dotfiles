@@ -15,7 +15,7 @@ make setup
 
 - **Terminal**: kitty
 - **Editor**: Zed
-- **Font**: Berkeley Mono / SF Mono / MesloLG
+- **Font**: Berkeley Mono / SF Mono / MesloLGS
 - **Color Scheme**: Catppuccin Mocha
 - **Prompt**: Starship
 - **Shell**: Zsh with Oh My Zsh

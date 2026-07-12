@@ -65,14 +65,14 @@
       "visual": "block",
     },
   },
-  "ui_font_family": "Berkeley Mono",
+  "ui_font_family": "SF Mono",
   "ui_font_size": 18,
-  "buffer_font_family": "Berkeley Mono",
+  "buffer_font_family": "SF Mono",
   "buffer_font_size": 18,
   "agent_ui_font_size": 18,
   "agent_buffer_font_size": 16,
   "terminal": {
-    "font_family": "BerkeleyMono Nerd Font Mono",
+    "font_family": "SF Mono",
     "font_size": 16,
     "option_as_meta": true,
     "shell": {
