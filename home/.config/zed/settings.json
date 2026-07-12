@@ -1,5 +1,4 @@
 {
-  "disable_ai": true,
   "languages": {
     "JavaScript": {
       "inlay_hints": {
@@ -73,26 +72,20 @@
   "agent_ui_font_size": 18,
   "agent_buffer_font_size": 16,
   "terminal": {
-    "font_family": "SF Mono",
+    "font_family": "MesloLGS Nerd Font Mono",
     "font_size": 16,
     "option_as_meta": true,
-    "shell": {
-      "with_arguments": {
-        "program": "zsh",
-        "args": ["--no-rcs"],
-      },
-    },
   },
   "relative_line_numbers": "enabled",
   "cursor_blink": true,
   "cursor_shape": "block",
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha",
   },
   "icon_theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha",
   },
@@ -159,4 +152,5 @@
       "model": "claude-opus-4-6",
     },
   },
+  "disable_ai": true,
 }
