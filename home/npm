@@ -1,9 +1,3 @@
-@nestjs/cli
-autocannon
-corepack
-markdown-toc
-markdownlint-cli2
 neovim
 npm
 prettier
-yarn
