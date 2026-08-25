@@ -58,16 +58,16 @@ automatically-unhide-macos-hidden-apps = true
 
     cmd-alt-ctrl-b = ['workspace [B]', 'exec-and-forget open -a /Applications/Safari.app']
     cmd-alt-ctrl-c = ['workspace [C]', 'exec-and-forget open -a /System/Applications/Calendar.app']
+    cmd-alt-ctrl-d = ['workspace [D]', 'exec-and-forget open -a /Applications/DBeaver.app']
     cmd-alt-ctrl-e = ['workspace [E]', 'exec-and-forget open -a /System/Applications/Mail.app']
+    cmd-alt-ctrl-f = ['workspace [F]', 'exec-and-forget open -a /Applications/Figma.app']
     cmd-alt-ctrl-m = ['workspace [M]', 'exec-and-forget open -a /System/Applications/Music.app']
     cmd-alt-ctrl-n = ['workspace [N]', 'exec-and-forget open -a /System/Applications/Notes.app']
     cmd-alt-ctrl-r = ['workspace [R]', 'exec-and-forget open -a /System/Applications/Reminders.app']
     cmd-alt-ctrl-s = ['workspace [S]', 'exec-and-forget open -a /Applications/Telegram.app']
     cmd-alt-ctrl-w = ['workspace [W]', 'exec-and-forget open -a /Applications/Google\ Chrome.app']
-    cmd-alt-ctrl-space = ['workspace [Space]', 'exec-and-forget open -a /Applications/Zed.app']
     cmd-alt-ctrl-enter = ['workspace [Enter]', 'exec-and-forget open -a /Applications/kitty.app']
-    cmd-alt-ctrl-a = 'exec-and-forget open -a /Users/$(whoami)/Applications/ChatGPT.app'
-    cmd-alt-ctrl-f = 'exec-and-forget open -a Finder'
+    cmd-alt-ctrl-space = 'exec-and-forget open -a Finder'
 
 [workspace-to-monitor-force-assignment]
    '[1]' = 'main'
@@ -84,8 +84,14 @@ automatically-unhide-macos-hidden-apps = true
     if.app-id = 'com.apple.iCal'
     run = 'move-node-to-workspace [C]'
 [[on-window-detected]]
+    if.app-id = 'org.jkiss.dbeaver.core.product'
+    run = 'move-node-to-workspace [D]'
+[[on-window-detected]]
     if.app-id = 'com.apple.mail'
     run = 'move-node-to-workspace [E]'
+[[on-window-detected]]
+    if.app-id = 'com.figma.Desktop'
+    run = 'move-node-to-workspace [F]'
 [[on-window-detected]]
     if.app-id = 'com.apple.Music'
     run = 'move-node-to-workspace [M]'
@@ -101,9 +107,6 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.google.Chrome'
     run = 'move-node-to-workspace [W]'
-[[on-window-detected]]
-    if.app-id = 'dev.zed.Zed'
-    run = 'move-node-to-workspace [Space]'
 [[on-window-detected]]
     if.app-id = 'net.kovidgoyal.kitty'
     run = 'move-node-to-workspace [Enter]'

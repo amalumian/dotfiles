@@ -1,6 +1,6 @@
-.PHONY: git-hooks system homebrew zsh git ssh starship gnupg mise npm bat eza lazygit nvim vim tmux btop ghostty kitty zed aerospace setup
+.PHONY: git-hooks system homebrew zsh git ssh starship gnupg mise npm bat eza lazygit nvim vim tmux btop kitty zed aerospace setup
 
-setup: git-hooks system homebrew zsh git ssh starship gnupg mise npm bat eza lazygit nvim vim tmux btop ghostty kitty zed aerospace
+setup: git-hooks system homebrew zsh git ssh starship gnupg mise npm bat eza lazygit nvim vim tmux btop kitty zed aerospace
 
 git-hooks:
 	./bin/git-hooks
@@ -52,9 +52,6 @@ tmux:
 
 btop:
 	./bin/btop
-
-ghostty:
-	./bin/ghostty
 
 kitty:
 	./bin/kitty
