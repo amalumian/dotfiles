@@ -67,7 +67,12 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-s = ['workspace [S]', 'exec-and-forget open -a /Applications/Telegram.app']
     cmd-alt-ctrl-w = ['workspace [W]', 'exec-and-forget open -a /Applications/Google\ Chrome.app']
     cmd-alt-ctrl-enter = ['workspace [Enter]', 'exec-and-forget open -a /Applications/kitty.app']
-    cmd-alt-ctrl-space = '''exec-and-forget osascript -e 'tell application "Finder" to activate' -e 'tell application "Finder" to make new Finder window' '''
+    cmd-alt-ctrl-space = '''exec-and-forget osascript -e '
+    tell application "Finder"
+        make new Finder window
+        activate
+    end tell'
+    '''
 
 [workspace-to-monitor-force-assignment]
    '[1]' = 'main'
