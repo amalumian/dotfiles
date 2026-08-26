@@ -16,7 +16,6 @@ echo "  - Animate opening applications: False"
 echo "  - Automatically hide and show the Dock: True"
 echo "  - Ask to keep changes when closing documents: True"
 echo "  - Automatically rearrange Spaces based on most recent use: False"
-echo "  - Group windows by application: True"
 echo "  - Prefer tabs when opening documents: Never"
 echo "  - Drag windows to screen edges to tile: False"
 echo "  - Drag windows to menu bar to fill screen: False"
@@ -69,6 +68,8 @@ echo "  - Show Path Bar: True"
 echo "  - Show Status Bar: True"
 echo "  - Create \"Developer\" directory in home directory"
 
+echo "Group windows by application"
+defaults write com.apple.dock expose-group-apps -bool true
 echo "Disable press and hold"
 defaults write -g ApplePressAndHoldEnabled -bool false
 echo "Disable windows opening animations"

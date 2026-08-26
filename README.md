@@ -14,7 +14,7 @@ make setup
 ## Overview
 
 - **Terminal**: kitty
-- **Editor**: Zed
+- **Editor**: Neovim
 - **Font**: Berkeley Mono / SF Mono / MesloLGS
 - **Color Scheme**: Catppuccin Mocha
 - **Prompt**: Starship
