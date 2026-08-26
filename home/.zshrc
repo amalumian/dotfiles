@@ -53,6 +53,7 @@ export FZF_DEFAULT_OPTS=" \
 
 # Aliases
 alias ls='eza --all --long --group --group-directories-first --icons --header --time-style long-iso'
+alias bup='brew update && brew upgrade'
 
 # tmux-sessionizer
 bindkey -s ^f "tmux-sessionizer\n"
