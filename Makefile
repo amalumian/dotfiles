@@ -44,9 +44,6 @@ lazygit:
 nvim:
 	./bin/nvim
 
-vim:
-	./bin/vim
-
 tmux:
 	./bin/tmux
 
