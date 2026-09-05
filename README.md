@@ -1,7 +1,5 @@
 # dotfiles
 
-![Desktop Screenshot](.assets/desktop.png)
-
 ## Setup
 
 > [!CAUTION]
