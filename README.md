@@ -15,7 +15,7 @@ make setup
 
 - **Terminal**: kitty
 - **Editor**: Neovim
-- **Font**: Berkeley Mono / SF Mono / MesloLGS
+- **Font**: MesloLGS Nerd Font Mono
 - **Color Scheme**: Catppuccin Mocha
 - **Prompt**: Starship
 - **Shell**: Zsh with Oh My Zsh
