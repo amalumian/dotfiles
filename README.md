@@ -17,3 +17,7 @@ make setup
 - **Color Scheme**: Catppuccin Mocha
 - **Prompt**: Starship
 - **Shell**: Zsh with Oh My Zsh
+
+## To do
+
+- Learn `mise` to see if it can replace the Makefile
