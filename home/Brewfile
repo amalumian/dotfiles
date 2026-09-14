@@ -66,3 +66,5 @@ cask "nikitabobko/tap/aerospace"
 cask "telegram"
 cask "transmission"
 cask "whatsapp"
+
+mas "Kindle", id: 302584613
