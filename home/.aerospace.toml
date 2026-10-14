@@ -69,7 +69,7 @@ automatically-unhide-macos-hidden-apps = true
     cmd-alt-ctrl-r = ['workspace [R]', 'exec-and-forget open -a /System/Applications/Reminders.app']
     cmd-alt-ctrl-s = ['workspace [S]', 'exec-and-forget open -a /Applications/Telegram.app']
     cmd-alt-ctrl-w = ['workspace [W]', 'exec-and-forget open -a /Applications/Google\ Chrome.app']
-    cmd-alt-ctrl-enter = ['workspace [Enter]', 'exec-and-forget open -a /Applications/kitty.app']
+    cmd-alt-ctrl-enter = ['workspace [Enter]', 'exec-and-forget open -a /Applications/Ghostty.app']
     cmd-alt-ctrl-space = '''exec-and-forget osascript -e '
     tell application "Finder"
         make new Finder window
@@ -116,5 +116,5 @@ automatically-unhide-macos-hidden-apps = true
     if.app-id = 'com.google.Chrome'
     run = 'move-node-to-workspace [W]'
 [[on-window-detected]]
-    if.app-id = 'net.kovidgoyal.kitty'
+    if.app-id = 'com.mitchellh.ghostty'
     run = 'move-node-to-workspace [Enter]'
