@@ -11,9 +11,8 @@ make setup
 
 ## Overview
 
-- **Terminal**: kitty
+- **Terminal**: Ghostty
 - **Editor**: Neovim
-- **Font**: MesloLGS Nerd Font Mono
 - **Color Scheme**: Catppuccin Mocha
 - **Prompt**: Starship
 - **Shell**: Zsh with Oh My Zsh
