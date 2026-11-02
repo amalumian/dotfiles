@@ -1,4 +1,3 @@
-vim.opt.background = "dark"
 vim.opt.shell = "zsh"
 vim.opt.guicursor = ""
 vim.opt.mouse = ""
