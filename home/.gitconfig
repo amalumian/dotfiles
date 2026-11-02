@@ -41,10 +41,10 @@
 	# Should match the name of the bat theme
 	syntax-theme = Catppuccin Mocha
 [delta]
-  features = catppuccin-mocha
   navigate = true
   line-numbers = true
   side-by-side = false
+  features = catppuccin-mocha
 [init]
   defaultBranch = main
 [commit]

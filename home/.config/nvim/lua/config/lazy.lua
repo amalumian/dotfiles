@@ -26,7 +26,7 @@ require("lazy").setup({
     lazy = false,
     version = false,
   },
-  install = { colorscheme = { "catppuccin/nvim", "habamax" } },
+  install = { colorscheme = { "default" } },
   checker = {
     enabled = true,
     notify = false,

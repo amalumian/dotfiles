@@ -8,8 +8,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 export STARSHIP_CONFIG="$HOME/.starship.toml"
 
-export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
-export PATH="/Applications/Racket v8.18/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Oh My Zsh
@@ -61,9 +59,6 @@ bindkey -s '\eh' "tmux-sessionizer -s 0\n"
 bindkey -s '\ej' "tmux-sessionizer -s 1\n"
 bindkey -s '\ek' "tmux-sessionizer -s 2\n"
 bindkey -s '\el' "tmux-sessionizer -s 3\n"
-
-# Matrix
-print -P "%F{46}Wake up, $USER...%f"
 
 # starship
 eval "$(starship init zsh)"
