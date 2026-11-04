@@ -1,4 +1,6 @@
 theme = Catppuccin Mocha
+background-opacity = 0.85
+background-blur = true
 font-size = 18
 macos-option-as-alt = true
 macos-titlebar-style = transparent
