@@ -8,6 +8,12 @@ return {
       float = {
         transparent = true,
       },
+      integrations = {
+        gitsigns = {
+          enabled = true,
+          transparent = false,
+        },
+      },
     },
   },
   {
