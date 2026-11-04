@@ -74,12 +74,5 @@ export FZF_DEFAULT_OPTS=" \
 alias ls='eza --all --long --group --group-directories-first --icons --header --time-style long-iso'
 alias bup='brew update && brew upgrade'
 
-# tmux-sessionizer
-bindkey -s ^f "tmux-sessionizer\n"
-bindkey -s '\eh' "tmux-sessionizer -s 0\n"
-bindkey -s '\ej' "tmux-sessionizer -s 1\n"
-bindkey -s '\ek' "tmux-sessionizer -s 2\n"
-bindkey -s '\el' "tmux-sessionizer -s 3\n"
-
 # starship
 eval "$(starship init zsh)"
