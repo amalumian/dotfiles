@@ -7,6 +7,10 @@ return {
         section_separators = { left = "", right = "" },
         component_separators = { left = "", right = "" },
       },
+      sections = {
+        lualine_a = { { "mode", separator = { left = "" } } },
+        lualine_z = { { "location", separator = { right = "" } } },
+      },
     }
   end,
 }

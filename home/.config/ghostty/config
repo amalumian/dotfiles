@@ -1,6 +1,6 @@
 theme = Catppuccin Mocha
-background-opacity = 0.85
-background-opacity-cells = true
+background-opacity = 0.9
+background-opacity-cells = false
 background-blur = true
 font-size = 18
 macos-option-as-alt = true
