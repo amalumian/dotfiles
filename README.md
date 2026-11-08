@@ -19,4 +19,5 @@ make setup
 
 ## To do
 
-- Learn `mise` to see if it can replace the Makefile
+- [ ] Double-check dotfiles, test on a fresh machine, and remove the warning above
+- [ ] Learn `mise` to see if it can replace the Makefile
