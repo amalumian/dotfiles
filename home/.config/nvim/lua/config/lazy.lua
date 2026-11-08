@@ -18,15 +18,14 @@ require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     { import = "plugins" },
-    { import = "plugins.editor" },
-    { import = "plugins.lsp" },
-    { import = "plugins.ui" },
   },
   defaults = {
     lazy = false,
     version = false,
   },
-  install = { colorscheme = { "catppuccin-mocha", "habamax" } },
+  install = {
+    colorscheme = { "catppuccin-mocha", "habamax" },
+  },
   checker = {
     enabled = true,
     notify = false,

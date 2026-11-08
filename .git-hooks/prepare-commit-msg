@@ -6,7 +6,7 @@ const fs = require("fs");
 const commitMsgFile = process.argv[2];
 const commitSource = process.argv[3];
 
-if (commitSource === "message") {
+if (!commitMsgFile || commitSource) {
   process.exit(0);
 }
 
@@ -42,11 +42,7 @@ try {
   });
 
   const getAllPaths = (files) => {
-    const skipDirectories = [
-      "home",
-      ".config",
-      ".local",
-    ];
+    const skipDirectories = ["home", ".config", ".local"];
     return [
       ...new Set(
         files.map((file) => {
