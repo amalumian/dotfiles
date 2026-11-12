@@ -1,3 +1,4 @@
 [tools]
 lua = "latest"
 node = "latest"
+"npm:neovim" = "latest"

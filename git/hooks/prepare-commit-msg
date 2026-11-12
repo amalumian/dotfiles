@@ -1,0 +1,72 @@
+#!/usr/bin/env node
+
+const { execFileSync } = require("node:child_process");
+const fs = require("node:fs");
+
+const [, , messageFile, source] = process.argv;
+if (!messageFile || source) process.exit(0);
+
+try {
+  // NUL delimiters preserve spaces, tabs, Unicode, and both paths of a rename.
+  const entries = execFileSync(
+    "git",
+    [
+      "diff",
+      "--cached",
+      "--name-status",
+      "-z",
+      "--find-renames",
+      "--diff-filter=ACDMRT",
+    ],
+    { encoding: "utf8", maxBuffer: 16 * 1024 * 1024 },
+  ).split("\0");
+  const groups = {
+    A: { title: "Add to", heading: "Added", files: [], scopes: new Set() },
+    M: {
+      title: "Modify in",
+      heading: "Modified",
+      files: [],
+      scopes: new Set(),
+    },
+    R: { title: "Rename in", heading: "Renamed", files: [], scopes: new Set() },
+    D: {
+      title: "Delete from",
+      heading: "Deleted",
+      files: [],
+      scopes: new Set(),
+    },
+  };
+  const display = (path) =>
+    /[\r\n\t]/.test(path) ? JSON.stringify(path) : path;
+
+  for (let i = 0; entries[i];) {
+    const status = entries[i++][0];
+    const from = entries[i++];
+    const to = status === "R" || status === "C" ? entries[i++] : from;
+    const group = groups[status === "C" ? "A" : status === "T" ? "M" : status];
+    group.files.push(
+      status === "R" ? `${display(from)} -> ${display(to)}` : display(to),
+    );
+    if (status === "R") group.scopes.add(display(from.split("/")[0]));
+    group.scopes.add(display(to.split("/")[0]));
+  }
+
+  const changes = Object.values(groups).filter((group) => group.files.length);
+  if (!changes.length) process.exit(0);
+
+  const title = changes
+    .map((group) => `${group.title} ${[...group.scopes].join(", ")}`)
+    .join("; ");
+  const body = changes
+    .map(
+      (group) =>
+        `${group.heading}:\n${group.files.map((file) => `  - ${file}`).join("\n")}`,
+    )
+    .join("\n\n");
+  // Keep Git's comments, including the staged diff from `git commit -v`.
+  const original = fs.readFileSync(messageFile, "utf8");
+  fs.writeFileSync(messageFile, `${title}\n\n${body}\n\n${original}`);
+} catch (error) {
+  console.error(`prepare-commit-msg: ${error.message}`);
+  // Message suggestions must not prevent a commit.
+}

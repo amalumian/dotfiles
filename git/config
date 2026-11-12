@@ -1,7 +1,6 @@
 [user]
   name = Arthur Malumian
   email = arthurmalumian@gmail.com
-  signingkey = KEYID
 [core]
   editor = nvim
   excludesfile = ~/.gitconfig.core.excludesfile
@@ -28,3 +27,5 @@
   tool = nvimdiff
 [difftool]
   prompt = false
+[include]
+  path = ~/.gitconfig.local

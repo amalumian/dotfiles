@@ -1,0 +1,87 @@
+# https://mise.jdx.dev/bootstrap.html
+min_version = "2026.11.7"
+include = ["mise/config.toml", "homebrew/mise.toml"]
+
+[env]
+_.path = ["{{ env.HOME }}/.local/bin", "/opt/homebrew/bin", "/opt/homebrew/sbin"]
+
+[bootstrap.directories]
+"~/.gnupg" = { mode = "0700" }
+
+[bootstrap.repos]
+"~/.oh-my-zsh" = { url = "https://github.com/ohmyzsh/ohmyzsh.git" }
+"~/.oh-my-zsh/custom/plugins/you-should-use" = { url = "https://github.com/MichaelAquilina/zsh-you-should-use.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-autosuggestions" = { url = "https://github.com/zsh-users/zsh-autosuggestions.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" = { url = "https://github.com/zsh-users/zsh-syntax-highlighting.git" }
+
+[dotfiles]
+"~/.config/bat" = "bat"
+"~/.config/btop" = "btop"
+"~/.config/ghostty" = "ghostty"
+"~/.config/karabiner/karabiner.json" = { source = "karabiner/karabiner.json", mode = "copy" }
+"~/.config/lazygit" = "lazygit"
+"~/.config/mise" = "mise"
+"~/.config/nvim" = "nvim"
+"~/.gitconfig" = "git/config"
+"~/.gitconfig.core.excludesfile" = "git/ignore"
+"~/.gitconfig.delta.features" = "git/delta.gitconfig"
+"~/.gnupg/gpg.conf" = { source = "gnupg/gpg.conf", mode = "copy", permissions = "0600" }
+"~/.gnupg/gpg-agent.conf" = { source = "gnupg/gpg-agent.conf", mode = "copy", permissions = "0600" }
+"~/.starship.toml" = "starship/starship.toml"
+"~/.tmux.conf" = "tmux/tmux.conf"
+"~/.zprofile" = "zsh/zprofile"
+"~/.zshrc" = "zsh/zshrc"
+
+[bootstrap.macos.defaults."com.apple.HIToolbox"]
+AppleFnUsageType = 2
+
+[bootstrap.macos.defaults.NSGlobalDomain]
+AppleKeyboardUIMode = 3
+NSAutomaticSpellingCorrectionEnabled = false
+NSAutomaticCapitalizationEnabled = false
+NSAutomaticInlinePredictionEnabled = false
+NSAutomaticPeriodSubstitutionEnabled = false
+NSAutomaticQuoteSubstitutionEnabled = false
+NSAutomaticDashSubstitutionEnabled = false
+ApplePressAndHoldEnabled = false
+
+[tasks.bootstrap]
+description = "Finish machine setup after mise bootstrap applies packages and dotfiles"
+run = [
+  "git config --local core.hooksPath git/hooks",
+  "bat cache --build",
+  { task = "gnupg" },
+]
+
+[tasks.gnupg]
+description = "Configure commit signing, generating a GPG key only when needed"
+raw = true
+run = '''
+set -eu
+if [ -t 0 ]; then
+  GPG_TTY=$(tty)
+  export GPG_TTY
+fi
+key=$(git config --global --get user.signingkey || true)
+if [ -z "$key" ] || ! gpg --list-secret-keys "$key" >/dev/null 2>&1; then
+  key=$(gpg --list-secret-keys --with-colons | awk -F: '$1 == "sec" && $2 !~ /[red]/ && $12 ~ /[sS]/ { signing = 1; next } signing && $1 == "fpr" { print $10; exit }')
+fi
+if [ -z "$key" ]; then
+  printf '%s\n' 'Generate a GPG key: RSA and RSA, 4096 bits, no expiration.'
+  gpg --full-generate-key
+  key=$(gpg --list-secret-keys --with-colons | awk -F: '$1 == "sec" && $2 !~ /[red]/ && $12 ~ /[sS]/ { signing = 1; next } signing && $1 == "fpr" { print $10; exit }')
+  test -n "$key"
+  gpg --armor --export "$key" | pbcopy
+  printf '%s\n' 'Public GPG key copied. Add it at https://github.com/settings/gpg/new'
+fi
+git config --file "$HOME/.gitconfig.local" user.signingkey "$key"
+'''
+
+[tasks.update]
+description = "Update packages, mise tools, shell plugins, and Neovim plugins"
+run = [
+  "mise bootstrap packages upgrade",
+  "mise upgrade",
+  "mise bootstrap repos update",
+  "nvim --headless '+Lazy! sync' +qa",
+]

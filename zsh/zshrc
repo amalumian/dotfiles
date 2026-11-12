@@ -6,35 +6,15 @@ export PAGER="bat"
 export BAT_THEME="Catppuccin Mocha"
 export XDG_CONFIG_HOME="$HOME/.config"
 export STARSHIP_CONFIG="$HOME/.starship.toml"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
-# Oh My Zsh
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-    echo "Installing Oh My Zsh..."
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-
-# Plugins
-PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
-
-if [ ! -d "$PLUGINS_DIR/you-should-use" ]; then
-    echo "Installing you-should-use plugin..."
-    git clone https://github.com/MichaelAquilina/zsh-you-should-use.git "$PLUGINS_DIR/you-should-use"
-fi
-
-if [ ! -d "$PLUGINS_DIR/zsh-autosuggestions" ]; then
-    echo "Installing zsh-autosuggestions plugin..."
-    git clone https://github.com/zsh-users/zsh-autosuggestions.git "$PLUGINS_DIR/zsh-autosuggestions"
-fi
-
-if [ ! -d "$PLUGINS_DIR/zsh-syntax-highlighting" ]; then
-    echo "Installing zsh-syntax-highlighting plugin..."
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$PLUGINS_DIR/zsh-syntax-highlighting"
-fi
-
+# Oh My Zsh and plugins are installed by mise bootstrap.
 plugins=(git you-should-use zsh-autosuggestions zsh-syntax-highlighting vi-mode)
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
+
+eval "$(mise activate zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -71,6 +51,7 @@ export FZF_DEFAULT_OPTS=" \
 
 # Aliases
 alias ls='eza --all --long --group --group-directories-first --icons --header --time-style long-iso'
+alias dotupdate='mise -C "$HOME/Documents/dotfiles" run update'
 
 # starship
 eval "$(starship init zsh)"
