@@ -6,7 +6,6 @@ export PAGER="bat"
 export BAT_THEME="Catppuccin Mocha"
 export XDG_CONFIG_HOME="$HOME/.config"
 export STARSHIP_CONFIG="$HOME/.starship.toml"
-
 export PATH="$HOME/.local/bin:$PATH"
 
 # Oh My Zsh
@@ -72,7 +71,6 @@ export FZF_DEFAULT_OPTS=" \
 
 # Aliases
 alias ls='eza --all --long --group --group-directories-first --icons --header --time-style long-iso'
-alias bup='brew update && brew upgrade'
 
 # starship
 eval "$(starship init zsh)"

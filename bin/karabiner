@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+set -e
+
+source "$(dirname "$0")/../lib/paths"
+
+echo "Setting up Karabiner..."
+
+rm ~/.config/karabiner/karabiner.json
+cp "$DOTFILES_DIR/.config/karabiner/karabiner.json" ~/.config/karabiner/karabiner.json
