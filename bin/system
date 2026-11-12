@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-echo "Set fastest key repeat and shortest delay (both sliders to the right)"
-defaults write -g KeyRepeat -int 2
-defaults write -g InitialKeyRepeat -int 15
-
 echo "Set Globe key to Emoji"
 defaults write com.apple.HIToolbox AppleFnUsageType -int 2
 
@@ -17,9 +13,6 @@ defaults write -g NSAutomaticInlinePredictionEnabled -bool false
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
-
-echo "Create ~/Developer"
-mkdir -p "$HOME/Developer"
 
 echo "Disable press and hold"
 defaults write -g ApplePressAndHoldEnabled -bool false

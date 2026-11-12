@@ -19,5 +19,4 @@ make setup
 
 ## To do
 
-- [ ] Double-check dotfiles, test on a fresh machine, and remove the warning above
-- [ ] Learn `mise` to see if it can replace the Makefile
+- [ ] Replace `Makefile` and bin scripts with `mise`, double-check config, remove caution above.
