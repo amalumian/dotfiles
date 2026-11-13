@@ -15,7 +15,7 @@
   navigate = true
   line-numbers = true
   side-by-side = false
-  features = catppuccin-mocha
+  features = tokyonight-moon
 [init]
   defaultBranch = main
 [commit]

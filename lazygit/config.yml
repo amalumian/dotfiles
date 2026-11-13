@@ -1,35 +1,37 @@
+# TokyoNight Moon, adapted from folke/tokyonight.nvim extras.
 gui:
   mouseEvents: false
   sidePanelWidth: 0.3
   nerdFontsVersion: "3"
   theme:
     activeBorderColor:
-      - "#fab387"
+      - "#ff966c"
       - bold
     inactiveBorderColor:
-      - "#a6adc8"
+      - "#589ed7"
     searchingActiveBorderColor:
-      - "#f9e2af"
+      - "#ff966c"
+      - bold
     optionsTextColor:
-      - "#89b4fa"
+      - "#82aaff"
     selectedLineBgColor:
-      - "#313244"
+      - "#2d3f76"
     inactiveViewSelectedLineBgColor:
-      - "#6c7086"
+      - "#2f334d"
     cherryPickedCommitFgColor:
-      - "#fab387"
+      - "#82aaff"
     cherryPickedCommitBgColor:
-      - "#45475a"
+      - "#c099ff"
     markedBaseCommitFgColor:
-      - "#89b4fa"
+      - "#82aaff"
     markedBaseCommitBgColor:
-      - "#f9e2af"
+      - "#ffc777"
     unstagedChangesColor:
-      - "#f38ba8"
+      - "#c53b53"
     defaultFgColor:
-      - "#cdd6f4"
+      - "#c8d3f5"
     authorColors:
-      "*": "#b4befe"
+      "*": "#c099ff"
 git:
   diffRenderers:
     - command: delta --dark --paging=never
