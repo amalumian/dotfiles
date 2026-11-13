@@ -1,4 +1,3 @@
-# TokyoNight Moon from folke/tokyonight.nvim extras, adapted as a named feature with bat syntax highlighting.
 [delta "tokyonight-moon"]
   dark = true
   syntax-theme = tokyonight_moon

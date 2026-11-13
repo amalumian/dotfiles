@@ -20,13 +20,29 @@ eval "$(zoxide init zsh --cmd cd)"
 source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-# TokyoNight Moon, adapted from folke/tokyonight.nvim extras.
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#2d3f76,bg:#1e2030,spinner:#ff007c,hl:#65bcff \
---color=fg:#c8d3f5,header:#ff966c,info:#545c7e,pointer:#ff007c \
---color=marker:#ff007c,fg+:#c8d3f5,prompt:#65bcff,hl+:#65bcff \
---color=selected-bg:#2f334d \
---color=border:#589ed7,label:#c8d3f5,gutter:#1e2030"
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --highlight-line \
+  --info=inline-right \
+  --ansi \
+  --layout=reverse \
+  --border=none \
+  --color=bg+:#2d3f76 \
+  --color=bg:#1e2030 \
+  --color=border:#589ed7 \
+  --color=fg:#c8d3f5 \
+  --color=gutter:#1e2030 \
+  --color=header:#ff966c \
+  --color=hl+:#65bcff \
+  --color=hl:#65bcff \
+  --color=info:#545c7e \
+  --color=marker:#ff007c \
+  --color=pointer:#ff007c \
+  --color=prompt:#65bcff \
+  --color=query:#c8d3f5:regular \
+  --color=scrollbar:#589ed7 \
+  --color=separator:#ff966c \
+  --color=spinner:#ff007c \
+"
 
 # Aliases
 alias ls='eza --all --long --group --group-directories-first --icons --header --time-style long-iso'
