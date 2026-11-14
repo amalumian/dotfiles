@@ -77,6 +77,10 @@ fi
 git config --file "$HOME/.gitconfig.local" user.signingkey "$key"
 '''
 
+[tasks.status]
+description = "Show the status of packages, tools, dotfiles, and machine setup"
+run = "mise bootstrap status"
+
 [tasks.update]
 description = "Update packages, mise tools, shell plugins, and Neovim plugins"
 run = [
@@ -85,3 +89,18 @@ run = [
   "mise bootstrap repos update",
   "nvim --headless '+Lazy! sync' +qa",
 ]
+
+[tasks.prune]
+description = "Remove unconfigured Homebrew packages and unused mise tool versions"
+raw = true
+usage = 'flag "-n --dry-run" help="Show what would be removed without removing anything"'
+run = '''
+set -eu
+set --
+if [ "${usage_dry_run:-false}" = true ]; then
+  set -- --dry-run
+fi
+mise bootstrap packages prune --manager brew-cask "$@"
+mise bootstrap packages prune --manager brew "$@"
+mise prune "$@"
+'''

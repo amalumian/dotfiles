@@ -13,7 +13,6 @@ Set up SSH:
 ```sh
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
-test ! -f ~/.ssh/config || cp ~/.ssh/config ~/.ssh/config.bak.$(date +%Y%m%d%H%M%S)
 cat > ~/.ssh/config <<'EOF'
 Host github.com
  HostName github.com
@@ -23,7 +22,7 @@ Host github.com
  UseKeychain yes
 EOF
 chmod 600 ~/.ssh/config
-test -f ~/.ssh/github || ssh-keygen -t ed25519 -C "github" -f ~/.ssh/github -N ""
+ssh-keygen -t ed25519 -C "github" -f ~/.ssh/github -N ""
 eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/github
 pbcopy < ~/.ssh/github.pub
@@ -44,8 +43,21 @@ curl -fsSL https://mise.run | sh && ~/.local/bin/mise trust --all && ~/.local/bi
 
 If prompted, generate a GPG key and add the copied public key to [GitHub GPG keys](https://github.com/settings/gpg/new). Open a new terminal.
 
+## Check status
+
+```sh
+dotstatus
+```
+
 ## Update dependencies
 
 ```sh
 dotupdate
+```
+
+## Prune dependencies
+
+```sh
+dotprune --dry-run
+dotprune
 ```
