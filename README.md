@@ -1,6 +1,6 @@
 # dotfiles
 
-## New Mac (Apple Silicon)
+## Setup (Apple Silicon)
 
 Install Xcode Command Line Tools and wait for the installation to finish:
 
@@ -43,19 +43,21 @@ curl -fsSL https://mise.run | sh && ~/.local/bin/mise trust --all && ~/.local/bi
 
 If prompted, generate a GPG key and add the copied public key to [GitHub GPG keys](https://github.com/settings/gpg/new). Open a new terminal.
 
-## Check status
+## Commands
+
+### Status
 
 ```sh
 dotstatus
 ```
 
-## Update dependencies
+### Update
 
 ```sh
 dotupdate
 ```
 
-## Prune dependencies
+### Prune
 
 ```sh
 dotprune --dry-run
