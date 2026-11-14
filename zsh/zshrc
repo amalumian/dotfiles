@@ -6,14 +6,13 @@ export PAGER="bat"
 export BAT_THEME="tokyonight_moon"
 export XDG_CONFIG_HOME="$HOME/.config"
 export STARSHIP_CONFIG="$HOME/.starship.toml"
-export PATH="$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+eval "$("$HOME/.local/bin/mise" activate zsh)"
 
 # Oh My Zsh and plugins are installed by mise bootstrap.
 plugins=(git you-should-use zsh-autosuggestions zsh-syntax-highlighting vi-mode)
 
 source "$ZSH/oh-my-zsh.sh"
 
-eval "$(mise activate zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 
 # Set up fzf key bindings and fuzzy completion

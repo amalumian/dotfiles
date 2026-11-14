@@ -2,3 +2,10 @@
 lua = "latest"
 node = "latest"
 "npm:neovim" = "latest"
+
+[env]
+_.path = { path = [
+  "{{ env.HOME }}/.local/bin",
+  "/opt/homebrew/bin",
+  "/opt/homebrew/sbin",
+], position = "append" }

@@ -1,9 +1,6 @@
 # https://mise.jdx.dev/bootstrap.html
 min_version = "2026.11.7"
-include = ["mise/config.toml", "homebrew/mise.toml"]
-
-[env]
-_.path = ["{{ env.HOME }}/.local/bin", "/opt/homebrew/bin", "/opt/homebrew/sbin"]
+include = ["homebrew/mise.toml"]
 
 [bootstrap.directories]
 "~/.gnupg" = { mode = "0700" }
@@ -29,7 +26,6 @@ _.path = ["{{ env.HOME }}/.local/bin", "/opt/homebrew/bin", "/opt/homebrew/sbin"
 "~/.gnupg/gpg-agent.conf" = { source = "gnupg/gpg-agent.conf", mode = "copy", permissions = "0600" }
 "~/.starship.toml" = "starship/starship.toml"
 "~/.tmux.conf" = "tmux/tmux.conf"
-"~/.zprofile" = "zsh/zprofile"
 "~/.zshrc" = "zsh/zshrc"
 
 [bootstrap.macos.defaults."com.apple.HIToolbox"]
