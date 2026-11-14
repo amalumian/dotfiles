@@ -3,14 +3,14 @@
   email = arthurmalumian@gmail.com
 [core]
   editor = nvim
-  excludesfile = ~/.gitconfig.core.excludesfile
+  excludesfile = ~/.gitconfig.ignore
   autocrlf = input
   safecrlf = warn
   pager = delta
 [interactive]
   diffFilter = delta --color-only
 [include]
-	path = ~/.gitconfig.delta.features
+  path = ~/.gitconfig.delta
 [delta]
   navigate = true
   line-numbers = true

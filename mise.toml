@@ -23,8 +23,8 @@ _.path = ["{{ env.HOME }}/.local/bin", "/opt/homebrew/bin", "/opt/homebrew/sbin"
 "~/.config/mise" = "mise"
 "~/.config/nvim" = "nvim"
 "~/.gitconfig" = "git/config"
-"~/.gitconfig.core.excludesfile" = "git/ignore"
-"~/.gitconfig.delta.features" = "git/delta.gitconfig"
+"~/.gitconfig.ignore" = "git/ignore"
+"~/.gitconfig.delta" = "git/delta"
 "~/.gnupg/gpg.conf" = { source = "gnupg/gpg.conf", mode = "copy", permissions = "0600" }
 "~/.gnupg/gpg-agent.conf" = { source = "gnupg/gpg-agent.conf", mode = "copy", permissions = "0600" }
 "~/.starship.toml" = "starship/starship.toml"
