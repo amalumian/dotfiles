@@ -43,6 +43,7 @@
 "brew:zoxide" = "latest"
 "brew-cask:appcleaner" = "latest"
 "brew-cask:betterdisplay" = "latest"
+"brew-cask:chatgpt" = "latest"
 "brew-cask:codex" = "latest"
 "brew-cask:dbeaver-community" = "latest"
 "brew-cask:deepl" = "latest"
