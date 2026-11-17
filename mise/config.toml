@@ -2,6 +2,9 @@
 lua = "latest"
 node = "latest"
 "npm:neovim" = "latest"
+"npm:yarn" = "latest"
+"npm:pnpm" = "latest"
+"npm:chrome-devtools-mcp" = "latest"
 
 [env]
 _.path = { path = [
