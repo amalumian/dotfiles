@@ -78,6 +78,11 @@ git config --file "$HOME/.gitconfig.local" user.signingkey "$key"
 description = "Show the status of packages, tools, dotfiles, and machine setup"
 run = "mise bootstrap status"
 
+[tasks.install]
+description = "Install missing Homebrew packages and mise tools"
+raw = true
+run = "mise bootstrap --only packages,tools"
+
 [tasks.update]
 description = "Update packages, mise tools, shell plugins, and Neovim plugins"
 run = [

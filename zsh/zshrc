@@ -26,6 +26,7 @@ source "$ZSH/oh-my-zsh.sh"
 # Aliases
 alias ls='eza --all --long --group --group-directories-first --icons --header --time-style long-iso'
 alias dotstatus='mise -C "$HOME/Documents/dotfiles" run status'
+alias dotinstall='mise -C "$HOME/Documents/dotfiles" run --skip-tools install'
 alias dotupdate='mise -C "$HOME/Documents/dotfiles" run update'
 alias dotprune='mise -C "$HOME/Documents/dotfiles" run prune'
 
